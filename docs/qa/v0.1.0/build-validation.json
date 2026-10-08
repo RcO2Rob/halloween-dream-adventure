@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-05",
+  "unity": "6000.6.2f1",
+  "platform": "macOS arm64",
+  "build": "0.1.0",
+  "development_build": true,
+  "executable_sha256": "12f0c08d7c0bcb20379b452b9b18c8563558d42aad45a57ee73247c37dd5241a",
+  "scene_validation": "3 chapters passed",
+  "runtime_checks": 72,
+  "runtime_mode": "Rendered standalone player, scripted interactions with actual physics, controlled teleports and accelerated time",
+  "human_playtest": "Not performed",
+  "github_sync": "Not performed, per user instruction"
+}

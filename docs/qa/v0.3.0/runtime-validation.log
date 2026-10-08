@@ -1,0 +1,1456 @@
+Mono path[0] = '/Users/roucheng/Documents/ChatGPT/Project_2 2/Builds/macOS/Lanterns of the Lost Dream.app/Contents/Resources/Data/Managed'
+Mono config path = '/Users/roucheng/Documents/ChatGPT/Project_2 2/Builds/macOS/Lanterns of the Lost Dream.app/Contents/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Found 1 interfaces on host : 0) 172.24.59.239
+Player connection [8231747456]  Target information:
+
+Player connection [8231747456]  * "[IP] 172.24.59.239 [Port] 55000 [Flags] 2 [Guid] 3378775662 [EditorId] 2942933370 [Version] 1048832 [Id] OSXPlayer(1,hst000560659um.nat.olemiss.edu) [Debug] 0 [PackageName] OSXPlayer [ProjectName] Lanterns of the Lost Dream" 
+
+Player connection [8231747456] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+ preferred device: Apple M5 (high power)
+Metal devices available: 1
+0: Apple M5 (high power)
+Using device Apple M5 (high power)
+Initialize engine version: 6000.6.2f1 (770e33f6875c)
+[EntityIdStore] init: VM path (explicit commit), pageSize=16384, blockCount=262144, entitiesPerBlock=1024, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path /Users/roucheng/Documents/ChatGPT/Project_2 2/Builds/macOS/Lanterns of the Lost Dream.app/Contents/Resources/Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+Initializing Metal device caps: Apple M5
+Mac GPU Family: 2
+Apple GPU Family: 9
+MSL Version: 3.0
+Has Float MSAA: 1
+Has Float Filtering: 1
+ReadWrite Texture Tier: 2
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.003 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Metal RecreateSurface[0x1112685f0]: surface size 1440x900
+UnloadTime: 0.561541 ms
+SMOKE_CHECK_OK: Tutorial loads in standalone player
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:78)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Timmy has a valid humanoid avatar and animation adapter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:278)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Timmy root motion is disabled so the CharacterController owns movement
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:280)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Timmy skin uses imported color textures
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:283)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Moving Timmy plays an imported animation and deforms the mesh
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:292)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Animated Timmy moves over the floor using the original controller
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:294)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+TIMMY_RUNTIME_BOUNDS: Center: (-0.01, 1.01, -3.24), Extents: (0.40, 1.18, 0.64) feet=(0.15, 0.21, -3.06)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:301)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Timmy is visible at player scale and centered on the movement collider
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:302)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Bow follows Timmy's animated left hand
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:304)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Carried candy follows Timmy's animated right hand
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:308)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Candy throw starts Timmy's masked throw animation
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:322)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Throwing removes candy from the animated hand
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:324)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Arrow shot starts Timmy's bow aiming animation
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:329)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Upper-body action returns to locomotion without leaving a frozen pose
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<CharacterChecks>d__11:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:333)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Pause preserves in-flight projectile and position
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:88)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Resume continues projectile simulation
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:91)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Chapter uses the selected Timmy humanoid character 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:96)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Exit rejects incomplete chapter 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:99)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Hidden road has no active floor
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:102)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: E interaction lights First light
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:105)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Lantern restores collidable road
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:106)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Lantern saves safe checkpoint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:107)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Restored bridge supports player movement
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:117)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Hidden road has no active floor
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:102)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: E interaction lights Crossing light
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:105)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Lantern restores collidable road
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:106)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Lantern saves safe checkpoint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:107)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Restored bridge supports player movement
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:117)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real arrow clears tutorial practice rune
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:125)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:129)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+MONSTER_RUNTIME_BOUNDS: Center: (-0.50, 3.12, 27.56), Extents: (1.34, 0.89, 2.12) model=(1.00, 1.00, 1.00) origin=(0.00, 0.00, 0.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:136)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Animated dragon has visible game-scale bounds centered on its hit collider
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:140)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Imported flight animation deforms the dragon mesh during gameplay
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:143)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:163)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: E picks up candy
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:171)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Tutorial replenishes candy after missed throws instead of blocking progression
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:176)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Replenished tutorial candy can be collected
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:181)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Ballistic candy shatters nightmare seal and consumes carried candy
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:185)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Falling costs health and returns to safe checkpoint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:190)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: All chapter objectives complete 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:192)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Physical gate trigger completes chapter 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:198)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.868000 ms
+Unloading 17 unused Assets / (268.5 KB). Loaded Objects now: 4558.
+Memory consumption went from 113.4 MB to 113.1 MB.
+Total: 12.273750 ms (FindLiveObjects: 0.043167 ms CreateObjectMapping: 0.007500 ms MarkObjects: 1.045958 ms  DeleteObjects: 11.160458 ms)
+
+SMOKE_CHECK_OK: Scene transition preserves chapter order
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:202)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Chapter uses the selected Timmy humanoid character 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:96)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Exit rejects incomplete chapter 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:99)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Hidden road has no active floor
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:102)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: E interaction lights Orchard light
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:105)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Lantern restores collidable road
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:106)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Lantern saves safe checkpoint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:107)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Hidden road has no active floor
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:102)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: E interaction lights Terrace light
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:105)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Lantern restores collidable road
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:106)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Lantern saves safe checkpoint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:107)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Hidden road has no active floor
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:102)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: E interaction lights Gate light
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:105)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Lantern restores collidable road
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:106)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Lantern saves safe checkpoint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:107)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:129)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:163)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:129)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:163)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:129)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Evolved dragon is visible and centered on its hit collider
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:153)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:163)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:129)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:163)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:129)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Evolved dragon is visible and centered on its hit collider
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:153)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:163)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Falling costs health and returns to safe checkpoint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:190)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: All chapter objectives complete 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:192)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Physical gate trigger completes chapter 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:198)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.128959 ms
+Unloading 33 unused Assets / (230.0 KB). Loaded Objects now: 1400.
+Memory consumption went from 112.3 MB to 112.1 MB.
+Total: 12.513500 ms (FindLiveObjects: 0.028125 ms CreateObjectMapping: 0.006417 ms MarkObjects: 1.900542 ms  DeleteObjects: 10.564042 ms)
+
+SMOKE_CHECK_OK: Scene transition preserves chapter order
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:202)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Castle chapter uses Timmy humanoid character
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:214)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Castle entrance lantern restores approach
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:220)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss wakes when entering restored courtyard
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:223)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss shell rejects arrows
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:227)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Grounded player can dash
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:231)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Dash grants damage immunity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:233)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Telegraphed bomb blast damages player within radius
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:238)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:256)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:259)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:264)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:256)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:259)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:264)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:256)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:259)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:264)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:256)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:259)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:264)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:256)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:259)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:264)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:256)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:259)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:264)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss defeat leads to victory screen
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:270)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Victory clears pending bomb hazards
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__10:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:271)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+LOST_DREAM_SMOKE_PASSED: 97 functional integration checks.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:207)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /Users/roucheng/Documents/ChatGPT/Project_2 2/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+Thread 0x16fc8f000 may have been prematurely finalized
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+Thread 0x16e807000 may have been prematurely finalized
+CodeReloadManager destroyed
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1791236638579,"processId":24196,"allocatedMemory":2081639,"memoryLabels":[{"Default":54543},{"Permanent":1472},{"NewDelete":1259545},{"Thread":8120},{"Manager":13623},{"VertexData":8},{"Geometry":408},{"Texture":16},{"Shader":78020},{"Material":68},{"GfxDevice":38796},{"GfxThread":400},{"Animation":1480},{"FreeType":8},{"FontEngine":736},{"Physics":2000},{"Physics2D":16},{"Serialization":16992},{"Input":43216},{"JobScheduler":448},{"TextLib":280},{"Mono":56},{"ScriptingNativeRuntime":128},{"BaseObject":43088},{"Resource":564},{"Renderer":2448},{"Transform":6485},{"File":4600},{"WebCam":32},{"Culling":32},{"Terrain":11298},{"Wind":24},{"String":3086},{"Utility":315736},{"PoolAlloc":1440},{"AI":40},{"TypeTree":5512},{"ScriptManager":5696},{"CodeReload":440},{"RuntimeInitializeOnLoadManager":64},{"Sprites":78},{"SpriteAtlas":120},{"GI":7200},{"Director":7648},{"CloudService":144},{"WebRequest":520},{"VR":49402},{"SceneManager":408},{"Video":2080},{"LazyScriptCache":32},{"Camera":1169},{"Secure":241},{"SerializationCache":3608},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57496},{"Baselib":16},{"Analytics":80},{"Hierarchy":1452},{"UIElements":40},{"CoreStats":14536},{"Identifiers":7152},{"Gui":157},{"CoreBusinessMetrics":128},{"AssetReference":32}]}

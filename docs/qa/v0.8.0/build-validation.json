@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-07",
+  "unity": "6000.6.2f1",
+  "platform": "macOS arm64",
+  "build": "0.8.0",
+  "development_build": true,
+  "executable_sha256": "da0974eb088dc6584a491a99bb6b5b8cd320f1a399f94df3a1e57a440d97ae05",
+  "scene_validation": "3 chapters passed; saved scenes unchanged from pre-charge v0.7 hashes",
+  "scene_sha256": {
+    "03_PumpkinKeep.unity": "61edcc9065734b15b6e82c443db760df5a5f84c4deef9dc4105a12a66bd9c65d",
+    "01_FirstLight.unity": "3f611ed40e5140a2ac57b1c16b8bad668f775976f00ea0caceea17de6b043b8e",
+    "02_ShatteredGardens.unity": "c03c019693b652009f1b5a91e503e1dbd8d6e81ff7747e9df9c26cb6f9ed16a3"
+  },
+  "runtime_checks": 228,
+  "runtime_mode": "Rendered standalone player; real interactions, jumps and physics with controlled teleports, steering and accelerated time",
+  "new_checks": "Half-health charge unlock, visible and locked warning, pause, closed shell, swept contact once, stationary dais, safe endpoint, face turned toward player, exposed recovery, return home, bomb/charge sequencing, sideways avoidance and full three-chapter victory",
+  "visual_inspection": "Final charge-warning and recovery captures inspected; marked lane, player and pink face visible",
+  "candy_color_matching": "Proposed only; not implemented",
+  "build_method": "BuildCurrentScenes in isolated copy; original Unity editor preserved; no scene regeneration; original and copied sources, maps and executable hashes verified",
+  "human_playtest": "Not performed",
+  "github_sync": "Not performed, per user instruction",
+  "zip_integrity": "Passed; packaged executable matches tested build",
+  "zip_sha256": "001389ad8c2c42359db0eb2ee67872755b8f9d44b535c8f0bef53a19592cce45",
+  "zip_bytes": 62733987
+}

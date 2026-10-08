@@ -1,0 +1,553 @@
+sandbox_extension_issue_file_to_process failed for /var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Builds/macOS/Lanterns of the Lost Dream.app: 1 (Operation not permitted)
+Mono path[0] = '/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Builds/macOS/Lanterns of the Lost Dream.app/Contents/Resources/Data/Managed'
+Mono config path = '/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Builds/macOS/Lanterns of the Lost Dream.app/Contents/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Found 1 interfaces on host : 0) 192.168.1.124
+Player connection [8231747456]  Target information:
+
+Player connection [8231747456]  * "[IP] 192.168.1.124 [Port] 55000 [Flags] 2 [Guid] 3691966024 [EditorId] 3233824458 [Version] 1048832 [Id] OSXPlayer(1,Mac.home.local) [Debug] 0 [PackageName] OSXPlayer [ProjectName] Lanterns of the Lost Dream" 
+
+Player connection [8231747456] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+ preferred device: Apple M5 (high power)
+Metal devices available: 1
+0: Apple M5 (high power)
+Using device Apple M5 (high power)
+Initialize engine version: 6000.6.2f1 (770e33f6875c)
+[EntityIdStore] init: VM path (explicit commit), pageSize=16384, blockCount=262144, entitiesPerBlock=1024, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path /var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Builds/macOS/Lanterns of the Lost Dream.app/Contents/Resources/Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+Initializing Metal device caps: Apple M5
+Mac GPU Family: 2
+Apple GPU Family: 9
+MSL Version: 3.0
+Has Float MSAA: 1
+Has Float Filtering: 1
+ReadWrite Texture Tier: 2
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.003 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Metal RecreateSurface[0x10fcf8890]: surface size 1440x900
+UnloadTime: 0.555333 ms
+SMOKE_CHECK_OK: Tutorial loads in standalone player
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<Run>d__9:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:78)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.265833 ms
+Unloading 24 unused Assets / (58.0 KB). Loaded Objects now: 1404.
+Memory consumption went from 110.6 MB to 110.6 MB.
+Total: 13.095000 ms (FindLiveObjects: 0.033667 ms CreateObjectMapping: 0.009042 ms MarkObjects: 1.812375 ms  DeleteObjects: 11.224833 ms)
+
+SMOKE_CHECK_OK: Castle chapter uses Timmy humanoid character
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__12:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:379)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Castle entrance lantern restores approach
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__12:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:385)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:674)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:676)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:679)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Jump route starts on safe island ground 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:684)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<>c__DisplayClass18_0:<JumpRouteChecks>b__0 (UnityEngine.Transform) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:711)
+System.Linq.Enumerable/SelectArrayIterator`2<UnityEngine.Transform, UnityEngine.Vector3>:MoveNext ()
+System.Collections.Generic.EnumerableHelpers:IterativeCopy<UnityEngine.Vector3> (System.Collections.Generic.IEnumerable`1<UnityEngine.Vector3>,UnityEngine.Vector3[],int,int)
+System.Collections.Generic.EnumerableHelpers:Copy<UnityEngine.Vector3> (System.Collections.Generic.IEnumerable`1<UnityEngine.Vector3>,UnityEngine.Vector3[],int,int)
+System.Linq.Enumerable/Concat2Iterator`1<UnityEngine.Vector3>:ToArray ()
+System.Linq.Enumerable:ToArray<UnityEngine.Vector3> (System.Collections.Generic.IEnumerable`1<UnityEngine.Vector3>)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:708)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<>c__DisplayClass18_0:<JumpRouteChecks>b__0 (UnityEngine.Transform) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:711)
+System.Linq.Enumerable/SelectArrayIterator`2<UnityEngine.Transform, UnityEngine.Vector3>:MoveNext ()
+System.Collections.Generic.EnumerableHelpers:IterativeCopy<UnityEngine.Vector3> (System.Collections.Generic.IEnumerable`1<UnityEngine.Vector3>,UnityEngine.Vector3[],int,int)
+System.Collections.Generic.EnumerableHelpers:Copy<UnityEngine.Vector3> (System.Collections.Generic.IEnumerable`1<UnityEngine.Vector3>,UnityEngine.Vector3[],int,int)
+System.Linq.Enumerable/Concat2Iterator`1<UnityEngine.Vector3>:ToArray ()
+System.Linq.Enumerable:ToArray<UnityEngine.Vector3> (System.Collections.Generic.IEnumerable`1<UnityEngine.Vector3>)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:708)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:718)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:738)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:718)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:738)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:718)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:738)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<JumpRouteChecks>d__18:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:743)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss wakes when entering restored courtyard
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__12:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:389)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss framing keeps player and pumpkin weak point visible
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__12:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:393)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Full-health boss has no second-phase charge
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__12:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:396)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss shell rejects arrows
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__12:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:399)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Grounded player can dash
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__12:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:403)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Dash grants damage immunity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__12:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:405)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Telegraphed bomb blast damages player within radius
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<BossBattle>d__12:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:410)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Boss introduces matching with only pink before unlocking other colors
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<ColorMatchingChecks>d__11:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:336)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: E picks up the actual blue candy hue
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<ColorMatchingChecks>d__11:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:342)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: E exchanges a held wrong color for the required floor candy
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<ColorMatchingChecks>d__11:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:346)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Candy swapping preserves both held and ground supplies
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<ColorMatchingChecks>d__11:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:348)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Candy swapping can be reversed without throwing away ammunition
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<ColorMatchingChecks>d__11:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:350)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Held candy visibly retains its blue material
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<ColorMatchingChecks>d__11:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:352)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Pause preserves required color and vulnerable window
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<ColorMatchingChecks>d__11:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:357)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Wrong-color regression launches a real blue candy projectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<ColorMatchingChecks>d__11:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:359)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+SMOKE_CHECK_OK: Thrown projectile preserves the carried candy hue
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke:Require (bool,string) (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:66)
+LostDream.PrototypeSmoke/<ColorMatchingChecks>d__11:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:361)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CANDY_COLLISION: hue=Blue target=Boss dais boss=False point=(0.00, 2.50, 15.44)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.DreamProjectile:Update () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/DreamProjectile.cs:59)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COLOR_WRONG_RESULT: health=6 expected=6 exposed=True phase=Exposed hue=Pink toast=Holding BLUE [<>] candy. Match the King's color. projectile=destroyed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+LostDream.PrototypeSmoke/<ColorMatchingChecks>d__11:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:363)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+LOST_DREAM_SMOKE_FAILED: System.Exception: Wrong-color projectile does no damage, explains the mismatch and leaves the window open
+  at LostDream.PrototypeSmoke.Require (System.Boolean condition, System.String name) [0x00026] in /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:67 
+  at LostDream.PrototypeSmoke+<ColorMatchingChecks>d__11.MoveNext () [0x00539] in /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:368 
+  at LostDream.PrototypeSmoke+<Guard>d__6.MoveNext () [0x0002f] in /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:47 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:LogError (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:158)
+LostDream.PrototypeSmoke/<Guard>d__6:MoveNext () (at /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-jump-project-ie8vteku/Assets/Scripts/PrototypeSmoke.cs:54)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 158)
+
+Thread 0x171277000 may have been prematurely finalized
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+Thread 0x17001f000 may have been prematurely finalized
+CodeReloadManager destroyed
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1791433263980,"processId":71099,"allocatedMemory":2099450,"memoryLabels":[{"Default":54543},{"Permanent":1472},{"NewDelete":1277104},{"Thread":8120},{"Manager":13623},{"VertexData":8},{"Geometry":408},{"Texture":16},{"Shader":78020},{"Material":68},{"GfxDevice":38796},{"GfxThread":400},{"Animation":1280},{"FreeType":8},{"FontEngine":736},{"Physics":2000},{"Physics2D":16},{"Serialization":16792},{"Input":43216},{"JobScheduler":448},{"TextLib":280},{"Mono":56},{"ScriptingNativeRuntime":128},{"BaseObject":40832},{"Resource":564},{"Renderer":2448},{"Transform":6485},{"File":4600},{"WebCam":32},{"Culling":32},{"Terrain":11298},{"Wind":24},{"String":3176},{"Utility":315736},{"PoolAlloc":1440},{"AI":40},{"TypeTree":5512},{"ScriptManager":5696},{"CodeReload":440},{"RuntimeInitializeOnLoadManager":64},{"Sprites":78},{"SpriteAtlas":120},{"GI":7200},{"Director":7848},{"CloudService":144},{"WebRequest":520},{"VR":49402},{"SceneManager":408},{"Video":2080},{"LazyScriptCache":32},{"Camera":1169},{"Secure":241},{"SerializationCache":3608},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57496},{"Baselib":16},{"Analytics":80},{"Hierarchy":1452},{"UIElements":40},{"CoreStats":14536},{"Identifiers":7152},{"Gui":319},{"CoreBusinessMetrics":128},{"AssetReference":32}]}

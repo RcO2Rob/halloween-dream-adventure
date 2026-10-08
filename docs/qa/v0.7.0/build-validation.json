@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-07",
+  "unity": "6000.6.2f1",
+  "platform": "macOS arm64",
+  "build": "0.7.0",
+  "development_build": true,
+  "executable_sha256": "3ef3b791d86becb8ba439104df0b52f32efab2aafe3b86402f0cc2f7f197a50d",
+  "scene_validation": "3 chapters passed; one targeted connection replaced in each; unrelated scene records preserved",
+  "scene_sha256": {
+    "03_PumpkinKeep.unity": "61edcc9065734b15b6e82c443db760df5a5f84c4deef9dc4105a12a66bd9c65d",
+    "01_FirstLight.unity": "3f611ed40e5140a2ac57b1c16b8bad668f775976f00ea0caceea17de6b043b8e",
+    "02_ShatteredGardens.unity": "c03c019693b652009f1b5a91e503e1dbd8d6e81ff7747e9df9c26cb6f9ed16a3"
+  },
+  "map_backup": "docs/map-backups/v0.6.1",
+  "runtime_checks": 208,
+  "runtime_mode": "Rendered standalone player; real interactions, jumps and physics with controlled route-entry teleports, steering and accelerated time",
+  "new_checks": "All 10 hops land on actual round platforms or exit islands; no invisible bridge floor and real fallable gaps; tutorial cannot be crossed by walking along platform centers; missed tutorial landing returns to checkpoint; existing candy refill and full three-chapter victory still pass",
+  "visual_inspection": "All three route overviews and chapter 2/3 airborne captures inspected; cyan rims, gold centers and jump signs readable. Tutorial airborne capture is during normal post-fall blinking.",
+  "build_method": "Targeted scene migration in isolated copy; preserved original open editor; saved map backup and serialized object audit; source and copied executable hashes verified",
+  "human_playtest": "Not performed",
+  "github_sync": "Not performed, per user instruction",
+  "zip_integrity": "Passed; packaged executable matches tested build",
+  "zip_sha256": "e2b3be6132cb9ae7a30a090d78cdc1b61f71be9d08006ded8110dfc369ae719d",
+  "zip_bytes": 62729612
+}

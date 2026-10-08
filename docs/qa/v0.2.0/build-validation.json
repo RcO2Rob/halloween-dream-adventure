@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-05",
+  "unity": "6000.6.2f1",
+  "platform": "macOS arm64",
+  "build": "0.2.0",
+  "development_build": true,
+  "executable_sha256": "97cb49fc85ebdd279a734a77543f9ae96e3a5675d9eda9a261bbf4a1961962ee",
+  "scene_validation": "3 chapters passed",
+  "runtime_checks": 82,
+  "runtime_mode": "Rendered standalone player; real interactions and physics with controlled teleports and accelerated time",
+  "new_checks": "Imported skinned models, skeletal deformation, visible game-scale bounds, collider centering for normal and evolved dragons",
+  "human_playtest": "Not performed",
+  "github_sync": "Not performed, per user instruction"
+}

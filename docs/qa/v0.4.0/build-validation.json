@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-05",
+  "unity": "6000.6.2f1",
+  "platform": "macOS arm64",
+  "build": "0.4.0",
+  "development_build": true,
+  "executable_sha256": "8183fadb09d40cf74ffb65888edb22e68cbb118c79e07832ded862f469b3499e",
+  "scene_validation": "3 chapters passed",
+  "runtime_checks": 107,
+  "runtime_mode": "Rendered standalone player; real interactions and physics with controlled teleports and accelerated time",
+  "new_checks": "Perspective camera, readable whole-character framing, lower view, actual orbit/zoom, movement relative to camera, wall obstruction and recovery, cursor ray target selection, player and boss visibility",
+  "human_playtest": "Not performed",
+  "github_sync": "Not performed, per user instruction"
+}

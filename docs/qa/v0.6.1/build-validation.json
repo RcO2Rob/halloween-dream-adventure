@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-07",
+  "unity": "6000.6.2f1",
+  "platform": "macOS arm64",
+  "build": "0.6.1",
+  "development_build": true,
+  "executable_sha256": "c1f33abb0a74c34040aaf48d154ba5d4ec853d1583ddf4882aef4bdd3ea8290f",
+  "scene_validation": "3 saved chapters passed, original scene files unchanged",
+  "scene_sha256": {
+    "Assets/Scenes/03_PumpkinKeep.unity": "873b85f6dddb7e75eae00010539fa8fd9205732386140f11182be0620462e3f8",
+    "Assets/Scenes/01_FirstLight.unity": "bdc6a5e381ff692af9afcedf9641c0e96e9dcbdde1e2e40e8918d3cb6afe08df",
+    "Assets/Scenes/02_ShatteredGardens.unity": "fc99cef4c578811c5ff3e37046b6f3de6bec03832fb5bbdde97b3b0894552e4e"
+  },
+  "runtime_checks": 165,
+  "runtime_mode": "Rendered standalone player; real interactions and physics with controlled teleports and accelerated time",
+  "new_checks": "Tutorial timed refill with candy held, lanterns unlit, pause, occupied spots, unrelated candy; three rounds of throwing away both candies, subsequent seal clearing and physical chapter transition; refill stops after seal completion",
+  "visual_inspection": "Tutorial final island refill screenshot: both candies visible and two-line refill hint legible",
+  "build_method": "Isolated project copy, keeping the Unity editor open; source bytes and copied executable hash verified",
+  "human_playtest": "Not performed",
+  "github_sync": "Not performed, per user instruction",
+  "zip_integrity": "Passed; packaged executable matches tested build",
+  "zip_sha256": "7738715c0e26e4fd18fa0652476754c2ec5e44c398349d895ca7e7cb59a3dd46",
+  "zip_bytes": 62722380
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "chapter_2": "Only three model subtrees/animation references, enemy kinds, warning materials and default pink fields changed",
+  "surviving_objects_unchanged_except_allowed": true,
+  "removed_model_objects": 220,
+  "added_prefab_records": 9,
+  "modified_records": 13,
+  "enemy_world_positions_health_and_counts_preserved": true,
+  "islands_lanterns_bridges_platforms_and_gates_preserved": true,
+  "01_FirstLight": "Byte-identical",
+  "03_PumpkinKeep": "Byte-identical"
+}

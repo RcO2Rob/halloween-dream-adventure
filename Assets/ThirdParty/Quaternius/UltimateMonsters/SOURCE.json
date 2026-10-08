@@ -1,0 +1,51 @@
+{
+  "author": "Quaternius",
+  "pack": "Ultimate Monsters",
+  "license": "CC0 1.0",
+  "official_url": "https://quaternius.com/packs/ultimatemonsters.html",
+  "official_download_folder": "https://drive.google.com/drive/folders/18m4KpzpEzhC9wl7jzr6dUc0N8Jozr79C",
+  "acquired": "2026-10-05",
+  "download_note": "Official Google Drive individual downloads returned quota exceeded. Selected files obtained from publicly redistributed pack archive; original bytes preserved.",
+  "mirror_archive": "https://ferretforge.fr/lucastucious/Chatboat-Assets/media/branch/kenney-packs/Ultimate%20Monsters-20250326T085816Z-001.zip",
+  "archive_sha256": "56f6e072267ed50c6a88bae48c8f4b13feb9cc77b4f11549df9e2cc3d118491b",
+  "files": [
+    {
+      "file": "Models/Dragon.fbx",
+      "archive_path": "Ultimate Monsters/Flying/FBX/Dragon.fbx",
+      "sha256": "16048b56c9444a702dd0d6acb3f05acc010e28030758130a8208a9c2c2591a1f"
+    },
+    {
+      "file": "Models/Dragon_Evolved.fbx",
+      "archive_path": "Ultimate Monsters/Flying/FBX/Dragon_Evolved.fbx",
+      "sha256": "b00942bdcaf4193e5079ce930387191f24c9ec519b3cc57896f1cde19bca8a31"
+    },
+    {
+      "file": "Textures/Atlas_Monsters.png",
+      "archive_path": "Ultimate Monsters/Flying/glTF/Atlas_Monsters.png",
+      "sha256": "b970ed1359ce749fd81a8395d58ff5f3044d843213e17fb94b97892d417c0af9"
+    },
+    {
+      "file": "License.txt",
+      "archive_path": "Ultimate Monsters/License.txt",
+      "sha256": "de990ef6fc68cffd7fd1ae342c4d0c823b541b8848d8f76bca5d3339f4de6f6e"
+    },
+    {
+      "file": "Models/Ghost.fbx",
+      "archive_path": "Ultimate Monsters/Flying/FBX/Ghost.fbx",
+      "sha256": "e7d6ce7e0b08e43c387ab814ef1c7db6464e80f3f5eeabba224862445cd3910c",
+      "added": "2026-10-07"
+    },
+    {
+      "file": "Models/Armabee.fbx",
+      "archive_path": "Ultimate Monsters/Flying/FBX/Armabee.fbx",
+      "sha256": "da94f919801b128ec422042b8356fa4cbb4e7301af3715eac5ced0cf78e1518e",
+      "added": "2026-10-07"
+    },
+    {
+      "file": "Models/Demon.fbx",
+      "archive_path": "Ultimate Monsters/Flying/FBX/Demon.fbx",
+      "sha256": "f2054e37e9b14fb9a476dd9aff8448d027a8195e07cd035ba9025db4d55e202d",
+      "added": "2026-10-07"
+    }
+  ]
+}

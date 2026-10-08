@@ -35,3 +35,8 @@ sysinfo.txt
 .env
 .env.*
 !.env.example
+
+# Mixamo permits game use, but not public redistribution of raw assets.
+# Keep import metadata and source records so locally restored assets retain GUIDs.
+/Assets/ThirdParty/Mixamo/**/*.fbx
+/Assets/ThirdParty/Mixamo/**/*.png

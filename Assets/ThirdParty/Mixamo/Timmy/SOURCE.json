@@ -1,0 +1,38 @@
+{
+  "acquired": "2026-10-05",
+  "source": "https://www.mixamo.com/",
+  "character": "Timmy",
+  "download_format": "FBX for Unity",
+  "model_pose": "T-pose, with skin",
+  "animation_settings": "Without Skin, 30 FPS, no keyframe reduction; Running In Place",
+  "animations": {
+    "Idle": "Standing Idle",
+    "Running": "Running With Intention",
+    "BowAim": "Standing Aim Idle 01",
+    "Throw": "Throw"
+  },
+  "license_reference": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
+  "license_summary": "Mixamo characters and animations are royalty free for personal, commercial and nonprofit projects including video games; they are not CC0.",
+  "files": [
+    {
+      "path": "Models/Timmy.fbx",
+      "sha256": "5117674edf74f130d58fb148bbdeb4ac66e117fff2767799af8bb34fa0f2fd72"
+    },
+    {
+      "path": "Animations/Idle.fbx",
+      "sha256": "ce571adf5f80139d2deace653ad78a1a97d11a3b8f8fc2228e65dda125933d8b"
+    },
+    {
+      "path": "Animations/BowAim.fbx",
+      "sha256": "f4c7fae5051e55b6ec110cb71dce7717d53af65c37ea3c31bcad177b99ffe97d"
+    },
+    {
+      "path": "Animations/Throw.fbx",
+      "sha256": "d7c8df0a74c4a98b96a1f663d89b07fd137db756cb51cadd554fa586575c52b9"
+    },
+    {
+      "path": "Animations/Running.fbx",
+      "sha256": "ab867f084bf9ee5c70ebdd6a34c9bf7e756033f38b394a7313eeb9c10b5e2678"
+    }
+  ]
+}

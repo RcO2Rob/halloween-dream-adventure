@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-07",
+  "unity": "6000.6.2f1",
+  "platform": "macOS arm64",
+  "build": "0.6.0",
+  "development_build": true,
+  "executable_sha256": "0fac941b7172fc05a5f0ed87392aa8bb533fd919c0558a1a6612e860941fe4ce",
+  "scene_validation": "3 saved chapters passed, original scene hashes unchanged",
+  "scene_sha256": {
+    "Assets/Scenes/03_PumpkinKeep.unity": "873b85f6dddb7e75eae00010539fa8fd9205732386140f11182be0620462e3f8",
+    "Assets/Scenes/01_FirstLight.unity": "bdc6a5e381ff692af9afcedf9641c0e96e9dcbdde1e2e40e8918d3cb6afe08df",
+    "Assets/Scenes/02_ShatteredGardens.unity": "fc99cef4c578811c5ff3e37046b6f3de6bec03832fb5bbdde97b3b0894552e4e"
+  },
+  "runtime_checks": 141,
+  "runtime_mode": "Rendered standalone player; real interactions and physics with controlled teleports and accelerated time",
+  "new_checks": "23 jump checks: grounded and paused input, takeoff/rise/fall/landing, mesh deformation and bent knees, configured height, double-jump prevention, landing reset, head collision, airborne movement/candy/bow pose, and no dash immunity from jumping",
+  "visual_inspection": "Rendered rising, falling, landing, existing bow and follow-camera screenshots inspected",
+  "build_method": "Temporary project copy, keeping the open Unity editor and saved map layouts intact; source bytes and executable hash verified",
+  "human_playtest": "Not performed",
+  "github_sync": "Not performed, per user instruction",
+  "zip_integrity": "Passed, packaged executable hash matches tested build",
+  "zip_sha256": "574172f8e79350db1105f37dd0458653df90bb8f70cc51ce932241b1fea952cd",
+  "zip_bytes": 62720264
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "scene": "03_PumpkinKeep.unity",
+    "before_sha256": "873b85f6dddb7e75eae00010539fa8fd9205732386140f11182be0620462e3f8",
+    "after_sha256": "61edcc9065734b15b6e82c443db760df5a5f84c4deef9dc4105a12a66bd9c65d",
+    "removed_records": 49,
+    "new_records": 54,
+    "changed_surviving_records": 8,
+    "preservation": "Removed objects confined to selected bridge solid/outline; surviving objects unchanged except selected route names/child lists, new path references and explicit existing jump defaults"
+  },
+  {
+    "scene": "01_FirstLight.unity",
+    "before_sha256": "bdc6a5e381ff692af9afcedf9641c0e96e9dcbdde1e2e40e8918d3cb6afe08df",
+    "after_sha256": "3f611ed40e5140a2ac57b1c16b8bad668f775976f00ea0caceea17de6b043b8e",
+    "removed_records": 57,
+    "new_records": 54,
+    "changed_surviving_records": 9,
+    "preservation": "Removed objects confined to selected bridge solid/outline; surviving objects unchanged except selected route names/child lists, new path references and explicit existing jump defaults"
+  },
+  {
+    "scene": "02_ShatteredGardens.unity",
+    "before_sha256": "fc99cef4c578811c5ff3e37046b6f3de6bec03832fb5bbdde97b3b0894552e4e",
+    "after_sha256": "c03c019693b652009f1b5a91e503e1dbd8d6e81ff7747e9df9c26cb6f9ed16a3",
+    "removed_records": 65,
+    "new_records": 71,
+    "changed_surviving_records": 10,
+    "preservation": "Removed objects confined to selected bridge solid/outline; surviving objects unchanged except selected route names/child lists, new path references and explicit existing jump defaults"
+  }
+]

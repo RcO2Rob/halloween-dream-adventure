@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-05",
+  "unity": "6000.6.2f1",
+  "platform": "macOS arm64",
+  "build": "0.3.0",
+  "development_build": true,
+  "executable_sha256": "526c0aab150047ea218581ff7d9d4b19bfe92653857ea1519b130924c7c36773",
+  "scene_validation": "3 chapters passed",
+  "runtime_checks": 97,
+  "runtime_mode": "Rendered standalone player; real interactions and physics with controlled teleports and accelerated time",
+  "new_checks": "Timmy humanoid avatar and textures, animation-driven skin deformation, controller movement, visible size, hand-following bow/candy, aim/throw state and return to locomotion, same avatar in all 3 scenes",
+  "human_playtest": "Not performed",
+  "github_sync": "Not performed, per user instruction"
+}

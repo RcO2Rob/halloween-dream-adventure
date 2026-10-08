@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/01_FirstLight.unity
+    guid: 6bc983fadf7d544c2a91d2d3127c3dee
+  - enabled: 1
+    path: Assets/Scenes/02_ShatteredGardens.unity
+    guid: 0a08e52a0d43a4e938ff61acd73f6274
+  - enabled: 1
+    path: Assets/Scenes/03_PumpkinKeep.unity
+    guid: 7272a5ca6ba3f4b2699e0f9430f79b02
+  m_configObjects: {}
