@@ -347,7 +347,7 @@ namespace LostDream
             return rune;
         }
 
-        static FlyingDragon Dragon(Transform parent, Vector3 point, float radius, int health, NightmareKind kind = NightmareKind.Dragon)
+        public static FlyingDragon Dragon(Transform parent, Vector3 point, float radius, int health, NightmareKind kind = NightmareKind.Dragon)
         {
             var root = DreamArt.Group("Small nightmare dragon", parent, point);
             var dragon = root.AddComponent<FlyingDragon>(); dragon.home = point; dragon.patrolRadius = radius; dragon.health = health;

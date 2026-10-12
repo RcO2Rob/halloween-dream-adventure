@@ -1,12 +1,11 @@
 {
+  "version": "0.10.0",
   "passed": true,
-  "chapter_2": "Only three model subtrees/animation references, enemy kinds, warning materials and default pink fields changed",
-  "surviving_objects_unchanged_except_allowed": true,
-  "removed_model_objects": 220,
-  "added_prefab_records": 9,
-  "modified_records": 13,
-  "enemy_world_positions_health_and_counts_preserved": true,
-  "islands_lanterns_bridges_platforms_and_gates_preserved": true,
-  "01_FirstLight": "Byte-identical",
-  "03_PumpkinKeep": "Byte-identical"
+  "method": "SHA-256 equality of all three saved scene files before edits, in tested copy and after delivery",
+  "scenes": {
+    "Assets/Scenes/03_PumpkinKeep.unity": "61edcc9065734b15b6e82c443db760df5a5f84c4deef9dc4105a12a66bd9c65d",
+    "Assets/Scenes/01_FirstLight.unity": "3f611ed40e5140a2ac57b1c16b8bad668f775976f00ea0caceea17de6b043b8e",
+    "Assets/Scenes/02_ShatteredGardens.unity": "bfa59659f4c21ffad9a54627388de47b93d75508438e5bae3b1c1a706a1ad441"
+  },
+  "scene_regeneration_performed": false
 }

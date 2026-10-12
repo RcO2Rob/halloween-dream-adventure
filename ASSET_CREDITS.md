@@ -12,10 +12,13 @@ The player is **Timmy** from [Mixamo](https://www.mixamo.com/), with Mixamo huma
 | Timmy idle, running, bow aiming, throwing | Adobe Mixamo authored humanoid animation | `Idle`, `Running`, `Standing Aim Idle 01`, `Throw`; locomotion blend, upper-body mask and prop following are project adaptations |
 | Jump takeoff/airborne/landing poses, forward bow pose, candy carrying pose, floating, boss squash | Original procedural animation adaptations | Chest/head alignment and two-bone arm solve over Mixamo bow aiming, hand target adjustment in `TimmyAnimation.cs`; environment and boss scripts |
 | Event audio and dream ambience | Original deterministic synthesized PCM audio generated for this project with Codex assistance; no commercial samples or recordings | `Assets/Resources/Audio`; 22,050 Hz mono WAV |
+| Exploration, boss and half-health background scores | Three original algorithmic compositions created for this project with Codex assistance; synthesized instruments, no external recordings or borrowed compositions | `Assets/Resources/Audio/Music`; 22,050 Hz stereo PCM16 WAV; generator and note sequences in `tools/generate_music.py`, file hashes in `Music/SOURCE.json` |
 | Interface font | Unity bundled `LegacyRuntime.ttf` | Unity built-in font resource |
 | Engine and primitive meshes | Unity | Governed by Unity's terms; engine binaries are excluded from this source repository |
 
 The game develops the user's three-level dream/lantern/dragon/pumpkin-boss concept. Tutorial seals, dash immunity, enemy timings, checkpoint healing, and visual treatment are prototype design choices.
+
+The v0.10 background scores use a shared original melodic motif with bell/plucked-string tones, pads, bass and synthesized percussion. `dream_journey` is a 46.8-second exploration loop at 82 BPM; `pumpkin_battle` is a 34.3-second combat loop at 112 BPM; `pumpkin_rage` is a 31.0-second half-health loop at 124 BPM. Circular reverb carries instrument tails across loop boundaries. Runtime music uses two looping sources with a 1.5-second crossfade; event effects remain on a separate source.
 
 ## Quaternius acquisition and adaptation
 

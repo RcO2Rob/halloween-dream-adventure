@@ -15,7 +15,7 @@ public static class PrototypeBuilder
     }
     public static void BuildCurrentScenes()
     {
-        PlayerSettings.bundleVersion = "0.9.0";
+        PlayerSettings.bundleVersion = "0.10.0";
         MakeCombatMaterials();
         ValidateScenes();
         AssetDatabase.SaveAssets();
@@ -62,7 +62,7 @@ public static class PrototypeBuilder
     public static void AddJumpPlatformsToCurrentScenes()
     {
         if (!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
-        PlayerSettings.bundleVersion = "0.9.0";
+        PlayerSettings.bundleVersion = "0.10.0";
         for (int i = 0; i < 3; i++)
         {
             var scene = EditorSceneManager.OpenScene("Assets/Scenes/" + DreamGame.SceneNames[i] + ".unity");
@@ -89,7 +89,7 @@ public static class PrototypeBuilder
         MonsterAssetBuilder.BuildVarietyPrefabs(); TimmyAssetBuilder.BuildPrefab();
         PlayerSettings.companyName = "Lost Dream Studio";
         PlayerSettings.productName = "Lanterns of the Lost Dream";
-        PlayerSettings.bundleVersion = "0.9.0";
+        PlayerSettings.bundleVersion = "0.10.0";
         PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.Standalone, "com.lostdream.halloween");
         PlayerSettings.defaultScreenWidth = 1440; PlayerSettings.defaultScreenHeight = 900;
         PlayerSettings.fullScreenMode = FullScreenMode.Windowed;

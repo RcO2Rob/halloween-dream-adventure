@@ -58,6 +58,18 @@ The [normal follow view](qa/00-perspective-follow.png), [dragon encounter](qa/01
 
 These are implementation and design-review observations, not invented participant feedback.
 
+## v0.10 owner feedback and implementation
+
+The owner described the overall prototype as good and requested two additions: two reinforcement summons during the castle boss fight, with the boss attacking concurrently, and background music to address the monotonous audio. This is owner feedback, not an independent first-time participant study.
+
+The implementation adds one dragon and one ghost at awakening, then one evolved dragon and one diving demon at half health. Two-second portal warnings precede spawning. Imported enemy models, their existing attack patterns, real bow collisions and the boss's normal bomb/charge state machine remain active. Summoned enemies drop the current matching candy on real ground outside the boss footprint and at least 2.5 units from other sweets. Three original melodic scores crossfade between exploration, battle and half-health battle. Pause freezes music position and summon warnings; retry resets waves; defeat/victory removes reinforcements, pending portals and hostile projectiles. All saved scene files remain unchanged.
+
+The QA iterations retained under `qa/iterations/v0.10.0-*` include failures and repairs. Reward placement was strengthened for a moving boss and repeated wave locations. Cursor selection was adjusted so a nearby monster takes priority over boss aim assistance. The traversal regression now freezes enemy attacks during its fall-only checks; species combat is tested separately with actual attacks. The boss regression waits for enough time in a real vulnerable window to pick up candy, capture a screenshot and launch a projectile, and removes its deliberately injected test sweet after the color-swap checks. These test changes do not extend the game's vulnerability windows or disable enemies in normal play.
+
+The final v0.10 macOS arm64 build passed 339 functional integration checks through all three chapters and boss victory. All 247 packaged app entries matched the tested build, and ZIP contents matched the same manifest. The final report is `qa/integration-results.json`, with build/package evidence in `qa/build-validation.json` and a separate saved-map hash audit. Background volume zero/restore, mute persistence, pause sample position, stage transitions and victory fade-out were checked; no independent listener assessment was performed.
+
+For the next owner playtest, check whether the two simultaneous threats feel manageable, whether the bow remains easy to aim while the boss moves, and whether music stays below warning/shot sounds. The compositions and their synthesis source are included; automated import/playback checks do not establish a listener's assessment of musical quality.
+
 ## First independent playtest
 
 Ask a person unfamiliar with the project to play from the title screen with only the game's own instructions. Observe before explaining. Record:

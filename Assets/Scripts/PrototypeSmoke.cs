@@ -30,6 +30,7 @@ namespace LostDream
         }
         void Start()
         {
+            UnityEngine.Random.InitState(20261012);
             outputDirectory = "/tmp/lost-dream-smoke";
             string[] args = Environment.GetCommandLineArgs();
             int index = Array.IndexOf(args, "--test-output");
@@ -78,6 +79,7 @@ namespace LostDream
             Require(DreamGame.Instance != null && DreamGame.Instance.levelIndex == 0, "Tutorial loads in standalone player");
             yield return Capture("01-title");
             DreamGame.Instance.StartPlaying();
+            yield return MusicChecks();
             if (Environment.GetCommandLineArgs().Contains("--boss-smoke"))
             {
                 DreamGame.Instance.LoadChapter(2);
@@ -85,6 +87,7 @@ namespace LostDream
                 Time.timeScale = 3;
                 yield return BossBattle();
                 yield return Capture("03-victory");
+                yield return SummonCleanupChecks();
                 Save(true, "");
                 Debug.Log("LOST_DREAM_BOSS_SMOKE_PASSED: " + checks.Count + " boss integration checks.");
                 Application.Quit(0);
@@ -238,6 +241,7 @@ namespace LostDream
             }
             yield return BossBattle();
             yield return Capture("03-victory");
+            yield return SummonCleanupChecks();
             Save(true, null);
             Debug.Log("LOST_DREAM_SMOKE_PASSED: " + checks.Count + " functional integration checks.");
             Application.Quit(0);
@@ -373,6 +377,17 @@ namespace LostDream
             game.ReplenishCandy();
             Require(FindObjectsByType<CandyPickup>(FindObjectsSortMode.None).Count(x => x.hue == boss.RequiredHue) >= 2,
                 "Refill guarantees required color even when floor slots are occupied by wrong colors");
+            Destroy(pink.gameObject);
+            yield return null;
+            var covered = FindObjectsByType<CandyPickup>(FindObjectsSortMode.None);
+            for (int i = 0; i < covered.Length; i++)
+                covered[i].transform.position = new Vector3(boss.transform.position.x + i * .1f, .65f, boss.transform.position.z);
+            game.ReplenishCandy();
+            Require(FindObjectsByType<CandyPickup>(FindObjectsSortMode.None).Count(x => x.hue == boss.RequiredHue &&
+                Vector3.ProjectOnPlane(x.transform.position - boss.transform.position, Vector3.up).magnitude >= 4 && x.transform.position.y < 1) >= 2,
+                "Covered candy stock cannot block safe matching-color ground replenishment");
+            foreach (var sweet in covered) Destroy(sweet.gameObject);
+            yield return null;
             Time.timeScale = previousScale;
         }
         IEnumerator BossBattle()
@@ -390,6 +405,14 @@ namespace LostDream
             player.Teleport(new Vector3(0, .1f, 6));
             yield return new WaitForSeconds(.3f);
             Require(game.boss.AwakeInArena, "Boss wakes when entering restored courtyard");
+            Require(game.boss.SummonWavesStarted == 1 && game.boss.PendingSummons == 2 && game.boss.ActiveSummons == 0,
+                "Awakening warns for exactly two enemies before the first summon wave materializes");
+            game.Pause();
+            yield return new WaitForSecondsRealtime(.3f);
+            Require(game.boss.SummonWavesCompleted == 0 && game.boss.PendingSummons == 2,
+                "Pausing freezes pending summons without spawning enemies");
+            game.Resume(); Time.timeScale = 3;
+            yield return SummonWaveChecks(game, 1);
             game.gameCamera.GetComponent<DreamCamera>().Snap();
             Vector3 heroScreen = game.gameCamera.WorldToViewportPoint(player.transform.position + Vector3.up);
             Vector3 bossScreen = game.gameCamera.WorldToViewportPoint(game.boss.AimPosition);
@@ -425,7 +448,10 @@ namespace LostDream
                     player.Teleport(safe[corner++ % safe.Length]);
                     changeAt = Time.time + .7f;
                 }
-                if (game.boss.Exposed)
+                // Enter a fresh enough window for pickup, screenshot and projectile
+                // travel, rather than asserting damage after an expired opening.
+                float minimumWindow = !testedColors ? 3.4f : game.boss.SecondPhase ? 1.5f : 2.1f;
+                if (game.boss.Exposed && game.boss.PhaseSecondsLeft >= minimumWindow)
                 {
                     if (!testedColors)
                     {
@@ -466,6 +492,8 @@ namespace LostDream
                     if (hp == game.boss.maxHealth / 2 + 1)
                     {
                         Require(game.boss.SecondPhase, "Candy hit at exactly half health activates the second phase");
+                        Require(game.boss.SummonWavesStarted == 2, "Half health triggers the second and final summon wave");
+                        yield return SummonWaveChecks(game, 2);
                         yield return BossChargeChecks(game);
                         player.Heal(5);
                     }
@@ -479,6 +507,168 @@ namespace LostDream
             Require(FindObjectsByType<NightmareBomb>(FindObjectsSortMode.None).Length == 0, "Victory clears pending bomb hazards");
             Require(game.boss.ChargesCompleted > 0 && game.boss.ChargeWarning == null,
                 "Boss victory includes second-phase charges and leaves no charge warning");
+            Require(game.boss.SummonWavesStarted == 2 && game.boss.SummonWavesCompleted == 2,
+                "The entire boss fight summons exactly twice with no repeat waves");
+            Require(game.boss.ActiveSummons == 0 && game.boss.PendingSummons == 0 && game.dragons.Length == 0,
+                "Victory removes summoned enemies and pending portals from target registration");
+            yield return new WaitForSecondsRealtime(1.7f);
+            Require(game.audioSystem.MusicTrack == "" && game.audioSystem.PlayingMusicSources == 0,
+                "Victory fades battle music out without leaving duplicate looping sources");
+        }
+        IEnumerator MusicChecks()
+        {
+            var game = DreamGame.Instance;
+            var audio = game.audioSystem;
+            foreach (string track in new[] { "dream_journey", "pumpkin_battle", "pumpkin_rage" })
+            {
+                var clip = Resources.Load<AudioClip>("Audio/Music/" + track);
+                Require(clip != null && clip.length > 20 && clip.channels == 2,
+                    "Original stereo background score imports and lasts more than twenty seconds: " + track);
+            }
+            yield return new WaitForSecondsRealtime(.2f);
+            Require(audio.MusicTrack == "dream_journey" && audio.MusicClip != null && audio.MusicPlaying,
+                "Exploration music plays automatically on normal start");
+            float volume = audio.musicVolume;
+            audio.musicVolume = 0;
+            yield return new WaitForSecondsRealtime(1.6f);
+            Require(audio.MusicGain == 0 && audio.MusicPlaying,
+                "Setting background volume to zero silences the score without losing its playback timeline");
+            audio.musicVolume = volume;
+            yield return new WaitForSecondsRealtime(.4f);
+            Require(audio.MusicGain > 0 && audio.MusicPlaying,
+                "Raising background volume restores the current score without restarting the scene");
+            audio.ToggleMute();
+            Require(audio.Muted && AudioListener.volume == 0, "Mute silences background music and event audio together");
+            audio.ToggleMute();
+            Require(!audio.Muted && AudioListener.volume == 1, "Unmute restores music and event audio");
+            game.Pause(); yield return null;
+            int sample = audio.MusicTimeSamples;
+            yield return new WaitForSecondsRealtime(.2f);
+            Require(audio.MusicPaused && !audio.MusicPlaying && audio.MusicTimeSamples == sample,
+                "Pause stops the music timeline instead of restarting the track");
+            game.Resume(); yield return null;
+            Require(!audio.MusicPaused && audio.MusicPlaying, "Resume continues the background score");
+        }
+        IEnumerator SummonCleanupChecks()
+        {
+            var previous = DreamGame.Instance;
+            previous.audioSystem.ToggleMute();
+            previous.Retry();
+            yield return new WaitForSecondsRealtime(.6f);
+            var game = DreamGame.Instance;
+            Require(game.audioSystem.Muted && AudioListener.volume == 0,
+                "Music mute preference survives retry and scene recreation");
+            game.audioSystem.ToggleMute();
+            Require(game.boss.SummonWavesStarted == 0 && game.dragons.Length == 0 && !game.boss.AwakeInArena,
+                "Retry resets summon counters and removes all reinforcements from the previous fight");
+            game.player.automation = true;
+            game.player.Teleport(game.lanterns[0].safeCheckpoint);
+            yield return new WaitForSeconds(.1f);
+            Require(game.player.Interact(), "Cleanup regression restores the castle entrance lantern");
+            game.player.Teleport(new Vector3(0, .12f, 6));
+            yield return new WaitForSeconds(.2f);
+            Require(game.boss.PendingSummons == 2, "Fresh fight starts two pending summon portals");
+            game.Defeat(); yield return null;
+            Require(game.boss.PendingSummons == 0 && game.dragons.Length == 0,
+                "Defeat clears pending portals before they can materialize");
+            yield return new WaitForSeconds(2.2f);
+            Require(game.boss.SummonWavesCompleted == 0 && game.boss.ActiveSummons == 0,
+                "A defeated fight never creates delayed reinforcement enemies");
+            game.Retry(); yield return new WaitForSecondsRealtime(.6f);
+            game = DreamGame.Instance; game.player.automation = true;
+            game.player.Teleport(game.lanterns[0].safeCheckpoint);
+            yield return new WaitForSeconds(.1f); game.player.Interact();
+            game.player.Teleport(new Vector3(0, .12f, 6));
+            yield return new WaitForSeconds(2.4f);
+            Require(game.boss.ActiveSummons == 2, "Victory cleanup regression begins with two living summoned enemies");
+            DreamProjectile.Spawn(new Vector3(0, 7, 7), Vector3.forward, false, true);
+            game.Win(); yield return null;
+            Require(game.boss.ActiveSummons == 0 && game.boss.PendingSummons == 0 && game.dragons.Length == 0 &&
+                !FindObjectsByType<DreamProjectile>(FindObjectsSortMode.None).Any(x => x.hostile),
+                "Victory clears living reinforcements and their hostile projectiles without requiring extra kills");
+        }
+        IEnumerator SummonWaveChecks(DreamGame game, int wave)
+        {
+            var boss = game.boss; var player = game.player;
+            int initialBombs = boss.BombsLaunched, initialCharges = boss.ChargesCompleted;
+            float deadline = Time.time + 6;
+            while (boss.SummonWavesCompleted < wave && Time.time < deadline) { player.Heal(5); yield return null; }
+            Require(boss.SummonWavesCompleted == wave && boss.PendingSummons == 0,
+                "Warned summon wave materializes and clears its portals: " + wave);
+            var enemies = game.dragons.Where(x => x != null && x.bossSummon && !x.Defeated).ToArray();
+            Require(enemies.Length == 2 && enemies.Any(x => x.kind == NightmareKind.Dragon) &&
+                enemies.Any(x => x.kind == (wave == 1 ? NightmareKind.Ghost : NightmareKind.Demon)),
+                "Wave has an arrow-targetable dragon and the appropriate small monster: " + wave);
+            Require(enemies.All(x => x.modelAnimation != null && x.GetComponent<Collider>().enabled),
+                "Summoned enemies have real Quaternius animated models and colliders");
+            if (wave == 1)
+            {
+                var enemy = enemies.First(x => x.kind == NightmareKind.Ghost);
+                Vector3 saved = enemy.transform.position;
+                game.gameCamera.GetComponent<DreamCamera>().Snap();
+                enemy.transform.position = boss.AimPosition + (game.gameCamera.transform.position - boss.AimPosition).normalized * 4;
+                Physics.SyncTransforms();
+                Vector3 cursor = game.gameCamera.WorldToScreenPoint(enemy.AimPosition);
+                Vector3 bossCursor = game.gameCamera.WorldToScreenPoint(boss.AimPosition);
+                Require(Vector2.Distance(cursor, bossCursor) < 100 &&
+                    Vector3.Distance(player.AimFromScreenPoint(cursor), enemy.AimPosition) < .01f,
+                    "Cursor aimed at a summoned monster near the boss selects the monster instead of boss aim assist");
+                enemy.transform.position = saved; Physics.SyncTransforms();
+            }
+            Require(game.audioSystem.MusicTrack == (wave == 1 ? "pumpkin_battle" : "pumpkin_rage"),
+                "Music transitions to the appropriate boss stage: " + wave);
+            foreach (var enemy in enemies)
+                Require(Physics.RaycastAll(enemy.home + Vector3.up, Vector3.down, 8, ~(1 << 2), QueryTriggerInteraction.Ignore)
+                    .Any(floor => floor.normal.y > .8f && floor.point.y < 1 &&
+                        floor.collider.GetComponentInParent<FlyingDragon>() == null && floor.collider.GetComponentInParent<PlayerMotor>() == null),
+                    "Summoned enemy home is over actual courtyard floor: " + enemy.kind);
+            yield return Capture("03-summon-wave-" + wave);
+            // Observe live concurrent attacks before removing them for charge isolation.
+            deadline = Time.time + 10;
+            float relocateAt = 0; bool right = false;
+            while ((enemies.All(x => x.AttacksCompleted == 0) ||
+                boss.BombsLaunched == initialBombs && boss.ChargesCompleted == initialCharges) && Time.time < deadline)
+            {
+                if (Time.time > relocateAt)
+                {
+                    right = !right; player.Teleport(new Vector3(right ? 8 : -8, .12f, 10));
+                    relocateAt = Time.time + 1.1f;
+                }
+                player.Heal(5); yield return null;
+            }
+            Require(enemies.Any(x => x.AttacksCompleted > 0), "Summoned enemies actively attack the player: " + wave);
+            Require(boss.BombsLaunched > initialBombs || boss.ChargesCompleted > initialCharges,
+                "The pumpkin continues its own attacks while reinforcements are alive: " + wave);
+            // Isolate reward assertions from automatic cycle recoloring and a moving
+            // boss footprint; concurrent combat was observed above with the boss live.
+            boss.enabled = false;
+            foreach (var enemy in enemies)
+            {
+                int health = enemy.health;
+                deadline = Time.time + 10;
+                while (!enemy.Defeated && Time.time < deadline)
+                {
+                    player.Heal(5);
+                    Vector3 position = enemy.AimPosition + Vector3.back * 3;
+                    player.Teleport(new Vector3(Mathf.Clamp(position.x, -9, 9), .12f, Mathf.Clamp(position.z, 2, 23)));
+                    player.FireAt(enemy.AimPosition);
+                    yield return new WaitForSeconds(.4f);
+                }
+                Require(enemy.Defeated && enemy.health <= 0 && health >= 2,
+                    "Real bow arrows defeat the summoned " + enemy.kind + " in wave " + wave);
+                Require(enemy.DroppedCandy != null && enemy.DroppedCandy.hue == boss.RequiredHue &&
+                    enemy.DroppedCandy.transform.position.y < 1 &&
+                    Vector3.ProjectOnPlane(enemy.DroppedCandy.transform.position - boss.transform.position, Vector3.up).magnitude >= 4,
+                    "Defeated reinforcement rewards matching candy on safe floor outside the boss footprint");
+                Require(FindObjectsByType<CandyPickup>(FindObjectsSortMode.None).Where(x => x != enemy.DroppedCandy).All(x =>
+                    Vector3.ProjectOnPlane(x.transform.position - enemy.DroppedCandy.transform.position, Vector3.up).magnitude >= 2.5f),
+                    "Reward candy does not overlap previous waves or existing different-color pickups");
+            }
+            foreach (var projectile in FindObjectsByType<DreamProjectile>(FindObjectsSortMode.None))
+                if (projectile.hostile) Destroy(projectile.gameObject);
+            player.Teleport(new Vector3(-9, .12f, 4)); player.Heal(5);
+            boss.enabled = true;
+            Require(boss.ActiveSummons == 0, "Both summons can be cleared without damaging the boss: " + wave);
         }
         IEnumerator BossChargeChecks(DreamGame game)
         {
@@ -687,6 +877,12 @@ namespace LostDream
         IEnumerator JumpRouteChecks(DreamGame game, DreamPath path)
         {
             var player = game.player;
+            // The traversal regression measures falls. Isolate it from random enemy
+            // projectile damage; enemy attacks have their own live combat checks.
+            var activeEnemies = game.dragons.Where(x => x != null && x.enabled && !x.Defeated).ToArray();
+            foreach (var enemy in activeEnemies) enemy.enabled = false;
+            foreach (var projectile in FindObjectsByType<DreamProjectile>(FindObjectsSortMode.None))
+                if (projectile.hostile) Destroy(projectile.gameObject);
             int chapter = game.levelIndex + 1;
             Require(path.IsJumpRoute && path.Revealed && path.jumpPlatforms.Length == (chapter == 2 ? 3 : 2),
                 "Lantern reveals the chapter's round jumping route " + chapter);
@@ -768,6 +964,7 @@ namespace LostDream
                 player.Teleport(path.jumpExit.position);
                 yield return new WaitForSeconds(.2f);
             }
+            foreach (var enemy in activeEnemies) if (enemy != null) enemy.enabled = true;
         }
         IEnumerator TutorialSupplyChecks()
         {

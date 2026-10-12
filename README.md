@@ -16,11 +16,15 @@ Lanterns restore bridge collision permanently, heal one health point, and save a
 
 The three playable scenes, Timmy humanoid player with idle/run/aim/throw animations, animated Quaternius enemies, procedural boss and environments, event sounds, menu, pause, retry, chapter selection, and macOS export are implemented. This is a prototype; balance and independent human playtesting remain development work.
 
+v0.10 adds two one-time reinforcement waves to the castle fight. Awakening calls an ember dragon and ghost; half health calls an evolved dragon and diving demon. Each wave has a two-second portal warning, and the Pumpkin King's normal attacks continue concurrently. Use the bow to defeat summoned enemies; they reward the required candy hue. Boss victory clears living summons, pending portals and hostile projectiles. These enemies are generated at runtime over actual ground, preserving all saved map layouts.
+
+Three original synthesized melodic scores now loop for exploration, boss combat and the faster half-health stage. A 1.5-second crossfade connects tracks; pause/resume preserves playback position, and M mutes both music and event effects across retries. Results fade music out. Volume is adjustable on the `DreamAudio` component. Scores, provenance and their reproducible generator are included in this repository.
+
 ## Play
 
-On an Apple Silicon Mac, open the local `Builds/macOS/Lanterns of the Lost Dream.app`. The local archive is `Builds/Lanterns-of-the-Lost-Dream-v0.9.0-macOS-arm64.zip`; the previous v0.1–v0.8.0 archives are retained locally. Builds are excluded from Git and are not downloadable from this repository. Play all three chapters or choose a chapter on the title screen.
+On an Apple Silicon Mac, open the local `Builds/macOS/Lanterns of the Lost Dream.app`. The v0.10 archive is `Builds/Lanterns-of-the-Lost-Dream-v0.10.0-macOS-arm64.zip`; the previous archives are retained locally. Builds are excluded from Git and are not downloadable from this repository. Play all three chapters or choose a chapter on the title screen.
 
-The v0.9 source snapshot is prepared for [the public GitHub repository](https://github.com/RcO2Rob/halloween-dream-adventure). It includes gameplay, all three saved maps, CC0 monster assets, and validation records. Mixamo FBX files and extracted textures stay local under their redistribution terms. A fresh clone requires [restoring Timmy assets](docs/MIXAMO_SETUP.md) before opening Unity or playing; the existing local project already has these files.
+This v0.10 source snapshot is published in [the public GitHub repository](https://github.com/RcO2Rob/halloween-dream-adventure). The snapshot includes gameplay, all three saved maps, CC0 monster assets, original music, and validation records. Mixamo FBX files and extracted textures stay local under their redistribution terms. A fresh clone requires [restoring Timmy assets](docs/MIXAMO_SETUP.md) before opening Unity or playing; the existing local project already has these files.
 
 | Input | Action |
 | --- | --- |
@@ -67,4 +71,4 @@ For opt-in runtime integration checks, launch the built executable with `--smoke
 - [Playtest plan and iteration log](docs/PLAYTEST.md)
 - [Asset provenance](ASSET_CREDITS.md)
 
-Unity project folders `Assets`, `Packages`, and `ProjectSettings` are included, except for raw Mixamo assets. Generated caches, local builds, and raw Mixamo FBX/PNG files are excluded by `.gitignore`; their existing local copies are preserved. Historical QA records describe the build and sync status at the time of each run. The v0.9 integration report records 283 passing automated checks; independent human playtesting remains pending.
+Unity project folders `Assets`, `Packages`, and `ProjectSettings` are included, except for raw Mixamo assets. Generated caches, local builds, and raw Mixamo FBX/PNG files are excluded by `.gitignore`; their existing local copies are preserved. Historical QA records describe the build and sync status at the time of each run. The v0.10 integration report records 339 passing automated checks; independent human playtesting remains pending.

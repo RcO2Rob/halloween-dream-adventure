@@ -1,0 +1,38 @@
+{
+  "source": "Original algorithmic compositions authored for this project with Codex assistance",
+  "samples": "Synthesized oscillators and deterministic noise only; no external samples or music",
+  "format": "22050 Hz stereo PCM16 WAV",
+  "generator": "tools/generate_music.py",
+  "tracks": [
+    {
+      "file": "dream_journey.wav",
+      "bpm": 82,
+      "bars": 16,
+      "seconds": 46.829251700680274,
+      "peak": 0.78,
+      "rms": 0.15865953500547453,
+      "loop_edge_delta": 0.0070857336738690095,
+      "sha256": "5867480e78ba5a4811de3020de348575ca382de7575db28eb4b3c11687b6087a"
+    },
+    {
+      "file": "pumpkin_battle.wav",
+      "bpm": 112,
+      "bars": 16,
+      "seconds": 34.285714285714285,
+      "peak": 0.78,
+      "rms": 0.15939591666262498,
+      "loop_edge_delta": 0.00929141484772314,
+      "sha256": "092b0d3721dc18ebc97ec91cb38548a76d4cc2cd5a9606e05f82698e24ae7c47"
+    },
+    {
+      "file": "pumpkin_rage.wav",
+      "bpm": 124,
+      "bars": 16,
+      "seconds": 30.967755102040815,
+      "peak": 0.78,
+      "rms": 0.14756744239775743,
+      "loop_edge_delta": 0.0011956673619947789,
+      "sha256": "72140a7c259a6e9f9f4afbeb8937e13b3d12c77c45ecf9246acb58a2407bb1bd"
+    }
+  ]
+}

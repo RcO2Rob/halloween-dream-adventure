@@ -1,4 +1,7 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LostDream
 {
@@ -21,7 +24,17 @@ namespace LostDream
         public Vector3 ChargeTarget => chargeEnd;
         public Vector3 ChargeStart => chargeStart;
         public int ChargesCompleted { get; private set; }
+        public int BombsLaunched { get; private set; }
         public GameObject ChargeWarning => chargeWarning;
+        public int SummonWavesStarted { get; private set; }
+        public int SummonWavesCompleted { get; private set; }
+        public int ActiveSummons => summoned.Count(x => x != null && !x.Defeated);
+        public int PendingSummons => summonPortals.Count;
+        public float PhaseSecondsLeft => Mathf.Max(0, timer);
+        [Tooltip("Seconds of visible warning before summoned enemies appear.")]
+        public float summonWarningSeconds = 2;
+        readonly List<FlyingDragon> summoned = new List<FlyingDragon>();
+        readonly List<GameObject> summonPortals = new List<GameObject>();
         public Vector3 AimPosition => transform.position + Vector3.up * 3;
         float timer, bombTimer, hitCooldown;
         int bombsRemaining;
@@ -71,6 +84,7 @@ namespace LostDream
                     timer = 2.4f;
                     game.ShowToast("The Pumpkin King awakens. Watch the bomb circles!", 4);
                     game.audioSystem.Play("boss", .65f);
+                    BeginSummonWave(false);
                 }
                 return;
             }
@@ -96,6 +110,7 @@ namespace LostDream
                     p.x = Mathf.Clamp(p.x, -11.5f, 11.5f);
                     p.z = Mathf.Clamp(p.z, 0, 24);
                     NightmareBomb.Spawn(new Vector3(p.x, .06f, p.z), SecondPhase ? 1.15f : 1.5f);
+                    BombsLaunched++;
                     bombsRemaining--;
                     bombTimer = .7f;
                 }
@@ -167,6 +182,119 @@ namespace LostDream
                     timer = 1.8f;
                 }
             }
+        }
+        void BeginSummonWave(bool secondWave)
+        {
+            // Exactly one call at awakening and one on crossing half health. The boss
+            // keeps its normal bombs/charge state machine running during each wave.
+            SummonWavesStarted++;
+            StartCoroutine(SummonWave(secondWave));
+        }
+        IEnumerator SummonWave(bool secondWave)
+        {
+            var game = DreamGame.Instance;
+            game.ShowToast(secondWave ? "WAVE 2! Dragon + diving demon. Keep dodging the King!" :
+                "WAVE 1! Dragon + ghost. Left-click / clear the reinforcements!", 4);
+            game.audioSystem.Play("warning", .5f, secondWave ? .8f : 1);
+            NightmareKind[] kinds = { NightmareKind.Dragon, secondWave ? NightmareKind.Demon : NightmareKind.Ghost };
+            var portals = new List<GameObject>();
+            var points = new List<Vector3>();
+            var spawnKinds = new List<NightmareKind>();
+            for (int i = 0; i < kinds.Length; i++)
+            {
+                if (!FindSummonGround(i == 0 ? -1 : 1, points, out Vector3 point)) continue;
+                points.Add(point);
+                spawnKinds.Add(kinds[i]);
+                var portal = DreamArt.Group("Nightmare summon warning", game.transform, point + Vector3.up * .08f);
+                DreamArt.Ring(portal.transform, 1.5f, "GlowTeal", 40, .1f);
+                var inner = DreamArt.Group("Summon inner ring", portal.transform, Vector3.up * .02f);
+                DreamArt.Ring(inner.transform, .7f, "Warning", 24, .08f);
+                portals.Add(portal); summonPortals.Add(portal);
+            }
+            float remaining = Mathf.Max(1.5f, summonWarningSeconds);
+            while (remaining > 0)
+            {
+                if (game == null || Defeated || game.Phase == GamePhase.Defeated || game.Phase == GamePhase.Victory) yield break;
+                if (game.Phase == GamePhase.Playing)
+                {
+                    remaining -= Time.deltaTime;
+                    foreach (var portal in portals)
+                        if (portal != null) portal.transform.localScale = Vector3.one * (1 + Mathf.Sin(remaining * 8) * .08f);
+                }
+                yield return null;
+            }
+            for (int i = 0; i < points.Count; i++)
+            {
+                // Check again at materialization; paused or completed fights never spawn.
+                while (game.Phase == GamePhase.Paused) yield return null;
+                if (Defeated || game.Phase != GamePhase.Playing) yield break;
+                var enemy = DreamWorld.Dragon(game.transform, points[i] + Vector3.up * 2.8f, 1.1f,
+                    secondWave && spawnKinds[i] == NightmareKind.Dragon ? 3 : 2, spawnKinds[i]);
+                enemy.bossSummon = true;
+                enemy.name = "Summoned " + spawnKinds[i] + " / wave " + (secondWave ? 2 : 1);
+                summoned.Add(enemy);
+                game.dragons = game.dragons.Concat(new[] { enemy }).ToArray();
+                DreamArt.Burst(enemy.home, "GlowTeal", 20, 2);
+                summonPortals.Remove(portals[i]); Destroy(portals[i]);
+            }
+            SummonWavesCompleted++;
+        }
+        bool FindSummonGround(int side, List<Vector3> reserved, out Vector3 point)
+        {
+            // Sample actual saved-map colliders; never rebuild or place a hidden floor.
+            Vector3[] offsets = { new Vector3(side * 7, 0, -5), new Vector3(side * 7, 0, -10),
+                new Vector3(side * 5, 0, -12), new Vector3(side * 7, 0, 2), new Vector3(side * 3, 0, -15) };
+            foreach (var offset in offsets)
+            {
+                Vector3 candidate = homePosition + offset;
+                if (Vector3.ProjectOnPlane(candidate - DreamGame.Instance.player.transform.position, Vector3.up).magnitude < 4 ||
+                    Vector3.ProjectOnPlane(candidate - transform.position, Vector3.up).magnitude < 4 ||
+                    reserved.Any(x => Vector3.Distance(x, candidate) < 3)) continue;
+                foreach (var hit in Physics.RaycastAll(candidate + Vector3.up * 8, Vector3.down, 12,
+                    ~(1 << 2), QueryTriggerInteraction.Ignore).OrderBy(x => x.distance))
+                {
+                    if (hit.normal.y < .8f || hit.point.y > homePosition.y + 1 ||
+                        hit.collider.GetComponentInParent<PlayerMotor>() != null ||
+                        hit.collider.GetComponentInParent<FlyingDragon>() != null ||
+                        hit.collider.GetComponentInParent<PumpkinBoss>() != null) continue;
+                    point = hit.point; return true;
+                }
+            }
+            point = Vector3.zero; return false;
+        }
+        public bool TryRewardGround(Vector3 origin, out Vector3 point)
+        {
+            Vector3[] candidates = { origin, origin + Vector3.left * 3, origin + Vector3.right * 3,
+                origin + Vector3.back * 3, origin + Vector3.forward * 3, DreamGame.Instance.player.transform.position };
+            foreach (Vector3 candidate in candidates.Concat(DreamGame.Instance.candySpawnPoints ?? new Vector3[0]))
+            {
+                if (Vector3.ProjectOnPlane(candidate - transform.position, Vector3.up).magnitude < 4) continue;
+                if (FindObjectsByType<CandyPickup>(FindObjectsSortMode.None).Any(x =>
+                    Vector3.ProjectOnPlane(candidate - x.transform.position, Vector3.up).magnitude < 2.5f)) continue;
+                foreach (var hit in Physics.RaycastAll(candidate + Vector3.up * 6, Vector3.down, 12,
+                    ~(1 << 2), QueryTriggerInteraction.Ignore).OrderBy(x => x.distance))
+                {
+                    if (hit.normal.y < .8f || hit.point.y > homePosition.y + 1 ||
+                        hit.collider.GetComponentInParent<PlayerMotor>() != null ||
+                        hit.collider.GetComponentInParent<FlyingDragon>() != null ||
+                        hit.collider.GetComponentInParent<PumpkinBoss>() != null) continue;
+                    point = hit.point; return true;
+                }
+            }
+            point = Vector3.zero; return false;
+        }
+        public void ClearSummons()
+        {
+            StopAllCoroutines();
+            foreach (var portal in summonPortals) if (portal != null) Destroy(portal);
+            summonPortals.Clear();
+            foreach (var enemy in summoned) if (enemy != null) Destroy(enemy.gameObject);
+            summoned.Clear();
+            var game = DreamGame.Instance;
+            if (game != null && game.dragons != null)
+                game.dragons = game.dragons.Where(x => x != null && !x.bossSummon).ToArray();
+            foreach (var projectile in FindObjectsByType<DreamProjectile>(FindObjectsSortMode.None))
+                if (projectile.hostile) Destroy(projectile.gameObject);
         }
         void BeginCharge()
         {
@@ -279,7 +407,11 @@ namespace LostDream
                 // One successful hit per attack cycle keeps the boss timing meaningful.
                 SetWeakPoint(false);
                 NextColor(maxHealth - Health < 3);
-                if (previousHealth * 2 > maxHealth && SecondPhase) BeginCharge();
+                if (previousHealth * 2 > maxHealth && SecondPhase)
+                {
+                    BeginSummonWave(true);
+                    BeginCharge();
+                }
                 else if (Vector3.Distance(transform.position, homePosition) > .01f) BeginReturn(true);
                 else
                 {
@@ -291,6 +423,6 @@ namespace LostDream
             }
             return true;
         }
-        void OnDestroy() { ClearChargeWarning(); }
+        void OnDestroy() { ClearChargeWarning(); ClearSummons(); }
     }
 }

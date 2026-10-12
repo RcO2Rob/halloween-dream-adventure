@@ -140,11 +140,13 @@ namespace LostDream
         {
             if (Phase != GamePhase.Playing) return;
             Phase = GamePhase.Defeated;
+            if (boss != null) boss.ClearSummons();
             audioSystem.Play("hurt");
         }
         public void Win()
         {
             Phase = GamePhase.Victory;
+            if (boss != null) boss.ClearSummons();
             foreach (var bomb in FindObjectsByType<NightmareBomb>(FindObjectsSortMode.None)) Destroy(bomb.gameObject);
             audioSystem.Play("victory", .8f);
             DreamArt.Burst(boss.transform.position + Vector3.up * 3, "GlowGold", 60, 7);
@@ -171,16 +173,24 @@ namespace LostDream
             var sweets = FindObjectsByType<CandyPickup>(FindObjectsSortMode.None);
             if (candySpawnPoints == null || candySpawnPoints.Length == 0) return;
             int offset = UnityEngine.Random.Range(0, candySpawnPoints.Length);
-            for (int i = 0; i < candySpawnPoints.Length && sweets.Length < 4; i++)
+            // A moving head can cover existing sweets. Count usable floor stock,
+            // rather than letting covered pickups block safe replenishment.
+            for (int i = 0; i < candySpawnPoints.Length && sweets.Count(x =>
+                Vector3.ProjectOnPlane(x.transform.position - boss.transform.position, Vector3.up).magnitude >= 4) < 4; i++)
             {
                 Vector3 point = candySpawnPoints[(offset + i) % candySpawnPoints.Length];
                 if (Vector3.ProjectOnPlane(point - boss.transform.position, Vector3.up).magnitude < 4) continue;
                 if (sweets.Any(x => Vector3.Distance(x.transform.position, point) < 1.5f)) continue;
-                if (Physics.Raycast(point + Vector3.up * 4, Vector3.down, out RaycastHit hit, 10, ~(1 << 2))
-                    && hit.normal.y > .6f && hit.collider.GetComponentInParent<PumpkinBoss>() == null)
+                foreach (var hit in Physics.RaycastAll(point + Vector3.up * 8, Vector3.down, 16, ~(1 << 2),
+                    QueryTriggerInteraction.Ignore).OrderBy(x => x.distance))
                 {
+                    if (hit.normal.y <= .6f || hit.point.y > point.y + 1 ||
+                        hit.collider.GetComponentInParent<PumpkinBoss>() != null ||
+                        hit.collider.GetComponentInParent<FlyingDragon>() != null ||
+                        hit.collider.GetComponentInParent<PlayerMotor>() != null) continue;
                     DreamWorld.Candy(transform, new Vector3(point.x, hit.point.y + .65f, point.z));
                     sweets = FindObjectsByType<CandyPickup>(FindObjectsSortMode.None);
+                    break;
                 }
             }
             // At each refill/cycle boundary preserve two required sweets, plus one of each
@@ -206,6 +216,8 @@ namespace LostDream
                 if (LitCount == 0) return "Find the entrance lantern. Restore the bridge to the keep.";
                 if (!boss.AwakeInArena) return "Jump across the glowing platforms. Face the Pumpkin King.";
                 if (boss.ChargeWarningActive || boss.Phase == BossPhase.Charging) return "Leave the marked charge lane.\nMove sideways or dodge with Shift.";
+                if (boss.ActiveSummons > 0 && !boss.Exposed)
+                    return "Left-click / clear summoned nightmares.\nKeep dodging the King's attacks.";
                 if (player.CarryingCandy && player.HeldCandyHue != boss.RequiredHue)
                     return "Need " + boss.RequiredCandyLabel + " candy.\nE at a different candy / swap your held color.";
                 if (player.CarryingCandy) return boss.Exposed ? "SHELL OPEN! Throw your matching candy." : "Match his color. Wait for SHELL OPEN.";

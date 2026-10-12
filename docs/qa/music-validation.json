@@ -1,0 +1,55 @@
+{
+  "version": "0.10.0",
+  "passed": true,
+  "pcm_peak_below_one": true,
+  "loop_seam_delta_below_0_02": true,
+  "tracks": [
+    {
+      "file": "dream_journey.wav",
+      "bpm": 82,
+      "bars": 16,
+      "seconds": 46.829251700680274,
+      "peak": 0.78,
+      "rms": 0.15865953500547453,
+      "loop_edge_delta": 0.0070857336738690095,
+      "sha256": "5867480e78ba5a4811de3020de348575ca382de7575db28eb4b3c11687b6087a"
+    },
+    {
+      "file": "pumpkin_battle.wav",
+      "bpm": 112,
+      "bars": 16,
+      "seconds": 34.285714285714285,
+      "peak": 0.78,
+      "rms": 0.15939591666262498,
+      "loop_edge_delta": 0.00929141484772314,
+      "sha256": "092b0d3721dc18ebc97ec91cb38548a76d4cc2cd5a9606e05f82698e24ae7c47"
+    },
+    {
+      "file": "pumpkin_rage.wav",
+      "bpm": 124,
+      "bars": 16,
+      "seconds": 30.967755102040815,
+      "peak": 0.78,
+      "rms": 0.14756744239775743,
+      "loop_edge_delta": 0.0011956673619947789,
+      "sha256": "72140a7c259a6e9f9f4afbeb8937e13b3d12c77c45ecf9246acb58a2407bb1bd"
+    }
+  ],
+  "runtime_checks": [
+    "Original stereo background score imports and lasts more than twenty seconds: dream_journey",
+    "Original stereo background score imports and lasts more than twenty seconds: pumpkin_battle",
+    "Original stereo background score imports and lasts more than twenty seconds: pumpkin_rage",
+    "Exploration music plays automatically on normal start",
+    "Setting background volume to zero silences the score without losing its playback timeline",
+    "Raising background volume restores the current score without restarting the scene",
+    "Mute silences background music and event audio together",
+    "Unmute restores music and event audio",
+    "Pause stops the music timeline instead of restarting the track",
+    "Resume continues the background score",
+    "Music transitions to the appropriate boss stage: 1",
+    "Music transitions to the appropriate boss stage: 2",
+    "Victory fades battle music out without leaving duplicate looping sources",
+    "Music mute preference survives retry and scene recreation"
+  ],
+  "independent_listener_review": false
+}

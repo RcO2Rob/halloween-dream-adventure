@@ -11,6 +11,7 @@ namespace LostDream
         public Animation modelAnimation;
         public Renderer chargeMarker;
         public NightmareKind kind;
+        public bool bossSummon;
         public Vector3 home;
         public float patrolRadius = 2.2f;
         public int health = 2;
@@ -22,6 +23,7 @@ namespace LostDream
         public Vector3 DiveStart { get; private set; }
         public Vector3 DiveTarget { get; private set; }
         public GameObject DiveWarning { get; private set; }
+        public CandyPickup DroppedCandy { get; private set; }
         public string DisplayName => kind == NightmareKind.Ghost ? "WISP GHOST" : kind == NightmareKind.Armabee ? "FANSHOT BEE" :
             kind == NightmareKind.Demon ? "DIVING DEMON" : MaxHealth >= 3 ? "ELDER DRAGON" : "EMBER DRAGON";
         public string AttackHint => kind == NightmareKind.Ghost ? "SLOW ORB / KEEP MOVING" : kind == NightmareKind.Armabee ? "3 SHOTS / FIND A GAP" :
@@ -201,7 +203,16 @@ namespace LostDream
             ClearDiveWarning();
             if (modelAnimation != null) StartCoroutine(FinishDefeat());
             else body.gameObject.SetActive(false);
-            DreamWorld.Candy(DreamGame.Instance.transform, new Vector3(transform.position.x, .65f, transform.position.z));
+            var game = DreamGame.Instance;
+            // Summoned enemies reward a usable sweet on courtyard ground, rather than
+            // dropping it at the demon's elevated dive position or inside the boss.
+            if (bossSummon && game.boss != null)
+            {
+                if (game.boss.TryRewardGround(home, out Vector3 ground))
+                    DroppedCandy = DreamWorld.Candy(game.transform, ground + Vector3.up * .65f, game.boss.RequiredHue);
+                else game.ReplenishCandy();
+            }
+            else DroppedCandy = DreamWorld.Candy(game.transform, new Vector3(transform.position.x, .65f, transform.position.z));
             DreamGame.Instance.ShowToast(DisplayName + " cleared. It left a candy behind.");
         }
         void OnDestroy() { ClearDiveWarning(); }

@@ -97,42 +97,51 @@ namespace LostDream
 
         void UpdateAim()
         {
+            AimPoint = AimFromScreenPoint(Input.mousePosition);
+        }
+        public Vector3 AimFromScreenPoint(Vector2 screenPoint)
+        {
             Camera camera = DreamGame.Instance.gameCamera;
-            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-            AimPoint = transform.position + Vector3.forward * 10 + Vector3.up;
+            Ray ray = camera.ScreenPointToRay(screenPoint);
+            Vector3 point = transform.position + Vector3.forward * 10 + Vector3.up;
+            bool enemySelected = false;
             if (Physics.Raycast(ray, out RaycastHit hit, 250, ~(1 << 2), QueryTriggerInteraction.Collide))
             {
-                AimPoint = hit.point;
-                if (hit.collider.GetComponentInParent<FlyingDragon>() == null
+                point = hit.point;
+                var directEnemy = hit.collider.GetComponentInParent<FlyingDragon>();
+                enemySelected = directEnemy != null && !directEnemy.Defeated;
+                if (enemySelected) point = directEnemy.AimPosition;
+                if (directEnemy == null
                     && hit.collider.GetComponentInParent<PumpkinBoss>() == null
                     && hit.collider.GetComponentInParent<DreamRune>() == null)
-                    AimPoint += Vector3.up * 1.35f;
+                    point += Vector3.up * 1.35f;
             }
-            else if (new Plane(Vector3.up, Vector3.up * 1.4f).Raycast(ray, out float distance)) AimPoint = ray.GetPoint(distance);
+            else if (new Plane(Vector3.up, Vector3.up * 1.4f).Raycast(ray, out float distance)) point = ray.GetPoint(distance);
             // Small screen-space aim assistance makes airborne targets readable with this camera.
-            float closest = 48;
+            float closest = enemySelected ? 0 : 48;
             foreach (var dragon in DreamGame.Instance.dragons)
             {
                 if (dragon == null || dragon.Defeated) continue;
                 Vector3 screen = camera.WorldToScreenPoint(dragon.AimPosition);
-                float pixels = Vector2.Distance(screen, Input.mousePosition);
+                float pixels = Vector2.Distance(screen, screenPoint);
                 if (screen.z > 0 && pixels < closest && HasLineTo(dragon.AimPosition, dragon.transform))
-                { closest = pixels; AimPoint = dragon.AimPosition; }
+                { closest = pixels; point = dragon.AimPosition; enemySelected = true; }
             }
             foreach (var rune in DreamGame.Instance.runes)
             {
                 if (rune == null || rune.Cleared) continue;
                 Vector3 screen = camera.WorldToScreenPoint(rune.AimPosition);
-                float pixels = Vector2.Distance(screen, Input.mousePosition);
+                float pixels = Vector2.Distance(screen, screenPoint);
                 if (screen.z > 0 && pixels < closest && HasLineTo(rune.AimPosition, rune.transform))
-                { closest = pixels; AimPoint = rune.AimPosition; }
+                { closest = pixels; point = rune.AimPosition; }
             }
             var boss = DreamGame.Instance.boss;
-            if (boss != null && !boss.Defeated)
+            if (boss != null && !boss.Defeated && !enemySelected)
             {
                 Vector3 screen = camera.WorldToScreenPoint(boss.AimPosition);
-                if (Vector2.Distance(screen, Input.mousePosition) < 100) AimPoint = boss.AimPosition;
+                if (Vector2.Distance(screen, screenPoint) < 100) point = boss.AimPosition;
             }
+            return point;
         }
         bool HasLineTo(Vector3 point, Transform target)
         {

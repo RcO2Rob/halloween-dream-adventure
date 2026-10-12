@@ -106,6 +106,7 @@ namespace LostDream
             Panel(new Rect(28, height - 128, 600, 100), panel);
             string progress = "LANTERNS  " + game.LitCount + "/" + game.lanterns.Length;
             if (game.levelIndex != 2) progress += "     ENEMIES  " + (game.dragons.Length - game.DragonsRemaining) + "/" + game.dragons.Length;
+            else if (game.boss.AwakeInArena) progress += "     WAVE " + game.boss.SummonWavesStarted + "/2  /  ENEMIES " + game.boss.ActiveSummons;
             Label(new Rect(48, height - 113, 560, 24), progress, small, gold);
             Label(new Rect(48, height - 82, 552, 56), game.Objective(), text);
             Panel(new Rect(width - 360, height - 156, 332, 128), panel);

@@ -1,4 +1,4 @@
-# Lanterns of the Lost Dream — Prototype design v0.9
+# Lanterns of the Lost Dream — Prototype design v0.10
 
 ## High concept
 
@@ -21,6 +21,8 @@ Follow a bending chain of islands. Three lanterns create successive crossings; f
 ### 3 — The Pumpkin Keep
 
 A lantern reveals two narrow raised round platforms across the castle approach, requiring two platform landings followed by a jump into the courtyard. Entering the courtyard wakes the Pumpkin King. He gives a warning, then sends falling pumpkin bombs; orange circles mark blast radii. Move out or dash while collecting glowing candy. In the first half, each volley opens his face for four seconds. Candy must match his current body hue. One accurate matching-color candy throw removes one of six health points and closes that window. Arrows and protected-phase candy do no damage.
+
+The boss calls reinforcements exactly twice: at awakening, one ember dragon and one ghost; at the hit that reaches half health, one evolved dragon and one diving demon. Each wave has two seconds of visible floor-ring warning and samples actual courtyard ground away from the player and boss. Boss bombs and charges continue during the summon warning and while enemies attack. Use arrows on the reinforcements and matching candy on the boss; clearing enemies is not a shield or a requirement for the boss's vulnerable window. Defeated reinforcements drop the currently required candy hue on ground near their home position. There are at most four summoned enemies across the fight and no periodic replacement waves. Pause freezes summon windup; retry resets both waves. Defeat and victory cancel pending summons and remove reinforcements and hostile projectiles.
 
 The hit that reduces health to 3/6 immediately unlocks his first charge. A 1.6-second warning marks a broad ground lane aimed at the player's initial position; moving afterward does not redirect it. The head then charges at 15 units per second, dealing at most one health point per charge and respecting normal dash/post-hit immunity. Its stone dais remains fixed. The endpoint stays within the courtyard. Move sideways or use Shift; the ordinary jump cannot clear the head's height. Afterward, the boss stops and turns its face toward the player, opening the matching-color weak point for 2.4 seconds. A nonfatal candy hit or the window's end closes the shell and sends it home. Later cycles use four bombs with shorter fuses followed by another charge; bomb explosions finish before the charge warning. Defeat clears bombs and charge warnings and displays victory.
 
@@ -48,6 +50,7 @@ E at a different-colored pickup swaps it with the held candy, leaving the previo
 | Boss supply | Random safe floor positions outside head footprint; target four pickups with two matching sweets | Colored floating wrappers and short nearby labels |
 | Boss matching | Candy hue must match while shell is open; wrong color consumes candy without damage or closing the window | Body hue, separate open/closed state, required name/symbol and mismatch toast |
 | Boss charge | Unlock at 3/6 health; 1.6 s locked-lane warning; one-point contact damage; 2.4 s exposed recovery, then return home | Marked corridor and arrow, warning sound, HUD phase instructions and exposed face |
+| Boss reinforcements | Two one-time waves, each one dragon and one monster; boss attacks concurrently; arrows defeat minions | Two-second portal rings, WAVE counter and living-enemy count; matching candy reward |
 | Exit | All chapter objectives required | Gate glow; explanatory rejection message |
 
 The lantern is a spatial switch: activation changes where the player can physically travel. This version uses readable single-lantern/single-crossing relationships for bridges and round platforms; ordering puzzles can follow core-loop playtesting.
@@ -98,5 +101,9 @@ stateDiagram-v2
 Player movement combines locomotion, grounded jump, grounded dash, attack pose, post-hit immunity, carrying candy, and falling recovery. Chapter states control whether player actions are accepted. The player uses Mixamo's Timmy Humanoid rig with idle/run blending and masked aiming/throwing clips; movement stays with the CharacterController, and bow/candy follow animated hands. Candy carrying adds a procedural arm target. Bow aiming squares the chest with the shot direction, extends the left arm forward and keeps the right hand beside the face with a two-bone solve; arrows originate at the bow grip. Boss animation is procedural. Flying enemies use Quaternius's imported skeletons and flight, attack, and death clips; a separate orange charge ring preserves attack-warning readability.
 
 ## Next decisions
+
+### Background score
+
+Exploration and the title screen use an original melodic dream score. Courtyard awakening crossfades to the boss score; reaching half health crossfades to a faster, denser arrangement. Each score loops, with event effects on a separate audio source. Pause holds the music playback position; resume continues it. M mutes music and effects together and retains that preference through retries and chapter changes. Level completion, defeat and victory fade the score out. `DreamAudio.musicVolume` allows volume tuning in the Inspector. Music sources are recreated with the scene, so retries do not accumulate loops.
 
 The prototype includes beginning-to-victory progression, sounds, checkpoints, retry, pause, mute, and chapter selection. There is no persistent save, controller support, or complex lantern ordering puzzle yet. Test camera scale, aiming, bridge width, bomb timing, and the readability of the vulnerability cue before expanding scope.

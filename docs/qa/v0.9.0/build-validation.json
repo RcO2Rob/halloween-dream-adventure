@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-07",
+  "unity": "6000.6.2f1",
+  "platform": "macOS arm64",
+  "build": "0.9.0",
+  "development_build": true,
+  "runtime_checks": 283,
+  "runtime_mode": "Rendered standalone player; real interactions, projectiles and jumps; controlled teleports, normal-speed charge checks and otherwise accelerated time",
+  "features": "Gradual pink/blue/gold boss matching, hue-locked attack windows, candy swapping and matching supplies; Ghost slow orb, Armabee fan shots and Demon locked dive; half-health charge retained",
+  "scene_validation": "3 chapters passed; tutorial/castle saved scenes byte-identical, garden limited to three enemy model/type changes and new default hue fields",
+  "scene_sha256": {
+    "03_PumpkinKeep.unity": "61edcc9065734b15b6e82c443db760df5a5f84c4deef9dc4105a12a66bd9c65d",
+    "01_FirstLight.unity": "3f611ed40e5140a2ac57b1c16b8bad668f775976f00ea0caceea17de6b043b8e",
+    "02_ShatteredGardens.unity": "bfa59659f4c21ffad9a54627388de47b93d75508438e5bae3b1c1a706a1ad441"
+  },
+  "map_backup": "docs/map-backups/v0.8.0",
+  "repairs": "Runtime flat stone-base collision, roof camera collision and player sightline protection; nearby labels hidden when occluded",
+  "visual_inspection": "Species models/warnings and pink/blue/gold matching, mismatch, charge/recovery views inspected; final label-occlusion views inspected before delivery",
+  "build_method": "BuildCurrentScenes in isolated copy; original Unity editor preserved; targeted saved garden migration audited; source and full app manifest match tested build",
+  "executable_sha256": "849f2e4c49fdbebf86013bfc5c8a2f38c63c322223b2bd7db8409af4334244bc",
+  "app_files_verified": 247,
+  "human_playtest": "Not performed",
+  "github_sync": "Not performed, per user instruction",
+  "zip_integrity": "Passed; all 247 packaged app files match tested build",
+  "zip_sha256": "2d61fe23cd904b3c862a7f366a9b98fe6535b09c33634cc99e66af980da7db0e",
+  "zip_bytes": 63086658
+}
