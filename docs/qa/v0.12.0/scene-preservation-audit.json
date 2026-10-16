@@ -1,0 +1,27 @@
+{
+  "main_scenes": [
+    {
+      "path": "Assets/Scenes/03_PumpkinKeep.unity",
+      "before_sha256": "d9e203b2270b64f7dcc83bd8875dc09a84a5b65500b847fa84e46c40c4fa5e7b",
+      "workspace_sha256": "d9e203b2270b64f7dcc83bd8875dc09a84a5b65500b847fa84e46c40c4fa5e7b",
+      "tested_sha256": "d9e203b2270b64f7dcc83bd8875dc09a84a5b65500b847fa84e46c40c4fa5e7b",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Scenes/01_FirstLight.unity",
+      "before_sha256": "5f91e0a8223b39d020823ef23ce5e3bc05537e96a30655f5ac1cefb156859bf6",
+      "workspace_sha256": "5f91e0a8223b39d020823ef23ce5e3bc05537e96a30655f5ac1cefb156859bf6",
+      "tested_sha256": "5f91e0a8223b39d020823ef23ce5e3bc05537e96a30655f5ac1cefb156859bf6",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Scenes/02_ShatteredGardens.unity",
+      "before_sha256": "a94f419ab13a43359f8a7397874423208d40ac2a326d8d97fe1e69cfd7cdb8aa",
+      "workspace_sha256": "a94f419ab13a43359f8a7397874423208d40ac2a326d8d97fe1e69cfd7cdb8aa",
+      "tested_sha256": "a94f419ab13a43359f8a7397874423208d40ac2a326d8d97fe1e69cfd7cdb8aa",
+      "unchanged": true
+    }
+  ],
+  "quality_settings_unchanged": true,
+  "build_scene_list_unchanged": true
+}

@@ -77,8 +77,19 @@ namespace LostDream
         {
             yield return new WaitForSecondsRealtime(1);
             Require(DreamGame.Instance != null && DreamGame.Instance.levelIndex == 0, "Tutorial loads in standalone player");
+            yield return TitleScreenChecks();
             yield return Capture("01-title");
             DreamGame.Instance.StartPlaying();
+            yield return null;
+            Require(DreamGame.Instance.Phase == GamePhase.Playing, "Start action leaves the cover menu and enters the tutorial");
+            if (Environment.GetCommandLineArgs().Contains("--title-only"))
+            {
+                yield return Capture("01-title-to-game");
+                Save(true, "");
+                Debug.Log("LOST_DREAM_TITLE_SMOKE_PASSED: " + checks.Count);
+                Application.Quit(0);
+                yield break;
+            }
             yield return MusicChecks();
             if (Environment.GetCommandLineArgs().Contains("--boss-smoke"))
             {
@@ -111,6 +122,7 @@ namespace LostDream
             for (int level = 0; level < 2; level++)
             {
                 var game = DreamGame.Instance;
+                HalloweenArtChecks(game);
                 Require(game.player.characterAnimation != null && game.player.characterAnimation.animator.isHuman,
                     "Chapter uses the selected Timmy humanoid character " + (level + 1));
                 game.player.automation = true;
@@ -121,6 +133,10 @@ namespace LostDream
                     game.player.Teleport(lantern.safeCheckpoint);
                     yield return new WaitForSeconds(.12f);
                     Require(game.player.Interact(), "E interaction lights " + lantern.lanternName);
+                    yield return null;
+                    var skin = lantern.GetComponent<LanternSkin>();
+                    Require(skin != null && skin.lit.activeSelf && !skin.unlit.activeSelf,
+                        "Poly Halloween lantern changes to its lit model after interaction");
                     Require(lantern.Lit && lantern.path.solid.activeSelf, "Lantern restores collidable road");
                     Require(Vector3.Distance(game.Checkpoint, lantern.safeCheckpoint) < .1f, "Lantern saves safe checkpoint");
                     if (level == 0 && lantern == game.lanterns[0]) yield return Capture("01-first-lantern");
@@ -393,6 +409,7 @@ namespace LostDream
         IEnumerator BossBattle()
         {
             var game = DreamGame.Instance;
+            HalloweenArtChecks(game);
             var player = game.player;
             Require(player.characterAnimation != null && player.characterAnimation.animator.isHuman,
                 "Castle chapter uses Timmy humanoid character");
@@ -401,6 +418,10 @@ namespace LostDream
             player.Teleport(lamp.safeCheckpoint);
             yield return new WaitForSeconds(.12f);
             Require(player.Interact(), "Castle entrance lantern restores approach");
+            yield return null;
+            var skin = lamp.GetComponent<LanternSkin>();
+            Require(skin != null && skin.lit.activeSelf && !skin.unlit.activeSelf,
+                "Castle lantern switches imported artwork on without changing the jump route");
             yield return JumpRouteChecks(game, lamp.path);
             player.Teleport(new Vector3(0, .1f, 6));
             yield return new WaitForSeconds(.3f);
@@ -1150,6 +1171,46 @@ namespace LostDream
             Require(Physics.Raycast(ray, out RaycastHit hit, 100, ~(1 << 2)) && hit.collider.GetComponent<DreamRune>() == rune,
                 "Perspective cursor ray can select the bow practice target");
         }
+        IEnumerator TitleScreenChecks()
+        {
+            var game = DreamGame.Instance;
+            Require(game.Phase == GamePhase.Menu, "Game launches into the cover menu before gameplay");
+            var art = Resources.Load<Texture2D>("UI/TitleBackdrop");
+            Require(art != null && art.width == 1600 && art.height == 1000,
+                "Chosen cover composition imports at its original 1600 by 1000 aspect ratio");
+            Require(game.audioSystem.MusicPlaying && game.audioSystem.MusicClip.name == "dream_journey",
+                "Dream music plays while the cover menu is displayed");
+            Vector3 start = game.player.transform.position;
+            foreach (Vector2Int size in new[] { new Vector2Int(1440, 900), new Vector2Int(1920, 1080), new Vector2Int(1280, 960) })
+            {
+                Screen.SetResolution(size.x, size.y, FullScreenMode.Windowed);
+                yield return new WaitForSecondsRealtime(.4f);
+                yield return Capture("00-cover-" + size.x + "x" + size.y);
+                Require(game.Phase == GamePhase.Menu && Vector3.Distance(game.player.transform.position, start) < .01f,
+                    "Cover menu remains idle and preserves the gameplay spawn while resizing: " + size);
+            }
+            Screen.SetResolution(1440, 900, FullScreenMode.Windowed);
+            yield return new WaitForSecondsRealtime(.4f);
+        }
+
+        void HalloweenArtChecks(DreamGame game)
+        {
+            Transform scenery = game.transform.Find("Poly Halloween scenery");
+            Require(scenery != null && scenery.childCount > 0, "Saved chapter includes imported Halloween scenery " + (game.levelIndex + 1));
+            Require(scenery.GetComponentsInChildren<Collider>(true).All(x => !x.enabled),
+                "Decorative props introduce no collision or projectile obstacles " + (game.levelIndex + 1));
+            Require(scenery.GetComponentsInChildren<Transform>(true).All(x => x == scenery || x.gameObject.layer == 2),
+                "Decoration stays outside gameplay targeting raycasts " + (game.levelIndex + 1));
+            foreach (var lantern in game.lanterns)
+            {
+                var skin = lantern.GetComponent<LanternSkin>();
+                Require(skin != null && skin.lantern == lantern && skin.unlit.activeSelf && !skin.lit.activeSelf,
+                    "Imported switch starts unlit and references the existing lantern: " + lantern.lanternName);
+                Require(skin.GetComponentsInChildren<Collider>(true).All(x => !x.enabled || x.transform == lantern.transform.Find("Lantern pedestal")),
+                    "Lantern artwork retains only the existing pedestal collision: " + lantern.lanternName);
+            }
+        }
+
         void Save(bool passed, string error)
         {
             var report = new Report { passed = passed, unityVersion = Application.unityVersion, checks = checks.ToArray(), error = error };

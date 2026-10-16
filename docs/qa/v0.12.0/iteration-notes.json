@@ -1,0 +1,21 @@
+{
+  "request": "Use the owner-selected characters-and-props render as the game start screen.",
+  "implementation": [
+    "Preserve the supplied PNG bytes and original aspect ratio.",
+    "Render through a camera-space canvas to preserve the reference colors in the linear-color project.",
+    "Keep menu controls in DreamHUD: start, chapter selection, sound toggle and control hints.",
+    "Disable the backdrop during gameplay and allocate it only when starting at the menu."
+  ],
+  "visual_inspection": [
+    "1440x900: full composition, readable controls, Timmy/dragon/cauldron visible.",
+    "1920x1080: full composition with matching side margins.",
+    "1280x960: full composition with matching top and bottom margins.",
+    "After start: gameplay visible without the cover overlay."
+  ],
+  "iterations": "Initial IMGUI rendering caused washed-out color. A color-correction attempt over-darkened the sky. Both were discarded. The final camera-space canvas matches the source sky RGB exactly in the three captured aspect ratios.",
+  "scope_limits": [
+    "Static cover artwork.",
+    "Automated checks and assistant screenshot inspection; no independent human playtest.",
+    "Local build only; no GitHub synchronization this turn."
+  ]
+}

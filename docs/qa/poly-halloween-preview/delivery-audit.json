@@ -1,0 +1,20 @@
+{
+  "gameplay_scene_sha256_before": {
+    "Assets/Scenes/03_PumpkinKeep.unity": "61edcc9065734b15b6e82c443db760df5a5f84c4deef9dc4105a12a66bd9c65d",
+    "Assets/Scenes/01_FirstLight.unity": "3f611ed40e5140a2ac57b1c16b8bad668f775976f00ea0caceea17de6b043b8e",
+    "Assets/Scenes/02_ShatteredGardens.unity": "bfa59659f4c21ffad9a54627388de47b93d75508438e5bae3b1c1a706a1ad441"
+  },
+  "gameplay_scene_sha256_after": {
+    "Assets/Scenes/03_PumpkinKeep.unity": "61edcc9065734b15b6e82c443db760df5a5f84c4deef9dc4105a12a66bd9c65d",
+    "Assets/Scenes/01_FirstLight.unity": "3f611ed40e5140a2ac57b1c16b8bad668f775976f00ea0caceea17de6b043b8e",
+    "Assets/Scenes/02_ShatteredGardens.unity": "bfa59659f4c21ffad9a54627388de47b93d75508438e5bae3b1c1a706a1ad441"
+  },
+  "all_three_gameplay_scenes_unchanged": true,
+  "build_scene_list_unchanged": true,
+  "source_files_hash_verified": 211,
+  "preview_scene_guid_references_resolved": true,
+  "preview_scene_sha256": "db34bb3efccc3fad21f269bc20b8ca584c86dfd5f8e81cb79bf3cdb74a5e1581",
+  "preview_saved_and_reopened_in_unity": true,
+  "assistant_visual_review": "Overview and close-up inspected; standard materials render; Timmy idle pose and dragon visible.",
+  "scope": "Local art preview only; existing gameplay build and GitHub remote not updated."
+}

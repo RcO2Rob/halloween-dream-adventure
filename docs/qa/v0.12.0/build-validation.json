@@ -1,0 +1,33 @@
+{
+  "version": "0.12.0",
+  "unity": "6000.6.2f1",
+  "architecture": "arm64",
+  "build": "passed",
+  "launch": "macOS Application Services: open -n -W, real rendered standalone player",
+  "integration_passed": true,
+  "integration_checks": 373,
+  "title_only_checks": 8,
+  "captured_menu_resolutions": [
+    [
+      1440,
+      900
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      1280,
+      960
+    ]
+  ],
+  "visual_review": "Menu captures at all three ratios and menu-to-game capture inspected by assistant",
+  "reference_color_probe": "Exact source sky RGB in three ratios; see cover-color-audit.json",
+  "main_scene_files_byte_identical_to_v0_11": true,
+  "copied_bundle_matches_tested_file_hashes_modes_and_symlinks": true,
+  "manifest_entries": 250,
+  "signature": "Deep strict ad-hoc signature verification passed on tested and copied bundle; see build-validation.log",
+  "previous_app": "Builds/archive/v0.11.0/Lanterns of the Lost Dream.app",
+  "independent_human_playtest": false,
+  "github_sync": "Not requested; no push performed"
+}

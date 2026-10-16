@@ -1,5 +1,19 @@
 # Prototype validation and playtest log
 
+## Local v0.12: owner-selected start-screen composition
+
+The start screen uses the selected `characters-and-props.png` render as a static backdrop. The source PNG is copied byte-for-byte with a provenance record. The entire image fits the window without cropping or stretching. Titles, a primary start button, three chapter buttons, control hints and a sound toggle are overlaid. Enter still begins the tutorial; starting or selecting a chapter removes the backdrop. Existing menu music continues.
+
+The signed macOS arm64 application passed 373 automated integration checks through three-chapter victory after a normal macOS launch. A focused eight-check run also captured the transition into gameplay. Menu screenshots at 1440×900, 1920×1080 and 1280×960 were visually inspected: controls remain visible and the selected scene composition is intact. A source-sky color probe matches exactly at all three sizes after replacing an unsuitable IMGUI texture path with a camera-space canvas. This probe checks color transfer at the sampled sky, not full-image pixel equality.
+
+All three saved chapter scenes are byte-identical to the v0.11 files; quality settings and the enabled-scene list are unchanged. The copied app matches the tested bundle in file hashes, modes and symlink targets. Reports, screenshots, filtered logs, packaging checks and the preservation audit are in `docs/qa/v0.12.0`. The previous v0.11 app and ZIP are retained locally. No GitHub push was performed. This is automated evidence and assistant visual inspection; independent human playtesting remains pending.
+
+## Local v0.11: Poly Halloween artwork
+
+The owner approved the independent art-study preview before this iteration. The saved tutorial, gardens and castle now use imported decorative props and unlit/lit pumpkin models. Original object records, transforms, active states, collider parameters, camera/light settings and gameplay values are retained; some previously implicit C# defaults are now serialized explicitly by Unity. The [saved-file audit](qa/v0.11.0/serialized-layout-audit.json) records these additions, while the editor-side audit compares gameplay and physics components before and after dressing.
+
+The macOS arm64 build passes 366 functional checks through three-chapter victory. The 27 added checks cover scenery presence, disabled decorative collision, exclusion from targeting raycasts, and each of the six lanterns' initial and post-interaction imported appearance. Existing music, jumping, real-projectile combat, color matching, two reinforcement waves, retry and cleanup checks remain. The final bundle is ad-hoc signed for local play, passes deep signature verification, and passed the same 366 checks after launch through macOS Application Services. Future macOS exports apply and verify this signature in `PrototypeBuilder`. Reports and screenshots are retained under `docs/qa/v0.11.0`. This is automated integration evidence and assistant visual inspection; independent human playtesting remains pending.
+
 ## Evidence levels
 
 Scene validation checks saved references, missing scripts, materials, hidden-road colliders, and checkpoint floors. Runtime integration uses the exported player with real E interactions, projectiles, bridge movement, falling recovery, gate triggers, chapter transitions, bomb damage, dash immunity, and boss victory. Controlled teleports and accelerated time make this reproducible. This does not establish first-time player comprehension or enjoyment.

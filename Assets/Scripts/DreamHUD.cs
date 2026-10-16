@@ -5,11 +5,14 @@ namespace LostDream
     public class DreamHUD : MonoBehaviour
     {
         GUIStyle title, heading, text, small, button, centered;
+        GUIStyle menuTitle, menuSubtitle, menuPrimary, menuChapter, menuSmall;
+        Texture2D menuShade;
         readonly Color cream = new Color(.96f, .91f, .79f);
         readonly Color gold = new Color(1, .69f, .3f);
         readonly Color teal = new Color(.4f, .91f, .83f);
         readonly Color panel = new Color(.045f, .04f, .09f, .88f);
         float width, height, scale;
+        void Awake() { gameObject.AddComponent<TitleBackdropDisplay>(); }
         void Styles()
         {
             Font font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
@@ -26,6 +29,27 @@ namespace LostDream
             button.active.background = ButtonTexture(new Color(.14f, .22f, .22f), gold);
             button.hover.textColor = cream; button.active.textColor = gold;
             button.border = new RectOffset(2, 2, 2, 2);
+            menuShade = new Texture2D(128, 1, TextureFormat.RGBA32, false, true);
+            menuShade.wrapMode = TextureWrapMode.Clamp;
+            for (int x = 0; x < 128; x++)
+            {
+                float shade = 1 - x / 127f;
+                menuShade.SetPixel(x, 0, new Color(0, 0, 0, .94f * shade * shade));
+            }
+            menuShade.Apply();
+            menuTitle = new GUIStyle(title) { fontSize = 64 };
+            menuSubtitle = new GUIStyle(title) { fontSize = 34 };
+            menuSmall = new GUIStyle(small) { fontSize = 14 };
+            menuPrimary = new GUIStyle(button) { fontSize = 21, fontStyle = FontStyle.Bold };
+            menuPrimary.normal.background = ButtonTexture(gold, gold);
+            menuPrimary.normal.textColor = new Color(.08f, .045f, .08f);
+            menuPrimary.hover.background = ButtonTexture(cream, cream);
+            menuPrimary.hover.textColor = menuPrimary.normal.textColor;
+            menuPrimary.active.background = ButtonTexture(teal, teal);
+            menuPrimary.active.textColor = menuPrimary.normal.textColor;
+            menuChapter = new GUIStyle(button) { fontSize = 17, alignment = TextAnchor.MiddleLeft };
+            menuChapter.padding = new RectOffset(14, 14, 4, 4);
+            menuChapter.normal.background = ButtonTexture(new Color(.045f, .035f, .085f, .8f), new Color(.55f, .47f, .65f, .55f));
         }
         Texture2D ButtonTexture(Color fill, Color border)
         {
@@ -60,21 +84,28 @@ namespace LostDream
         }
         void Menu(DreamGame game)
         {
-            Panel(new Rect(0, 0, 720, height), new Color(.045f, .04f, .09f, .92f));
-            Label(new Rect(64, 80, 590, 30), "A HALLOWEEN DREAM ADVENTURE", small, gold);
-            Label(new Rect(60, 125, 640, 92), "LANTERNS", title);
-            Label(new Rect(64, 225, 640, 70), "OF THE LOST DREAM", new GUIStyle(title) { fontSize = 44 });
-            Panel(new Rect(64, 332, 64, 3), gold);
-            Label(new Rect(64, 365, 560, 100), "Bring the roads back with pumpkin light.\nFace the flying nightmares.\nBreak the King's shell with stolen candy.", text);
-            if (GUI.Button(new Rect(64, 490, 500, 62), "BEGIN THE DREAM  /  ENTER", button)) game.StartPlaying();
-            Label(new Rect(64, 580, 580, 28), "OR CHOOSE A CHAPTER", small, gold);
+            GUI.DrawTexture(new Rect(0, 0, Mathf.Min(width * .52f, 740), height), menuShade);
+            Label(new Rect(64, 56, 560, 28), "A HALLOWEEN DREAM ADVENTURE", menuSmall, gold);
+            Label(new Rect(61, 101, 650, 90), "LANTERNS", menuTitle);
+            Label(new Rect(64, 188, 650, 54), "OF THE LOST DREAM", menuSubtitle);
+            Panel(new Rect(64, 261, 54, 3), gold);
+            Label(new Rect(64, 288, 350, 70), "Light the lanterns.\nFind your way through the dream.", text);
+            float actionsY = Mathf.Max(390, height - 440);
+            if (GUI.Button(new Rect(64, actionsY, 320, 58), "BEGIN THE DREAM", menuPrimary)) game.StartPlaying();
+            Label(new Rect(64, actionsY + 68, 320, 24), "PRESS ENTER TO BEGIN", menuSmall);
+            Label(new Rect(64, actionsY + 115, 340, 25), "OR CHOOSE A CHAPTER", menuSmall, gold);
             for (int i = 0; i < 3; i++)
             {
                 int chapter = i;
-                if (GUI.Button(new Rect(64, 622 + i * 52, 500, 42), "0" + (i + 1) + "   " + DreamGame.ChapterNames[i], button)) game.LoadChapter(chapter);
+                if (GUI.Button(new Rect(64, actionsY + 150 + i * 48, 320, 40), "0" + (i + 1) + "   " + DreamGame.ChapterNames[i], menuChapter)) game.LoadChapter(chapter);
             }
-            Label(new Rect(64, height - 90, 640, 72), "WASD / move     Left-click / bow    E / interact    Q / candy\nSpace / jump    Shift / dodge    Mouse / aim\nMiddle-drag / orbit    Scroll / zoom    F / reset view", small);
-            Label(new Rect(width - 360, height - 42, 340, 24), "M / sound     Esc / pause", small);
+            Label(new Rect(64, height - 82, 640, 60), "WASD / move    Space / jump    Shift / dodge\nLeft-click / bow    E / interact    Q / candy", menuSmall);
+            if (GUI.Button(new Rect(width - 228, 38, 188, 36), game.audioSystem.Muted ? "SOUND OFF  /  M" : "SOUND ON  /  M", menuChapter))
+                game.audioSystem.ToggleMute();
+        }
+        void OnDestroy()
+        {
+            if (menuShade != null) Destroy(menuShade);
         }
         void PlayHUD(DreamGame game)
         {

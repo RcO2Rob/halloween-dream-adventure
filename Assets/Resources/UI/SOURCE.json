@@ -1,0 +1,13 @@
+{
+  "asset": "Title screen backdrop",
+  "source": "docs/qa/poly-halloween-preview/characters-and-props.png",
+  "selection": "User selected this rendered composition as the game start screen",
+  "sha256": "366eb3d95d030752863e1d315ffd8c20f21887c2af7f4cd01901550af37f3d85",
+  "artwork_credits": [
+    "polyperfect / Poly Halloween Pack",
+    "Adobe Mixamo / Timmy",
+    "Quaternius / Ultimate Monsters",
+    "Project-authored placement, lighting and floating island"
+  ],
+  "scope": "Rendered composite image, not redistributed source models or textures"
+}

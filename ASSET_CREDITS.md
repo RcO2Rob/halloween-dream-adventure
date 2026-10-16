@@ -1,6 +1,6 @@
 # Asset provenance
 
-The player is **Timmy** from [Mixamo](https://www.mixamo.com/), with Mixamo humanoid animation clips. Flying enemies use the **Ultimate Monsters** pack by [Quaternius](https://quaternius.com/packs/ultimatemonsters.html), licensed **CC0 1.0**. Environments and the pumpkin boss are procedural.
+The player is **Timmy** from [Mixamo](https://www.mixamo.com/), with Mixamo humanoid animation clips. Flying enemies use the **Ultimate Monsters** pack by [Quaternius](https://quaternius.com/packs/ultimatemonsters.html), licensed **CC0 1.0**. Terrain, castle structure and the pumpkin boss are procedural. Since local v0.11, scenery and lantern skins in all three chapters use **Poly Halloween Pack** by **polyperfect** under the Standard Unity Asset Store EULA; an independent art preview is retained. See [preview and restoration instructions](docs/POLY_HALLOWEEN_SETUP.md).
 
 | Asset | Source | Implementation |
 | --- | --- | --- |
@@ -8,6 +8,8 @@ The player is **Timmy** from [Mixamo](https://www.mixamo.com/), with Mixamo huma
 | Timmy player | Adobe Mixamo character; royalty-free project use under Mixamo terms | Original FBX and extracted textures in `Assets/ThirdParty/Mixamo/Timmy`; humanoid prefab, material and controller in `Assets/Resources/Characters` |
 | Pumpkin boss, castle, islands, round jumping platforms, vegetation, bow, candy | Original procedural geometry authored for this project with Codex assistance | `DreamArt.cs`, `DreamWorld.cs`, `PrototypeBuilder.cs`; Unity primitives and generated meshes |
 | Materials | Original project palette | `PrototypeBuilder.MakeMaterials`; `Assets/Resources/Materials` |
+| Chapter scenery, interactive lantern skins and separate art study: pumpkins, graveyard walls, tombstones, dead trees, candles, cauldron and props | polyperfect, Poly Halloween Pack, Unity Asset Store #236625; Standard Unity Asset Store EULA | Original source and GUIDs preserved locally under `Assets/polyperfect/Poly Halloween`, excluded from public Git; project-authored placements in the three saved chapters and `Assets/Scenes/Previews/PolyHalloweenPreview.unity`; `LanternSkin` follows the original lantern state |
+| Start-menu backdrop | Owner-selected render of the project's art-study scene, containing credited polyperfect, Mixamo and Quaternius artwork | Unmodified rendered composite from `docs/qa/poly-halloween-preview/characters-and-props.png` copied to `Assets/Resources/UI/TitleBackdrop.png`; `TitleBackdropDisplay` fits the image while `DreamHUD` draws the title, shade and buttons. This is a rendered game image, not a source-model distribution. Provenance and hash in `Assets/Resources/UI/SOURCE.json` |
 | Enemy flight, attack windup, death | Quaternius authored animation clips; CC0 1.0 | Animation playback driven by the enemy state machine |
 | Timmy idle, running, bow aiming, throwing | Adobe Mixamo authored humanoid animation | `Idle`, `Running`, `Standing Aim Idle 01`, `Throw`; locomotion blend, upper-body mask and prop following are project adaptations |
 | Jump takeoff/airborne/landing poses, forward bow pose, candy carrying pose, floating, boss squash | Original procedural animation adaptations | Chest/head alignment and two-bone arm solve over Mixamo bow aiming, hand target adjustment in `TimmyAnimation.cs`; environment and boss scripts |

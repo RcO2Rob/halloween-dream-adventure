@@ -15,7 +15,7 @@ public static class PrototypeBuilder
     }
     public static void BuildCurrentScenes()
     {
-        PlayerSettings.bundleVersion = "0.10.0";
+        PlayerSettings.bundleVersion = "0.12.0";
         MakeCombatMaterials();
         ValidateScenes();
         AssetDatabase.SaveAssets();
@@ -62,7 +62,7 @@ public static class PrototypeBuilder
     public static void AddJumpPlatformsToCurrentScenes()
     {
         if (!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
-        PlayerSettings.bundleVersion = "0.10.0";
+        PlayerSettings.bundleVersion = "0.12.0";
         for (int i = 0; i < 3; i++)
         {
             var scene = EditorSceneManager.OpenScene("Assets/Scenes/" + DreamGame.SceneNames[i] + ".unity");
@@ -89,7 +89,7 @@ public static class PrototypeBuilder
         MonsterAssetBuilder.BuildVarietyPrefabs(); TimmyAssetBuilder.BuildPrefab();
         PlayerSettings.companyName = "Lost Dream Studio";
         PlayerSettings.productName = "Lanterns of the Lost Dream";
-        PlayerSettings.bundleVersion = "0.10.0";
+        PlayerSettings.bundleVersion = "0.12.0";
         PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.Standalone, "com.lostdream.halloween");
         PlayerSettings.defaultScreenWidth = 1440; PlayerSettings.defaultScreenHeight = 900;
         PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
@@ -127,7 +127,34 @@ public static class PrototypeBuilder
             options = BuildOptions.Development
         });
         if (report.summary.result != BuildResult.Succeeded) throw new Exception("Mac build failed: " + report.SummarizeErrors());
+        SignMacBuild();
         Debug.Log("LOST_DREAM_BUILD_OK: " + report.summary.totalSize + " bytes.");
+    }
+
+    public static void SignMacBuild()
+    {
+#if UNITY_EDITOR_OSX
+        // Some bundled Unity runtime dylibs retain invalid signatures after export.
+        // Ad-hoc signing supports local play without requiring a developer account.
+        string bundle = Path.GetFullPath("Builds/macOS/Lanterns of the Lost Dream.app");
+        string quoted = "\"" + bundle.Replace("\\", "\\\\").Replace("\"", "\\\"") + "\"";
+        foreach (string arguments in new[] {
+            "--force --deep --sign - --timestamp=none --preserve-metadata=entitlements " + quoted,
+            "--verify --deep --strict " + quoted })
+        {
+            var info = new System.Diagnostics.ProcessStartInfo("/usr/bin/codesign", arguments) {
+                UseShellExecute = false, RedirectStandardError = true, RedirectStandardOutput = true
+            };
+            using (var process = System.Diagnostics.Process.Start(info))
+            {
+                string output = process.StandardOutput.ReadToEnd();
+                string error = process.StandardError.ReadToEnd();
+                process.WaitForExit();
+                if (process.ExitCode != 0) throw new Exception("Local Mac bundle signing failed: " + output + error);
+            }
+        }
+        Debug.Log("LOST_DREAM_MAC_SIGNATURE_OK");
+#endif
     }
 
     [MenuItem("Lost Dream/Validate prototype scenes")]
