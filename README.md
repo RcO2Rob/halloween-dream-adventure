@@ -4,6 +4,8 @@ A playable four-level Unity 3D prototype, titled **Lanterns of the Lost Dream**.
 
 Current release: **v0.14.0**. It includes storybook typography, the first-chapter introduction, six gentle ethereal music arrangements, fitted scenery collision, removal of the R restart shortcut, and no floating candy labels in chapter three. See [release notes](docs/RELEASE_v0.14.0.md).
 
+The latest source checkpoint adds a golden ground trail and eight-step instruction panel to chapter one, covering lanterns, bow practice, jumping, the flying monster, candy and the exit. Chapter three hides enemy names and attack text while keeping health bars. This checkpoint also includes the owner's saved garden prop-position adjustments. The tutorial update passed 86 focused rendered standalone checks; the later garden position edits have a separate serialized-object/reference audit. See [tutorial guidance and validation](docs/qa/tutorial-guide/README.md). The packaged v0.14.0 app and ZIP remain the previous exported release.
+
 ## Current concept
 
 The player explores a dream being consumed by nightmares. Lighting pumpkin lanterns disperses nightmare fog and reveals paths through the dream.

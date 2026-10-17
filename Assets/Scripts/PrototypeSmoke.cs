@@ -86,6 +86,8 @@ namespace LostDream
             if (Environment.GetCommandLineArgs().Contains("--opening-smoke"))
             { yield return OpeningReview(); yield break; }
             DreamGame.Instance.DismissIntroduction();
+            if (Environment.GetCommandLineArgs().Contains("--tutorial-guide-smoke"))
+            { yield return TutorialGuideReview(); yield break; }
             if (Environment.GetCommandLineArgs().Contains("--scenery-collision-smoke") || Environment.GetCommandLineArgs().Contains("--scenery-contact-smoke"))
             { yield return SceneryCollisionReview(); yield break; }
             if (Environment.GetCommandLineArgs().Contains("--music-smoke"))

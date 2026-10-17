@@ -222,7 +222,18 @@ namespace LostDream
                 }
                 Reticle(game);
                 TargetLabels(game);
+                if (game.Tutorial != null) TutorialPrompt(game.Tutorial);
             }
+        }
+        void TutorialPrompt(TutorialGuide guide)
+        {
+            Rect box = new Rect(width / 2 - 215, 24, 430, 124);
+            Panel(box, panel);
+            Label(new Rect(box.x + 16, box.y + 8, 398, 23), "Follow the golden trail  /  " + guide.StepNumber + " of 8", small, gold);
+            Label(new Rect(box.x + 16, box.y + 35, 398, 30), guide.Title,
+                new GUIStyle(small) { font = DreamTypography.Strong, fontSize = 22 }, cream);
+            Label(new Rect(box.x + 16, box.y + 70, 398, 48), guide.Instruction,
+                new GUIStyle(small) { fontSize = 17 }, cream);
         }
         void Reticle(DreamGame game)
         {
@@ -242,12 +253,15 @@ namespace LostDream
                 Vector3 p = game.gameCamera.WorldToScreenPoint(dragon.AimPosition + Vector3.up * 1.2f);
                 if (p.z <= 0) continue;
                 float x = p.x / scale, y = (Screen.height - p.y) / scale;
-                var nameStyle = new GUIStyle(small) { fontSize = 17, alignment = TextAnchor.MiddleCenter };
-                Label(new Rect(x - 120, y - 28, 240, 24), dragon.DisplayName, nameStyle, cream);
                 Panel(new Rect(x - 24, y, 48, 5), panel);
                 Panel(new Rect(x - 24, y, 48f * dragon.health / dragon.MaxHealth, 5), teal);
-                if (dragon.Phase == DragonPhase.Telegraph)
-                    Label(new Rect(x - 160, y + 7, 320, 24), dragon.AttackHint, nameStyle, gold);
+                if (game.levelIndex != 2)
+                {
+                    var nameStyle = new GUIStyle(small) { fontSize = 17, alignment = TextAnchor.MiddleCenter };
+                    Label(new Rect(x - 120, y - 28, 240, 24), dragon.DisplayName, nameStyle, cream);
+                    if (dragon.Phase == DragonPhase.Telegraph)
+                        Label(new Rect(x - 160, y + 7, 320, 24), dragon.AttackHint, nameStyle, gold);
+                }
             }
         }
         void Modal(DreamGame game, string caption, string description, string action, System.Action callback)

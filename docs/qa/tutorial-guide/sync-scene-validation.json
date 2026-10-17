@@ -1,0 +1,8 @@
+{
+  "same_serialized_objects": true,
+  "same_asset_references": true,
+  "changed_objects": 5,
+  "changes": "Local positions of two transforms and three prefab roots only",
+  "scene_sha256": "f7ce9010b366c5a286588a6a2cc1bf5ef851691380a5675da45bb8c712095dad",
+  "tutorial_runtime_qa_predates_these_garden_position_edits": true
+}

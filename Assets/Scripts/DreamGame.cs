@@ -25,6 +25,7 @@ namespace LostDream
         public Vector3[] candySpawnPoints;
         public GardenAdventure garden;
         public WitchlightMarsh marsh;
+        public TutorialGuide Tutorial { get; private set; }
         public const int BossChapterIndex = 3;
         public GamePhase Phase { get; private set; }
         public Vector3 Checkpoint { get; private set; }
@@ -71,6 +72,7 @@ namespace LostDream
         }
         void Start()
         {
+            if (levelIndex == 0) Tutorial = gameObject.AddComponent<TutorialGuide>();
             if (boss != null) ReplenishCandy();
         }
 
@@ -293,6 +295,7 @@ namespace LostDream
                 if (player.CarryingCandy) return boss.Exposed ? "SHELL OPEN! Throw your matching candy." : "Match his color. Wait for SHELL OPEN.";
                 return "E / pick up " + boss.RequiredCandyLabel + " candy.\nThrow when his shell opens. Shift / dodge.";
             }
+            if (Tutorial != null) return Tutorial.Instruction;
             foreach (var lamp in lanterns)
             {
                 var path = lamp.path;
