@@ -1,4 +1,4 @@
-"""Generate only the original major-key victory loop, preserving all prior scores."""
+"""Archive the legacy oscillator victory loop; current scores use arrange_soundtrack.py."""
 import json
 from generate_music import OUT, render
 

@@ -53,7 +53,9 @@ namespace LostDream
             if (paused) return;
             bool finished = game.Phase == GamePhase.Defeated || game.Phase == GamePhase.LevelComplete;
             string desired = game.Phase == GamePhase.Victory ? "dream_celebration" : finished ? "" : game.boss != null && game.boss.AwakeInArena ?
-                game.boss.SecondPhase ? "pumpkin_rage" : "pumpkin_battle" : "dream_journey";
+                game.boss.SecondPhase ? "pumpkin_rage" : "pumpkin_battle" :
+                game.Phase == GamePhase.Menu ? "dream_journey" :
+                game.levelIndex == 1 ? "shattered_gardens" : game.levelIndex == 2 ? "witchlight_marsh" : "dream_journey";
             if (desired != MusicTrack)
             {
                 MusicTrack = desired;

@@ -77,11 +77,21 @@ namespace LostDream
         {
             yield return new WaitForSecondsRealtime(1);
             Require(DreamGame.Instance != null && DreamGame.Instance.levelIndex == 0, "Tutorial loads in standalone player");
+            if (Environment.GetCommandLineArgs().Contains("--typography-smoke") || Environment.GetCommandLineArgs().Contains("--opening-smoke")) DreamTypography.AuditEnabled = true;
             yield return TitleScreenChecks();
             yield return Capture("01-title");
             DreamGame.Instance.StartPlaying();
             yield return null;
             Require(DreamGame.Instance.Phase == GamePhase.Playing, "Start action leaves the cover menu and enters the tutorial");
+            if (Environment.GetCommandLineArgs().Contains("--opening-smoke"))
+            { yield return OpeningReview(); yield break; }
+            DreamGame.Instance.DismissIntroduction();
+            if (Environment.GetCommandLineArgs().Contains("--scenery-collision-smoke") || Environment.GetCommandLineArgs().Contains("--scenery-contact-smoke"))
+            { yield return SceneryCollisionReview(); yield break; }
+            if (Environment.GetCommandLineArgs().Contains("--music-smoke"))
+            { yield return SoundtrackReview(); yield break; }
+            if (Environment.GetCommandLineArgs().Contains("--typography-smoke"))
+            { yield return TypographyReview(); yield break; }
             if (Environment.GetCommandLineArgs().Contains("--marsh-smoke"))
             {
                 DreamGame.Instance.LoadChapter(2); yield return new WaitForSecondsRealtime(.7f);
@@ -619,8 +629,9 @@ namespace LostDream
                 "All eighteen tutorial tree positions use imported dead trees and hide the former round canopy art");
             Require(group.GetComponentsInChildren<Transform>().Any(t => t.name.Contains("Tree_Scary_Dead")) &&
                 group.GetComponentsInChildren<Transform>().Any(t => t.name.Contains("Tree_Poplar_Dead_A")) &&
-                group.GetComponentsInChildren<Collider>(true).All(c => !c.enabled),
-                "Tutorial trees match the garden's two dead-tree models without adding collision or blocking targeting");
+                group.GetComponentsInChildren<SceneryObstacle>(true).All(o => o.Solid) &&
+                group.GetComponentsInChildren<SceneryObstacle>(true).Length == 18,
+                "Tutorial trees match the garden's two dead-tree models with fitted physical collision");
             var camera = game.gameCamera; var follow = camera.GetComponent<DreamCamera>();
             follow.enabled = false; camera.transform.position = new Vector3(14, 13, -14); camera.transform.LookAt(new Vector3(0, 1, 3));
             yield return Capture("01-matching-dead-trees"); follow.enabled = true; follow.Snap();
@@ -2112,17 +2123,17 @@ namespace LostDream
         {
             Transform scenery = game.transform.Find("Poly Halloween scenery");
             Require(scenery != null && scenery.childCount > 0, "Saved chapter includes imported Halloween scenery " + (game.levelIndex + 1));
-            Require(scenery.GetComponentsInChildren<Collider>(true).All(x => !x.enabled),
-                "Decorative props introduce no collision or projectile obstacles " + (game.levelIndex + 1));
-            Require(scenery.GetComponentsInChildren<Transform>(true).All(x => x == scenery || x.gameObject.layer == 2),
-                "Decoration stays outside gameplay targeting raycasts " + (game.levelIndex + 1));
+            Require(scenery.GetComponentsInChildren<SceneryObstacle>(true).All(o => o.Solid),
+                "Solid scenery uses fitted colliders " + (game.levelIndex + 1));
+            Require(scenery.GetComponentsInChildren<Collider>(true).All(x => !x.enabled || x.GetComponentInParent<SceneryObstacle>() != null),
+                "Physical decoration uses explicitly marked obstacle shapes " + (game.levelIndex + 1));
             foreach (var lantern in game.lanterns)
             {
                 var skin = lantern.GetComponent<LanternSkin>();
                 Require(skin != null && skin.lantern == lantern && skin.unlit.activeSelf && !skin.lit.activeSelf,
                     "Imported switch starts unlit and references the existing lantern: " + lantern.lanternName);
-                Require(skin.GetComponentsInChildren<Collider>(true).All(x => !x.enabled || x.transform == lantern.transform.Find("Lantern pedestal")),
-                    "Lantern artwork retains only the existing pedestal collision: " + lantern.lanternName);
+                Require(skin.GetComponentsInChildren<Collider>(true).All(x => !x.enabled || x.transform == lantern.transform.Find("Lantern pedestal") || x.GetComponentInParent<SceneryObstacle>(true) != null),
+                    "Lantern retains its pedestal and fitted pumpkin collision: " + lantern.lanternName);
             }
         }
 

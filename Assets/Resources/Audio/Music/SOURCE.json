@@ -1,38 +1,209 @@
 {
-  "source": "Original algorithmic compositions authored for this project with Codex assistance",
-  "samples": "Synthesized oscillators and deterministic noise only; no external samples or music",
-  "format": "22050 Hz stereo PCM16 WAV",
-  "generator": "tools/generate_music.py",
+  "version": 3,
+  "style": "Gentle ethereal dream atmosphere, selected by the user",
+  "composition": "Original project note sequences arranged with Codex assistance; no borrowed songs.",
+  "instrument_bank": {
+    "author": "S. Christian Collins",
+    "name": "GeneralUser GS 2.0.3",
+    "commit": "684543d5e5efaef08d02be50dcda8d552478fa60",
+    "sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+    "url": "https://www.schristiancollins.com/generaluser.php",
+    "license": "Assets/ThirdParty/Music/GeneralUser-GS-LICENSE.txt"
+  },
+  "renderer": {
+    "name": "TinySoundFont",
+    "commit": "853a0a171759f1ddba0de1442133a75912bbeffa",
+    "license": "tools/vendor/tinysoundfont/LICENSE"
+  },
+  "sample_rate": 32000,
+  "channels": 2,
   "tracks": [
     {
-      "file": "dream_journey.wav",
-      "bpm": 82,
-      "bars": 16,
-      "seconds": 46.829251700680274,
-      "peak": 0.78,
-      "rms": 0.15865953500547453,
-      "loop_edge_delta": 0.0070857336738690095,
-      "sha256": "5867480e78ba5a4811de3020de348575ca382de7575db28eb4b3c11687b6087a"
+      "track": "dream_journey",
+      "style": "Gentle ethereal dream atmosphere",
+      "bpm": 68,
+      "meter": 4,
+      "bars": 48,
+      "duration_seconds": 169.41175,
+      "key": "MIDI tonic 62, natural minor",
+      "orchestration": "Distant celesta, breathy flute, warm pads and slow harp",
+      "sections": [
+        "Drifting into sleep",
+        "A distant light",
+        "Breath of the garden",
+        "Beyond the mist",
+        "A remembered path",
+        "Floating home"
+      ],
+      "note_count": 234,
+      "peak": 0.5186782303029425,
+      "rms": 0.07999999731980882,
+      "boundary_step": 1.0842021724855044e-19,
+      "section_rms": [
+        0.04916688330706871,
+        0.08310878146395016,
+        0.09326857242765303,
+        0.09340821220818869,
+        0.09787521859837388,
+        0.045517800658611794
+      ],
+      "sha256": "0ae410dc34262f499250b51ccb006498b6287f8797f69ab34b483abe0eeb2a19"
     },
     {
-      "file": "pumpkin_battle.wav",
-      "bpm": 112,
-      "bars": 16,
-      "seconds": 34.285714285714285,
-      "peak": 0.78,
-      "rms": 0.15939591666262498,
-      "loop_edge_delta": 0.00929141484772314,
-      "sha256": "092b0d3721dc18ebc97ec91cb38548a76d4cc2cd5a9606e05f82698e24ae7c47"
+      "track": "shattered_gardens",
+      "style": "Gentle ethereal dream atmosphere",
+      "bpm": 72,
+      "meter": 4,
+      "bars": 48,
+      "duration_seconds": 160.0,
+      "key": "MIDI tonic 60, natural minor",
+      "orchestration": "Airy bottle flute, soft piano and sustained strings",
+      "sections": [
+        "Drifting into sleep",
+        "A distant light",
+        "Breath of the garden",
+        "Beyond the mist",
+        "A remembered path",
+        "Floating home"
+      ],
+      "note_count": 246,
+      "peak": 0.4461825256692304,
+      "rms": 0.0799999963859393,
+      "boundary_step": 0.0,
+      "section_rms": [
+        0.048879997398933867,
+        0.08915259080699944,
+        0.08990723765403517,
+        0.0943243867904782,
+        0.09461599172121615,
+        0.04615163710668904
+      ],
+      "sha256": "672e83ee5750155424080721f904cbdbd6544a6f3ddec824a247c9e27b97e31c"
     },
     {
-      "file": "pumpkin_rage.wav",
-      "bpm": 124,
-      "bars": 16,
-      "seconds": 30.967755102040815,
-      "peak": 0.78,
-      "rms": 0.14756744239775743,
-      "loop_edge_delta": 0.0011956673619947789,
-      "sha256": "72140a7c259a6e9f9f4afbeb8937e13b3d12c77c45ecf9246acb58a2407bb1bd"
+      "track": "witchlight_marsh",
+      "style": "Gentle ethereal dream atmosphere",
+      "bpm": 66,
+      "meter": 4,
+      "bars": 48,
+      "duration_seconds": 174.54546875,
+      "key": "MIDI tonic 64, natural minor",
+      "orchestration": "Floating harp, wordless choir and sparse vibraphone",
+      "sections": [
+        "Drifting into sleep",
+        "A distant light",
+        "Breath of the garden",
+        "Beyond the mist",
+        "A remembered path",
+        "Floating home"
+      ],
+      "note_count": 246,
+      "peak": 0.4752497696270986,
+      "rms": 0.08000000067685925,
+      "boundary_step": 0.0,
+      "section_rms": [
+        0.05115443093551029,
+        0.07886501579628173,
+        0.09553666225909162,
+        0.09301355101209537,
+        0.09666761037042836,
+        0.049397740744853307
+      ],
+      "sha256": "e836c54fcb6435b16a9d802985f675a826384d5a7fc84984a51932662a4089c7"
+    },
+    {
+      "track": "pumpkin_battle",
+      "style": "Gentle ethereal dream atmosphere",
+      "bpm": 88,
+      "meter": 4,
+      "bars": 48,
+      "duration_seconds": 130.90909375,
+      "key": "MIDI tonic 50, natural minor",
+      "orchestration": "Low string swells, distant horns and a restrained pulse",
+      "sections": [
+        "Drifting into sleep",
+        "A distant light",
+        "Breath of the garden",
+        "Beyond the mist",
+        "A remembered path",
+        "Floating home"
+      ],
+      "note_count": 270,
+      "peak": 0.5011824030729111,
+      "rms": 0.0800000007020892,
+      "boundary_step": 0.0,
+      "section_rms": [
+        0.051159402154781125,
+        0.08972827936515587,
+        0.09016873829076852,
+        0.0918138543760723,
+        0.09020284530635159,
+        0.0550890986103784
+      ],
+      "sha256": "758d1edae4a6c70bf881c414b2f132035954cf7dff2ab74a16b8062eed8c5260"
+    },
+    {
+      "track": "pumpkin_rage",
+      "style": "Gentle ethereal dream atmosphere",
+      "bpm": 102,
+      "meter": 4,
+      "bars": 48,
+      "duration_seconds": 112.9411875,
+      "key": "MIDI tonic 50, natural minor",
+      "orchestration": "Tense string swells and a deeper pulse beneath airy melody",
+      "sections": [
+        "Drifting into sleep",
+        "A distant light",
+        "Breath of the garden",
+        "Beyond the mist",
+        "A remembered path",
+        "Floating home"
+      ],
+      "note_count": 334,
+      "peak": 0.4919417283059555,
+      "rms": 0.07999999009166953,
+      "boundary_step": 0.0,
+      "section_rms": [
+        0.050104709680714676,
+        0.08921466227026516,
+        0.09167571055586587,
+        0.0922911939531582,
+        0.09026094338960568,
+        0.053489384956392966
+      ],
+      "sha256": "0d65a1fb0d166ea0c65ee356692da60b28a9a8e0f3c822294deeb078ad7076b3"
+    },
+    {
+      "track": "dream_celebration",
+      "style": "Gentle ethereal dream atmosphere",
+      "bpm": 84,
+      "meter": 4,
+      "bars": 48,
+      "duration_seconds": 137.14284375,
+      "key": "MIDI tonic 60, major",
+      "orchestration": "Warm major-key piano, flute and harp homecoming",
+      "sections": [
+        "Drifting into sleep",
+        "A distant light",
+        "Breath of the garden",
+        "Beyond the mist",
+        "A remembered path",
+        "Floating home"
+      ],
+      "note_count": 270,
+      "peak": 0.4829153674761224,
+      "rms": 0.07999999944852347,
+      "boundary_step": 0.0,
+      "section_rms": [
+        0.04835146986619761,
+        0.08914763223205442,
+        0.0922963890635762,
+        0.09363790955193543,
+        0.09316442547910071,
+        0.04635238210914638
+      ],
+      "sha256": "e573b4688c7a519332e9dc377b5e0a249d2d4298a4c9a4aae7bebe58340669b5"
     }
-  ]
+  ],
+  "independent_listener_review": false
 }

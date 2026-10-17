@@ -1,0 +1,43 @@
+{
+  "source_repository": "https://github.com/google/fonts",
+  "revision": "47d54ca1ebb14fd864695f1d39dc734f39017c33",
+  "license": "SIL Open Font License 1.1; original license files included",
+  "modified_font_files": false,
+  "roles": {
+    "title": "Griffy Regular",
+    "body": "Averia Sans Libre Regular",
+    "emphasis": "Averia Sans Libre Bold"
+  },
+  "files": [
+    {
+      "path": "Assets/Resources/Typography/Griffy-Regular.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/griffy/Griffy-Regular.ttf",
+      "sha256": "c889c3f8d169631386a297eae8b5bdefbf8d06aa9f4f325faec31b9b5f38eeb5",
+      "bytes": 208776
+    },
+    {
+      "path": "Assets/Resources/Typography/AveriaSansLibre-Regular.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/averiasanslibre/AveriaSansLibre-Regular.ttf",
+      "sha256": "834a9a8ef3a37da0165274d0345836b430e54ef15e6ebf070ae7c5805034efbc",
+      "bytes": 108320
+    },
+    {
+      "path": "Assets/Resources/Typography/AveriaSansLibre-Bold.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/averiasanslibre/AveriaSansLibre-Bold.ttf",
+      "sha256": "c54cc938b365fa4442b9de4db603f26596e9ef3d3feba311cf986b6e13107863",
+      "bytes": 112976
+    },
+    {
+      "path": "Assets/ThirdParty/Fonts/Griffy/OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/griffy/OFL.txt",
+      "sha256": "879ec56fcc9a961937fd24d542b3b7b3f2b8cb3236b7351e62d16719e25de14c",
+      "bytes": 4483
+    },
+    {
+      "path": "Assets/ThirdParty/Fonts/AveriaSansLibre/OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/averiasanslibre/OFL.txt",
+      "sha256": "46239ba6485d28553fd944da4ad32a00d9c403aa1c3e111676b0b96fe458d1d4",
+      "bytes": 4402
+    }
+  ]
+}

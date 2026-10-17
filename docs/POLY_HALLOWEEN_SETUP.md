@@ -19,7 +19,7 @@ After approval of the preview, the artwork was applied to all three saved maps. 
 
 Interactive pumpkin lanterns retain their original `Lantern` component, pedestal, interaction ring, light, road references and checkpoint. `LanternSkin` switches imported unlit/lit models with the original switch state. The original geometric renderers are hidden while their objects and collision remain.
 
-Decorations have collision disabled and use Ignore Raycast to preserve movement, shooting, candy placement and camera obstruction rules. Saved-file audits preserve original objects, transforms, existing collision and gameplay values, with Unity's newly serialized default fields recorded separately.
+The original v0.11 art pass disabled decoration collision. The current local physics update adds fitted mesh collision to solid props in all four saved chapters, including the tutorial's replacement trees and both lantern variants. Artwork retains its Ignore Raycast layer; separate mesh-surface collider children use Default so movement, arrows and aiming agree. Hidden procedural trees have their obsolete trunk colliders disabled. Interactive potion receivers, gates, routes and enemy collision retain their existing logic. See [scenery collision and editing](SCENERY_COLLISION.md).
 
 The pre-artwork scenes and metadata are archived locally under `Builds/archive/before-poly-halloween-20261015-rwk_p19a`; validation is in `docs/qa/v0.11.0`. The artwork operation did not call the world generator or change the enabled scene list. Historical QA records retain their original local-only status; the current source synchronization also includes v0.12.
 

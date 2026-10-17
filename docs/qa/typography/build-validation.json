@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "checks": 23,
+  "suite": "--smoke-test --typography-smoke",
+  "unityVersion": "6000.6.2f1",
+  "embeddedFonts": [
+    "Griffy-Regular",
+    "AveriaSansLibre-Regular",
+    "AveriaSansLibre-Bold"
+  ],
+  "fontFilesUnmodifiedAndSourceHashesVerified": true,
+  "savedSceneBytesUnchanged": {
+    "03_WitchlightMarsh.unity": true,
+    "04_PumpkinKeep.unity": true,
+    "01_FirstLight.unity": true,
+    "02_ShatteredGardens.unity": true
+  },
+  "coverSizes": [
+    [
+      1440,
+      900
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      1280,
+      960
+    ]
+  ],
+  "gameplayHudSizes": [
+    [
+      1440,
+      900
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      1280,
+      960
+    ],
+    [
+      1280,
+      720
+    ]
+  ],
+  "screenCoverage": [
+    "cover",
+    "four chapter HUDs",
+    "world signs and shrines",
+    "candy labels",
+    "potion recipe",
+    "boss HUD",
+    "pause",
+    "retry",
+    "victory"
+  ],
+  "actualGlyphAndTextBoundsChecks": true,
+  "macSignatureVerified": true,
+  "testedCodeAndFontsMatchOriginalWorkspace": true,
+  "independentHumanUsabilityAssessment": false,
+  "fullGameplaySuiteRerun": false
+}

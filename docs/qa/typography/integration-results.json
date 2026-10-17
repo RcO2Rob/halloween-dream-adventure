@@ -1,0 +1,30 @@
+{
+    "passed": true,
+    "unityVersion": "6000.6.2f1",
+    "checks": [
+        "Tutorial loads in standalone player",
+        "Game launches into the cover menu before gameplay",
+        "Title menu keeps a visible free cursor for its buttons",
+        "Chosen cover composition imports at its original 1600 by 1000 aspect ratio",
+        "Dream music plays while the cover menu is displayed",
+        "Cover menu remains idle and preserves the gameplay spawn while resizing: (1440, 900)",
+        "Cover menu remains idle and preserves the gameplay spawn while resizing: (1920, 1080)",
+        "Cover menu remains idle and preserves the gameplay spawn while resizing: (1280, 960)",
+        "Start action leaves the cover menu and enters the tutorial",
+        "All three embedded font faces load in the standalone player without installed system fonts",
+        "Typeface covers controls, candy symbols, Roman numerals and punctuation: Griffy-Regular",
+        "Typeface covers controls, candy symbols, Roman numerals and punctuation: AveriaSansLibre-Regular",
+        "Typeface covers controls, candy symbols, Roman numerals and punctuation: AveriaSansLibre-Bold",
+        "Saved signs, shrines and recipes use the shared typefaces in chapter 1",
+        "World lettering uses its own font atlas, preventing missing glyph rectangles in chapter 1",
+        "Saved signs, shrines and recipes use the shared typefaces in chapter 2",
+        "World lettering uses its own font atlas, preventing missing glyph rectangles in chapter 2",
+        "Saved signs, shrines and recipes use the shared typefaces in chapter 3",
+        "World lettering uses its own font atlas, preventing missing glyph rectangles in chapter 3",
+        "Saved signs, shrines and recipes use the shared typefaces in chapter 4",
+        "World lettering uses its own font atlas, preventing missing glyph rectangles in chapter 4",
+        "Menus, HUD, prompts and modals fit their actual font metrics: ",
+        "Typography review returns safely to the four-chapter menu"
+    ],
+    "error": ""
+}

@@ -19,9 +19,11 @@ namespace LostDream
             if (label == null)
             {
                 var root = DreamArt.Group("Candy color label", transform, Vector3.up * .65f);
+                root.SetActive(false);
                 label = root.AddComponent<TextMesh>();
                 label.characterSize = .065f; label.fontSize = 40;
                 label.anchor = TextAnchor.MiddleCenter;
+                DreamTypography.ApplyWorld(label);
                 label.color = CandyPalette.Color(hue);
             }
             label.text = CandyPalette.Label(hue);
@@ -47,7 +49,8 @@ namespace LostDream
             visual.Rotate(0, Time.deltaTime * 40, 0);
             if (label != null && DreamGame.Instance != null)
             {
-                bool nearby = (DreamGame.Instance.boss != null || DreamGame.Instance.marsh != null) &&
+                // Floating color labels are reserved for the Boss's matching mechanic.
+                bool nearby = DreamGame.Instance.boss != null &&
                     Vector3.Distance(transform.position, DreamGame.Instance.player.transform.position) < 14;
                 bool clear = nearby && !Physics.Linecast(DreamGame.Instance.gameCamera.transform.position,
                     label.transform.position, ~(1 << 2), QueryTriggerInteraction.Ignore);

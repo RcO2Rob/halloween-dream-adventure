@@ -39,6 +39,14 @@ namespace LostDream
         public int RunesRemaining => runes.Count(x => x != null && !x.Cleared);
         public bool ObjectivesComplete => LitCount == lanterns.Length && DragonsRemaining == 0 && RunesRemaining == 0 &&
             (garden == null || garden.Complete) && (marsh == null || marsh.Complete);
+        static bool omitNextIntroduction;
+        const float IntroductionDuration = 16;
+        float introductionRemaining;
+        int introductionFrame;
+        public bool IntroductionVisible => levelIndex == 0 && introductionRemaining > 0;
+        public float IntroductionSecondsRemaining => introductionRemaining;
+        public float IntroductionOpacity => Mathf.Min(1, (IntroductionDuration - introductionRemaining) / .35f,
+            introductionRemaining / .5f);
         float candyTimer;
         bool awaitMouseRelease;
         int captureFrame;
@@ -54,7 +62,10 @@ namespace LostDream
             Phase = DreamTransition.Running ? GamePhase.LevelComplete : JourneyStarted ? GamePhase.Playing : GamePhase.Menu;
             if (DreamTransition.Running) Time.timeScale = 0;
             RefreshCursor();
+            if (JourneyStarted && levelIndex == 0 && !omitNextIntroduction) BeginIntroduction();
+            omitNextIntroduction = false;
             Application.targetFrameRate = 60;
+            DreamTypography.ApplyWorld(transform);
             foreach (var sign in GetComponentsInChildren<TextMesh>())
                 sign.text = sign.text.Replace("SPACE  /  DODGE", "SHIFT  /  DODGE");
         }
@@ -80,8 +91,17 @@ namespace LostDream
                 else if (Phase == GamePhase.Defeated) Retry();
                 else if (Phase == GamePhase.Victory) LoadChapter(0);
             }
-            if (Input.GetKeyDown(KeyCode.R) && Phase != GamePhase.Menu) Retry();
             if (Phase != GamePhase.Playing) return;
+            if (IntroductionVisible)
+            {
+                introductionRemaining = Mathf.Max(0,introductionRemaining - Time.deltaTime);
+                if (Time.frameCount > introductionFrame + 1 &&
+                    (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) ||
+                     Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) ||
+                     Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Q) ||
+                     (MouseActionsReady && (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))) ||
+                     (player.automation && player.automationMove.sqrMagnitude > .01f))) DismissIntroduction();
+            }
             PlaySeconds += Time.deltaTime;
             if (levelIndex == 0 && runes.Any(x => x != null && x.candyOnly && !x.Cleared))
             {
@@ -110,8 +130,15 @@ namespace LostDream
             Time.timeScale = 1;
             RefreshCursor();
             audioSystem.Play("lantern", .5f);
+            if (levelIndex == 0) BeginIntroduction();
             ShowToast("Light the lanterns. Bring the dream back.", 4);
         }
+        void BeginIntroduction()
+        {
+            introductionRemaining = IntroductionDuration;
+            introductionFrame = Time.frameCount;
+        }
+        public void DismissIntroduction() { introductionRemaining = 0; }
         public void Pause() { if (Phase == GamePhase.Playing) { Phase = GamePhase.Paused; Time.timeScale = 0; RefreshCursor(); } }
         public void Resume() { Phase = GamePhase.Playing; Time.timeScale = 1; RefreshCursor(); }
         void RefreshCursor()
@@ -124,17 +151,20 @@ namespace LostDream
         }
         void OnApplicationFocus(bool focused) { if (!focused) Pause(); }
         void OnApplicationPause(bool paused) { if (paused) Pause(); }
-        public void LoadChapter(int chapter)
+        public void LoadChapter(int chapter) { OpenChapter(chapter, true); }
+        void OpenChapter(int chapter, bool showIntroduction)
         {
             if (DreamTransition.Running) return;
+            omitNextIntroduction = !showIntroduction;
             JourneyStarted = true;
             Time.timeScale = 1;
             SceneManager.LoadScene(SceneNames[Mathf.Clamp(chapter, 0, SceneNames.Length - 1)]);
         }
-        public void Retry() { LoadChapter(levelIndex); }
+        public void Retry() { OpenChapter(levelIndex, false); }
         public void ReturnToMenu()
         {
             JourneyStarted = false;
+            omitNextIntroduction = false;
             Time.timeScale = 1;
             SceneManager.LoadScene(SceneNames[0]);
         }

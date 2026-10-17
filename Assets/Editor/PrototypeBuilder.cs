@@ -15,7 +15,7 @@ public static class PrototypeBuilder
     }
     public static void BuildCurrentScenes()
     {
-        PlayerSettings.bundleVersion = "0.13.0";
+        PlayerSettings.bundleVersion = "0.14.0";
         MakeCombatMaterials();
         ValidateScenes();
         AssetDatabase.SaveAssets();

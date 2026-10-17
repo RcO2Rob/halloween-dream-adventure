@@ -2,6 +2,8 @@
 
 A playable four-level Unity 3D prototype, titled **Lanterns of the Lost Dream**. Play as Mixamo's **Timmy**, restore dream roads with pumpkin lanterns, shoot flying nightmares, and defeat the Pumpkin King with matching-color candy during his vulnerable phase. Flying enemies use animated Dragon, Dragon_Evolved, Ghost, Armabee and Demon models from Quaternius's Ultimate Monsters pack (CC0); stronger enemies use the evolved model.
 
+Current release: **v0.14.0**. It includes storybook typography, the first-chapter introduction, six gentle ethereal music arrangements, fitted scenery collision, removal of the R restart shortcut, and no floating candy labels in chapter three. See [release notes](docs/RELEASE_v0.14.0.md).
+
 ## Current concept
 
 The player explores a dream being consumed by nightmares. Lighting pumpkin lanterns disperses nightmare fog and reveals paths through the dream.
@@ -19,9 +21,9 @@ The four playable scenes, Timmy humanoid player with idle/run/aim/throw animatio
 
 v0.10 adds two one-time reinforcement waves to the castle fight. Awakening calls an ember dragon and ghost; half health calls an evolved dragon and diving demon. Each wave has a two-second portal warning, and the Pumpkin King's normal attacks continue concurrently. Use the bow to defeat summoned enemies; they reward the required candy hue. Boss victory clears living summons, pending portals and hostile projectiles. These enemies are generated at runtime over actual ground, preserving all saved map layouts.
 
-Four original synthesized melodic scores loop for exploration, boss combat, the faster half-health stage and victory. A 1.5-second crossfade connects tracks; pause/resume preserves playback position, and M mutes both music and event effects across retries. Boss victory switches to the bright C-major `dream_celebration` loop at 128 BPM; defeat and chapter-completion screens fade music out. Volume is adjustable on the `DreamAudio` component. Scores, provenance and their reproducible generators are included in this repository.
+Six original arrangements give the tutorial, gardens and marsh different musical identities, followed by Boss combat, the faster half-health stage and a major-key homecoming. The user-selected gentle, ethereal style uses sampled flute, harp, warm pads, wordless choir and soft strings. Exploration has no drums; Boss stages keep a restrained low heartbeat. Each piece lasts 113–175 seconds with slow melodic breaths and contrasting sections. A 1.5-second crossfade connects tracks; pause/resume preserves playback position, and M mutes music and event effects across retries. Defeat and chapter completion fade music out. Adjust volume on `DreamAudio`; see [soundtrack sources and regeneration](docs/MUSIC.md). Source/assets are updated locally; existing packaged app/ZIP snapshots remain separate.
 
-v0.11 applies polyperfect's Poly Halloween artwork to the three saved chapters: restrained tutorial scenery, graveyard details in the gardens, and castle approach and perimeter decoration. Imported lantern models switch between unlit and lit appearances using the existing lantern state. Original map transforms, collisions, jump routes, checkpoints, enemy settings and boss mechanics are preserved. Decorative prefabs have their own collision disabled and stay outside targeting raycasts. An independent [art preview](docs/POLY_HALLOWEEN_SETUP.md) is also included.
+v0.11 applied polyperfect's Poly Halloween artwork to the original three saved chapters. Its initial decorative pass disabled prop collision; the current local [scenery physics update](docs/SCENERY_COLLISION.md) adds fitted collision to solid trees, pumpkins, tombstones, coffins, large mushrooms and other substantial props in all four chapters. Lantern models switch between unlit/lit collision together with their artwork. Map transforms, jump routes, checkpoints, enemy settings and Boss mechanics remain. An independent [art preview](docs/POLY_HALLOWEEN_SETUP.md) is also included.
 
 v0.12 uses the owner-selected art-study composition as the start-menu backdrop. The complete image fits the window without stretching or cropping its characters. A translucent left-side shade supports the title, start action and three chapter buttons, with a sound toggle at the upper right. Enter still starts the tutorial; the backdrop disappears during gameplay. No saved chapter layout is changed.
 
@@ -37,9 +39,9 @@ The local candy-art update replaces saved ground/held sweets and runtime repleni
 
 ## Play
 
-On an Apple Silicon Mac, open the local `Builds/macOS/Lanterns of the Lost Dream.app`. The v0.12 archive is `Builds/Lanterns-of-the-Lost-Dream-v0.12.0-macOS-arm64.zip`; previous archives are retained locally. Builds are excluded from Git and are not downloadable from this repository. That older package contains its original three chapters. The current four-chapter journey is available in the Unity source; the older packaged app is a separate snapshot.
+On an Apple Silicon Mac, open the local `Builds/macOS/Lanterns of the Lost Dream.app`. The current archive is `Builds/Lanterns-of-the-Lost-Dream-v0.14.0-macOS-arm64.zip`; previous archives are retained locally. Builds are excluded from Git and are not downloadable from this repository. The current export contains all four chapters and the v0.14 changes; earlier packaged applications are separate snapshots.
 
-This v0.12 source snapshot includes the chapter artwork integration, start screen, saved maps, project-authored code, rendered previews and validation records. Mixamo FBX files, extracted textures and Poly Halloween source assets stay local under their redistribution terms. A fresh clone requires [restoring Timmy assets](docs/MIXAMO_SETUP.md) and [Poly Halloween assets](docs/POLY_HALLOWEEN_SETUP.md) before opening Unity or playing; the existing local project already has these files.
+This source snapshot includes the chapter artwork integration, start screen, saved maps, project-authored code, rendered previews and validation records. Mixamo FBX files, extracted textures and Poly Halloween source assets stay local under their redistribution terms. A fresh clone requires [restoring Timmy assets](docs/MIXAMO_SETUP.md) and [Poly Halloween assets](docs/POLY_HALLOWEEN_SETUP.md) before opening Unity or playing; the existing local project already has these files.
 
 | Input | Action |
 | --- | --- |
@@ -53,7 +55,6 @@ This v0.12 source snapshot includes the chapter artwork integration, start scree
 | Space | Jump once from the ground |
 | Shift | Dash with brief damage immunity |
 | Esc | Pause and release mouse / resume and capture mouse |
-| R | Restart current chapter |
 | Enter | Begin / continue / retry |
 | M | Toggle sound |
 
@@ -93,10 +94,20 @@ The saved `Assets/Scenes/02_ShatteredGardens.unity` contains the expanded advent
 
 The second-chapter exit uses the installed Poly Halloween iron gate. After all garden objectives are complete, its two leaves swing inward, then the floor lights mark a walk-through exit. Pause freezes opening, and retry restores the closed gate and unlit trail. See [garden editing notes](docs/GARDEN_ADVENTURE.md).
 
-Both chapter-one and chapter-two exits now use opening iron gates with continuous fence wings joining the island side rails and a rear side railings with a clear central exit opening. The tutorial's eighteen tree positions use the same Scary Dead and Dead Poplar models as the garden. Original tree collisions and gameplay positions are retained; former round-canopy visuals are hidden.
+Both chapter-one and chapter-two exits now use opening iron gates with continuous fence wings joining the island side rails and rear side railings with a clear central exit opening. The tutorial's eighteen tree positions use the same Scary Dead and Dead Poplar models as the garden. Visible tree meshes now own the collision; hidden former round-canopy models leave no invisible trunk obstacle. Gameplay positions are retained.
 
 ## Four-chapter expansion
 
 Unlocked gates now fade to black, load the next scene and fade back in automatically. Chapter three is **Witchlight Marsh**, a separate six-island adventure with three color recipes, renewable supplies, marked mist hazards, twelve guardians and moving jump platforms. The preserved Boss map is now `Assets/Scenes/04_PumpkinKeep.unity`; the new map is `Assets/Scenes/03_WitchlightMarsh.unity`. All four appear in the title menu and Build Settings. See [marsh layout, editing and pacing notes](docs/WITCHLIGHT_MARSH.md). First-time human play duration remains to be measured.
 
-The current four-chapter journey passed **719 rendered standalone checks**, including all three automatic chapter fades, marsh recipes/hazards/traversal and the complete Boss ending. Validation scope, preserved-map hashes and screenshots are in [four-chapter QA](docs/qa/four-chapters/README.md); this does not measure human play time.
+The v0.13 four-chapter checkpoint passed **719 rendered standalone checks**, including all three automatic chapter fades, marsh recipes/hazards/traversal and the complete Boss ending. Validation scope, preserved-map hashes and screenshots are in [four-chapter QA](docs/qa/four-chapters/README.md); this does not measure human play time.
+
+## Storybook typography
+
+The current Unity source uses Griffy for its storybook headings and Averia Sans Libre for readable instructions, controls, buttons and world lettering. Menus use softer reading case, and all four chapters share embedded font assets. See [typography setup](docs/TYPOGRAPHY.md) for font sources, original licenses, hierarchy and focused visual-review instructions. Saved map layouts remain unchanged.
+
+The typography update passed 23 focused standalone checks across all four chapters and multiple window sizes. Screenshots, font coverage, layout checks and unchanged-map hashes are in [typography QA](docs/qa/typography/README.md).
+
+## Opening explanation
+
+Starting chapter one displays a storybook card introducing the full journey: light pumpkin lanterns, recover lost memory fragments deeper in the dream, and escape the Halloween nightmare. It fades away automatically or closes when the player begins moving; retries skip it. See [opening text and behavior](docs/OPENING_STORY.md).

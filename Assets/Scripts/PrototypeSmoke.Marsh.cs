@@ -25,11 +25,17 @@ namespace LostDream
                 }
                 yield return null;
             }
+            bool focused = Application.isFocused;
+            var expected = focused ? GamePhase.Playing : GamePhase.Paused;
             Require(black && loadedUnderBlack && !DreamTransition.Running && DreamGame.Instance.levelIndex == nextChapter &&
-                DreamGame.Instance.Phase == GamePhase.Playing && Time.timeScale == 1,
-                "Black fade automatically loads and resumes chapter " + (nextChapter + 1));
-            Require(Cursor.lockState == CursorLockMode.Locked && !Cursor.visible,
-                "Automatic fade restores mouse look and hides the cursor");
+                DreamGame.Instance.Phase == expected && Time.timeScale == (focused ? 1 : 0),
+                "Black fade automatically loads chapter " + (nextChapter + 1) + " and respects application focus: phase=" +
+                DreamGame.Instance.Phase + " focused=" + focused + " opacity=" + DreamTransition.BlackOpacity);
+            Require(Cursor.lockState == (focused ? CursorLockMode.Locked : CursorLockMode.None) && Cursor.visible != focused,
+                "Automatic fade restores the correct mouse state for the foreground or paused background window");
+            // Automation may run behind the user's editor. Verify the normal
+            // background pause first, then explicitly resume only the test run.
+            if (!focused) DreamGame.Instance.Resume();
             yield return new WaitForSecondsRealtime(.15f);
         }
         IEnumerator MarshAdventureChecks(DreamGame game)

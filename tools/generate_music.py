@@ -1,4 +1,4 @@
-"""Render three original looping scores. Run with Python 3 and NumPy.
+"""Archive the legacy v0.10 oscillator scores. Run with Python 3 and NumPy.
 
 No recordings, samples, external compositions or downloaded music are used.
 The orchestration and note sequences below are project source.
@@ -10,7 +10,7 @@ import wave
 import numpy as np
 
 RATE = 22050
-OUT = Path(__file__).resolve().parents[1] / "Assets/Resources/Audio/Music"
+OUT = Path(__file__).resolve().parents[1] / "Builds/archive/legacy-procedural-music"
 
 
 def frequency(note):

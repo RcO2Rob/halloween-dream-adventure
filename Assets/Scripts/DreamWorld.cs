@@ -414,6 +414,7 @@ namespace LostDream
             var text = textGo.AddComponent<TextMesh>();
             text.text = top + "\n" + bottom; text.fontSize = 48; text.characterSize = .035f; text.anchor = TextAnchor.MiddleCenter;
             text.color = new Color(1, .83f, .53f);
+            DreamTypography.ApplyWorld(text);
         }
 
         static PumpkinBoss Boss(Transform parent, Vector3 point)
