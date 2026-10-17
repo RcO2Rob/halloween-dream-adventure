@@ -5,6 +5,7 @@ namespace LostDream
     public class DreamGate : MonoBehaviour
     {
         public Renderer[] glowParts;
+        public GardenIronGate ironGate;
         bool lastOpen;
         float promptReady;
         void Update()
@@ -18,7 +19,14 @@ namespace LostDream
         }
         void OnTriggerStay(Collider other)
         {
-            if (other.GetComponent<PlayerMotor>() == null || Time.time < promptReady) return;
+            var player = other.GetComponent<PlayerMotor>();
+            if (player == null) return;
+            if (ironGate != null)
+            {
+                if (ironGate.CanPass(player)) DreamGame.Instance.TryExit();
+                return;
+            }
+            if (Time.time < promptReady) return;
             promptReady = Time.time + 2;
             DreamGame.Instance.TryExit();
         }

@@ -33,6 +33,9 @@ namespace LostDream
         public float PhaseSecondsLeft => Mathf.Max(0, timer);
         [Tooltip("Seconds of visible warning before summoned enemies appear.")]
         public float summonWarningSeconds = 2;
+        public Vector2 arenaMin = new Vector2(-11.5f, 0);
+        public Vector2 arenaMax = new Vector2(11.5f, 24);
+        bool shattered;
         readonly List<FlyingDragon> summoned = new List<FlyingDragon>();
         readonly List<GameObject> summonPortals = new List<GameObject>();
         public Vector3 AimPosition => transform.position + Vector3.up * 3;
@@ -107,8 +110,8 @@ namespace LostDream
                 if (bombsRemaining > 0 && bombTimer <= 0)
                 {
                     Vector3 p = game.player.transform.position + new Vector3(Random.Range(-1.8f, 1.8f), 0, Random.Range(-1.8f, 1.8f));
-                    p.x = Mathf.Clamp(p.x, -11.5f, 11.5f);
-                    p.z = Mathf.Clamp(p.z, 0, 24);
+                    p.x = Mathf.Clamp(p.x, arenaMin.x, arenaMax.x);
+                    p.z = Mathf.Clamp(p.z, arenaMin.y, arenaMax.y);
                     NightmareBomb.Spawn(new Vector3(p.x, .06f, p.z), SecondPhase ? 1.15f : 1.5f);
                     BombsLaunched++;
                     bombsRemaining--;
@@ -306,8 +309,8 @@ namespace LostDream
             if (direction.sqrMagnitude < .01f) direction = Vector3.back;
             float distance = Mathf.Clamp(Vector3.ProjectOnPlane(game.player.transform.position - chargeStart, Vector3.up).magnitude, 5, 10);
             chargeEnd = chargeStart + direction * distance;
-            chargeEnd.x = Mathf.Clamp(chargeEnd.x, -9.5f, 9.5f);
-            chargeEnd.z = Mathf.Clamp(chargeEnd.z, 2.5f, 22);
+            chargeEnd.x = Mathf.Clamp(chargeEnd.x, arenaMin.x + 2, arenaMax.x - 2);
+            chargeEnd.z = Mathf.Clamp(chargeEnd.z, arenaMin.y + 2.5f, arenaMax.y - 2);
             chargeEnd.y = homePosition.y;
             Phase = BossPhase.ChargeTelegraph;
             timer = 1.6f;
@@ -422,6 +425,15 @@ namespace LostDream
                 }
             }
             return true;
+        }
+        public void BreakApart()
+        {
+            if (shattered) return;
+            shattered = true; Health = 0; Phase = BossPhase.Defeated;
+            ClearChargeWarning();
+            foreach (var collider in GetComponentsInChildren<Collider>()) collider.enabled = false;
+            PumpkinBurst.Begin(this);
+            pumpkin.gameObject.SetActive(false); crown.gameObject.SetActive(false);
         }
         void OnDestroy() { ClearChargeWarning(); ClearSummons(); }
     }

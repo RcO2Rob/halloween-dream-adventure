@@ -1,0 +1,24 @@
+{
+    "passed": false,
+    "unityVersion": "6000.6.2f1",
+    "checks": [
+        "Tutorial loads in standalone player",
+        "Game launches into the cover menu before gameplay",
+        "Chosen cover composition imports at its original 1600 by 1000 aspect ratio",
+        "Dream music plays while the cover menu is displayed",
+        "Cover menu remains idle and preserves the gameplay spawn while resizing: (1440, 900)",
+        "Cover menu remains idle and preserves the gameplay spawn while resizing: (1920, 1080)",
+        "Cover menu remains idle and preserves the gameplay spawn while resizing: (1280, 960)",
+        "Start action leaves the cover menu and enters the tutorial",
+        "Player settles on the ground before jumping",
+        "Pause prevents jump input",
+        "Grounded jump starts upward controller velocity",
+        "Repeated input cannot launch a second jump before leaving the floor",
+        "Jump has a distinct takeoff animation stage",
+        "Jump rises off the floor with the ascending animation",
+        "Airborne jump input cannot produce a double jump",
+        "Jump animation deforms the skin independently of the upward root movement",
+        "Airborne jump visibly bends the leg instead of sliding the standing pose upward"
+    ],
+    "error": "System.Exception: Jump keeps the left hand below its shoulder: rising\n  at LostDream.PrototypeSmoke.Require (System.Boolean condition, System.String name) [0x00026] in /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-poly-preview-wjzxe2c1/Assets/Scripts/PrototypeSmoke.cs:68 \n  at LostDream.PrototypeSmoke.RequireRelaxedJumpHands (LostDream.TimmyAnimation character, System.String stage) [0x0007b] in /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-poly-preview-wjzxe2c1/Assets/Scripts/PrototypeSmoke.cs:1191 \n  at LostDream.PrototypeSmoke+<JumpChecks>d__24.MoveNext () [0x0040c] in /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-poly-preview-wjzxe2c1/Assets/Scripts/PrototypeSmoke.cs:1124 \n  at LostDream.PrototypeSmoke+<Guard>d__6.MoveNext () [0x0002f] in /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-poly-preview-wjzxe2c1/Assets/Scripts/PrototypeSmoke.cs:48 "
+}

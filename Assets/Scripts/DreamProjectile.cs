@@ -13,6 +13,7 @@ namespace LostDream
             CandyHue hue = CandyHue.Pink, string hostileMaterial = "GlowGold")
         {
             GameObject root = DreamArt.Group(hostile ? "Dragon ember" : candy ? "Thrown candy" : "Arrow", null, origin);
+            if (!candy && velocity.sqrMagnitude > .001f) root.transform.rotation = Quaternion.LookRotation(velocity);
             var projectile = root.AddComponent<DreamProjectile>();
             projectile.velocity = velocity;
             projectile.candy = candy;
@@ -54,12 +55,14 @@ namespace LostDream
                 {
                     var dragon = hit.collider.GetComponentInParent<FlyingDragon>();
                     var rune = hit.collider.GetComponentInParent<DreamRune>();
+                    var cauldron = hit.collider.GetComponentInParent<WitchCauldron>();
                     var boss = hit.collider.GetComponentInParent<PumpkinBoss>();
                     if (candy && DreamGame.Instance.player.automation)
                         Debug.Log("CANDY_COLLISION: hue=" + hue + " target=" + hit.collider.name + " boss=" + (boss != null) + " point=" + hit.point);
                     if (dragon != null) dragon.Hit(candy ? 2 : 1);
                     else if (rune != null) rune.Hit(candy);
                     else if (boss != null) boss.Hit(candy, hue);
+                    else if (cauldron != null) cauldron.Hit(candy, hue);
                 }
                 DreamArt.Burst(hit.point, candy ? CandyPalette.Material(hue) : hostile ? hostileMaterial : "GlowTeal", 7, 1.5f);
                 Destroy(gameObject);

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "finalTargetedChecks": 265,
+  "earlierFullGameChecks": 637,
+  "fullRunBoundary": "Before rear-sightline and fence-mesh-axis visual corrections; full evidence retained in full-before-rear-opening.",
+  "unityVersion": "6000.6.2f1",
+  "exactFinalSourceAndSceneMatch": true,
+  "thirdSceneUnchanged": true,
+  "tutorialTreeModels": 18,
+  "models": [
+    "Tree_Scary_Dead",
+    "Tree_Poplar_Dead_A"
+  ],
+  "originalTreeCollisionPreserved": true,
+  "bothGateAnchorsPreserved": true,
+  "frontWingHeight": 2.8,
+  "rearExitOpeningWidth": 4.7,
+  "visibleFenceMeshesClearDoorway": true,
+  "bothChapterFenceWalkAndJumpChecksPassed": true,
+  "finalGardenWalkThroughPassed": true,
+  "macBuildAndSignaturePassed": true
+}

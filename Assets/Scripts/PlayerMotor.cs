@@ -4,6 +4,7 @@ using UnityEngine;
 namespace LostDream
 {
     [RequireComponent(typeof(CharacterController))]
+    [DefaultExecutionOrder(20)]
     public class PlayerMotor : MonoBehaviour
     {
         public Transform visual;
@@ -22,6 +23,7 @@ namespace LostDream
         public bool CarryingCandy { get; private set; }
         public CandyHue HeldCandyHue { get; private set; }
         public Vector3 AimPoint { get; private set; }
+        public Vector2 AimScreenPoint => new Vector2(Screen.width * .5f, Screen.height * .5f);
         public float DashCooldown => Mathf.Max(0, dashReady - Time.time);
         public bool Invulnerable => Time.time < invulnerableUntil || Time.time < dashUntil;
         public DreamInteractable Nearby { get; private set; }
@@ -32,6 +34,7 @@ namespace LostDream
         float stride, attackPose, footsteps, lookUntil;
         float airTime;
         Vector3 dashDirection, moveDirection;
+        bool bowRequested, candyRequested;
 
         void Awake()
         {
@@ -50,9 +53,17 @@ namespace LostDream
         {
             DreamGame game = DreamGame.Instance;
             if (game == null) return;
+            if (game.Phase == GamePhase.Victory)
+            {
+                // Let a winning airborne hero settle; combat and movement input stop.
+                float dt = Mathf.Min(Time.unscaledDeltaTime, .05f);
+                if (controller.isGrounded) verticalSpeed = -2;
+                else verticalSpeed -= gravity * dt;
+                controller.Move(Vector3.up * verticalSpeed * dt);
+                return;
+            }
             UpdateNearby();
             if (game.Phase != GamePhase.Playing) return;
-            UpdateAim();
             Vector3 forward = Vector3.ProjectOnPlane(game.gameCamera.transform.forward, Vector3.up).normalized;
             Vector3 right = Vector3.ProjectOnPlane(game.gameCamera.transform.right, Vector3.up).normalized;
             float x = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) ? 1 : 0;
@@ -84,8 +95,8 @@ namespace LostDream
             if (!automation)
             {
                 if (Input.GetKeyDown(KeyCode.E)) Interact();
-                if (Input.GetMouseButton(0) && !game.gameCamera.GetComponent<DreamCamera>().IsOrbiting) FireAt(AimPoint);
-                if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Q)) ThrowAt(AimPoint);
+                if (game.MouseActionsReady && Input.GetMouseButton(0)) RequestBowShot();
+                if ((game.MouseActionsReady && Input.GetMouseButtonDown(1)) || Input.GetKeyDown(KeyCode.Q)) RequestCandyThrow();
             }
             Animate(horizontal.magnitude);
             if (horizontal.magnitude > 1 && controller.isGrounded)
@@ -94,60 +105,48 @@ namespace LostDream
                 if (footsteps <= 0) { game.audioSystem.Play("step", .12f, Random.Range(.9f, 1.1f)); footsteps = .34f; }
             }
         }
+        public void RequestBowShot() { bowRequested = true; }
+        public void RequestCandyThrow() { candyRequested = true; }
+        void LateUpdate()
+        {
+            var game = DreamGame.Instance;
+            if (game != null && game.Phase == GamePhase.Playing)
+            {
+                // Camera, humanoid evaluation and procedural jump pose have all
+                // settled this frame before the final bow pose and launch.
+                Physics.SyncTransforms();
+                UpdateAim();
+                if (!automation && characterAnimation != null && characterAnimation.IsAiming)
+                { LookToward(AimPoint); characterAnimation.TrackAim(AimPoint); }
+                if (bowRequested) FireAt(AimPoint);
+                if (candyRequested) ThrowAt(AimPoint);
+            }
+            bowRequested = candyRequested = false;
+        }
 
         void UpdateAim()
         {
-            AimPoint = AimFromScreenPoint(Input.mousePosition);
+            AimPoint = AimFromScreenPoint(AimScreenPoint);
+        }
+        public void BeginVictory()
+        {
+            automationMove = moveDirection = Vector3.zero;
+            bowRequested = candyRequested = false;
+            dashUntil = Time.time; attackPose = 0; lookUntil = 0;
+            IsJumping = false; airTime = 0; verticalSpeed = Mathf.Min(0, verticalSpeed);
+            CarryingCandy = false;
+            if (heldCandy != null) heldCandy.SetActive(false);
+            foreach (var renderer in visual.GetComponentsInChildren<Renderer>()) renderer.enabled = true;
+            if (characterAnimation != null) characterAnimation.BeginVictory();
         }
         public Vector3 AimFromScreenPoint(Vector2 screenPoint)
         {
             Camera camera = DreamGame.Instance.gameCamera;
             Ray ray = camera.ScreenPointToRay(screenPoint);
-            Vector3 point = transform.position + Vector3.forward * 10 + Vector3.up;
-            bool enemySelected = false;
-            if (Physics.Raycast(ray, out RaycastHit hit, 250, ~(1 << 2), QueryTriggerInteraction.Collide))
-            {
-                point = hit.point;
-                var directEnemy = hit.collider.GetComponentInParent<FlyingDragon>();
-                enemySelected = directEnemy != null && !directEnemy.Defeated;
-                if (enemySelected) point = directEnemy.AimPosition;
-                if (directEnemy == null
-                    && hit.collider.GetComponentInParent<PumpkinBoss>() == null
-                    && hit.collider.GetComponentInParent<DreamRune>() == null)
-                    point += Vector3.up * 1.35f;
-            }
-            else if (new Plane(Vector3.up, Vector3.up * 1.4f).Raycast(ray, out float distance)) point = ray.GetPoint(distance);
-            // Small screen-space aim assistance makes airborne targets readable with this camera.
-            float closest = enemySelected ? 0 : 48;
-            foreach (var dragon in DreamGame.Instance.dragons)
-            {
-                if (dragon == null || dragon.Defeated) continue;
-                Vector3 screen = camera.WorldToScreenPoint(dragon.AimPosition);
-                float pixels = Vector2.Distance(screen, screenPoint);
-                if (screen.z > 0 && pixels < closest && HasLineTo(dragon.AimPosition, dragon.transform))
-                { closest = pixels; point = dragon.AimPosition; enemySelected = true; }
-            }
-            foreach (var rune in DreamGame.Instance.runes)
-            {
-                if (rune == null || rune.Cleared) continue;
-                Vector3 screen = camera.WorldToScreenPoint(rune.AimPosition);
-                float pixels = Vector2.Distance(screen, screenPoint);
-                if (screen.z > 0 && pixels < closest && HasLineTo(rune.AimPosition, rune.transform))
-                { closest = pixels; point = rune.AimPosition; }
-            }
-            var boss = DreamGame.Instance.boss;
-            if (boss != null && !boss.Defeated && !enemySelected)
-            {
-                Vector3 screen = camera.WorldToScreenPoint(boss.AimPosition);
-                if (Vector2.Distance(screen, screenPoint) < 100) point = boss.AimPosition;
-            }
-            return point;
-        }
-        bool HasLineTo(Vector3 point, Transform target)
-        {
-            Vector3 origin = transform.position + Vector3.up * 1.3f;
-            if (!Physics.Raycast(origin, point - origin, out RaycastHit hit, Vector3.Distance(origin, point), ~(1 << 2))) return true;
-            return hit.transform == target || hit.transform.IsChildOf(target);
+            // Keep the world point exactly on the displayed ray, including ground,
+            // walls and enemy surfaces. Hidden offsets/target snapping break a fixed reticle.
+            return Physics.Raycast(ray, out RaycastHit hit, 120, ~(1 << 2), QueryTriggerInteraction.Ignore)
+                ? hit.point : ray.GetPoint(120);
         }
         void UpdateNearby()
         {
@@ -195,7 +194,7 @@ namespace LostDream
                 origin = characterAnimation.BowGripPosition;
             }
             Vector3 direction = (target - origin).normalized;
-            DreamProjectile.Spawn(origin + direction * (characterAnimation != null ? .15f : .65f), direction * 31, false);
+            DreamProjectile.Spawn(origin, direction * 31, false);
             attackPose = .25f;
             DreamGame.Instance.audioSystem.Play("bow", .35f, Random.Range(.95f, 1.08f));
             return true;
@@ -222,10 +221,14 @@ namespace LostDream
         }
         void Face(Vector3 point)
         {
+            LookToward(point);
+            lookUntil = Time.time + .35f;
+        }
+        void LookToward(Vector3 point)
+        {
             Vector3 direction = point - transform.position;
             direction.y = 0;
             if (direction.sqrMagnitude > .01f) visual.rotation = Quaternion.LookRotation(direction);
-            lookUntil = Time.time + .35f;
         }
         public bool PickCandy(CandyHue hue = CandyHue.Pink)
         {

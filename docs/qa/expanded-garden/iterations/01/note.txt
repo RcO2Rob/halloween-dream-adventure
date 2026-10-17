@@ -1,0 +1,1 @@
+Test setup failure: two deliberate candy misses were attempted 0.25 seconds apart, below the existing 0.6-second throw cooldown. The second attempt retained its candy. Fix: assert that each throw launches and respect the normal cooldown. No gameplay cooldown changed.

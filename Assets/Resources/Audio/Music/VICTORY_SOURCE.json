@@ -1,0 +1,17 @@
+{
+  "source": "Original project-authored algorithmic victory composition",
+  "generator": "tools/generate_victory_music.py and tools/generate_music.py",
+  "samples": "Synthesized oscillators and deterministic noise; no external samples or recordings",
+  "harmony": "C major, I-IV-V-I, ascending bell melody, plucked arpeggios and light drums",
+  "format": "22050 Hz stereo PCM16 WAV",
+  "track": {
+    "file": "dream_celebration.wav",
+    "bpm": 128,
+    "bars": 16,
+    "seconds": 30.0,
+    "peak": 0.78,
+    "rms": 0.1609873382680852,
+    "loop_edge_delta": 0.0,
+    "sha256": "ae50e0f13090b25107c7acd4dc47f9855671db917ff344a8e3e61be9168ca3d2"
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "backup": "Builds/archive/before-crypt-left-20261016-125007",
+    "preservedComponents": 4829,
+    "movedRoots": 12,
+    "center": {
+        "x": -33.0,
+        "y": -0.44999998807907104,
+        "z": 74.0
+    },
+    "translation": {
+        "x": -35.0,
+        "y": 0.0,
+        "z": -30.0
+    },
+    "unrelatedContentPreserved": true,
+    "gatePreserved": true,
+    "checkpointAndSupplyUpdated": true
+}

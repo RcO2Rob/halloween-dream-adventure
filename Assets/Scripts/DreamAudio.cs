@@ -51,8 +51,8 @@ namespace LostDream
                 if (paused) ambience.Pause(); else ambience.UnPause();
             }
             if (paused) return;
-            bool finished = game.Phase == GamePhase.Victory || game.Phase == GamePhase.Defeated || game.Phase == GamePhase.LevelComplete;
-            string desired = finished ? "" : game.levelIndex == 2 && game.boss != null && game.boss.AwakeInArena ?
+            bool finished = game.Phase == GamePhase.Defeated || game.Phase == GamePhase.LevelComplete;
+            string desired = game.Phase == GamePhase.Victory ? "dream_celebration" : finished ? "" : game.boss != null && game.boss.AwakeInArena ?
                 game.boss.SecondPhase ? "pumpkin_rage" : "pumpkin_battle" : "dream_journey";
             if (desired != MusicTrack)
             {

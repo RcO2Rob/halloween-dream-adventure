@@ -1,5 +1,67 @@
 # Prototype validation and playtest log
 
+## Local reticle and arrow alignment correction
+
+The previous fixed-reticle path retained two behaviors from free-cursor aiming: ordinary ground/wall hits were shifted upward by 1.35 units, and nearby enemies/runes or the boss could silently replace the ray hit with a different point. The player also aimed/fired in Update before the follow camera moved in LateUpdate, and new arrows inherited world-forward rotation until their first Update. These cause distinct surface, turning and first-frame visual errors.
+
+The corrected aim is the exact first solid surface under the central ray, with a 120-unit forward sky fallback. Aim and projectile queries consistently ignore trigger-only volumes. Camera evaluation runs first, then the humanoid/procedural pose, then final aim and queued attacks. The bow grip launches the arrow directly, the bow pitches toward the chosen point, and the arrow's visible axis is initialized from its velocity before rendering. Active bow posing follows current aim between repeat shots. The bow-to-target path converges on the reticle surface while actual nearby cover can still block the muzzle.
+
+The full three-chapter regression passed **452 functional integration checks**, including actual enemy hits, matching-candy boss defeat, the enlarged arena, head breakup, celebration music, continuous idle/fireworks and retry cleanup.
+
+The focused isolated signed macOS arm64 player passed 24 checks: ordinary floor/wall points match the reticle, real queued arrows hit small physical targets at 5 and 18 units, first-frame bow/grip/arrow direction agrees, an off-axis rune does not redirect the aim, near-bow cover blocks an otherwise camera-visible target, and same-frame 90-degree turn/zoom and moving jump shots use the updated view and grip. World aim projects within 0.1 pixels of the center in these controlled cases. The tests use the shared input-request queue and real controller/projectiles; they do not emulate physical desktop mouse clicks. Independent human mouse-feel review remains pending.
+
+All three saved maps, the enlarged courtyard and the previous victory audio/assets are preserved. Current Unity runtime scripts are updated; the earlier packaged app/ZIP remain separate snapshots. Evidence is retained in `docs/qa/aim-alignment`; no GitHub push was requested.
+
+## Local enlarged boss arena and victory sequence
+
+The saved castle courtyard is 42 by 38, enlarged from 30 by 28 with its front landing edge fixed at Z=-2. Existing courtyard geometry, walls, tower positions, perimeter props, candy pickups and supply points are adapted in place; tower/prop sizes and the approach island/jump route remain unchanged. The courtyard's side fences are rebuilt at the new edges. The two earlier chapter scenes remain byte-identical. The live editor operation backs up both the saved castle scene and its loaded state, then verifies 663 unrelated components retain their signatures. Its map audit records the backup path. New serialized boss bounds constrain bombs and charge endpoints to the larger usable space.
+
+Victory partitions the actual pumpkin head and crown surfaces into at most 64 moving mesh fragments, disables the intact artwork/collision, and arcs the fragments outward before shrinking and removing them after 3.3 seconds. Debris has no colliders or rigidbodies and does not consume gameplay randomness. A dedicated `dream_celebration` score crossfades in using the existing two-source mixer: C major, 128 BPM, 30 seconds, synthesized bells/plucked arpeggios and light drums. Its original source/hash record is retained; a short loop-seam envelope brings both endpoint samples to zero. The previous three WAV files are unchanged.
+
+The old victory path stopped updating the motor while leaving its animation parameters and procedural attack/jump state intact. The new path cancels running/dashing, clears attack and carrying poses, restores blink-hidden renderers, transitions the humanoid controller to idle/Relax, and lets an airborne hero settle. The animator uses unscaled time during victory. A baked-mesh comparison verifies visible idle deformation, and another check verifies animation advances while gameplay time is frozen.
+
+The final full three-chapter regression passed **437 functional integration checks**, including real color-matched candy hits through boss defeat, the two reinforcement waves, bomb/charge damage and avoidance, the entrance jump route, fireworks, ongoing idle motion and retry cleanup.
+
+The final focused ending run passed 33 checks on an isolated signed macOS arm64 player using the exact live-edited saved map and final audio. It checks real ground support in newly added areas, the unchanged approach and landing edge, actual moving model fragments, celebration music with one surviving looping source, cleared attack states, idle mesh deformation, unscaled idle/fireworks, supported particles, bounded cleanup and retry restoring the intact boss. This is automated evidence and assistant visual inspection; independent human playtesting remains pending. Evidence is retained in `docs/qa/expanded-boss-ending`. No GitHub push or replacement of the earlier packaged app/ZIP is part of this change.
+
+## Local mouse-follow shoulder camera
+
+Moving the mouse directly rotates the third-person view without holding an orbit button. The shoulder pivot keeps Timmy to the left of a fixed central reticle. The actual player aiming point and HUD share the same screen coordinate, including existing airborne-target assistance. Both bow arrows and candy use that aim point. Upward pitch supports flying targets, pitch limits prevent flipping, and yaw wraps after long rotations. Empty-sky aim follows the viewing ray; boss assistance requires a visible forward target with a clear line of fire.
+
+Playing captures/hides the cursor; pause, menus, defeat, chapter completion and victory release it. Switching away pauses the game. Resume waits for the menu click to be released before accepting mouse attacks and ignores mouse attacks while the application lacks focus. Boss framing retains collision protection and distance adjustment while preserving the player's chosen yaw and pitch indefinitely. Movement remains relative to the view. Scroll zoom, F reset, jumping, interaction and the two attack buttons retain their controls.
+
+The final isolated signed macOS arm64 player passed **422 full integration checks** through three-chapter victory, including jumping, the new candy art, reinforcement waves, color matching, charge damage, castle corner visibility, music, fireworks and scene-reload cleanup.
+
+The 35-check focused run verifies rendered rotation from mouse-axis deltas, framing clearance, pitch/yaw limits, movement, zoom and obstacle recovery, cursor state transitions, focus-loss handling, click-release protection, central-ray target selection, real arrow and candy impacts, and unchanged angles after more than four idle seconds in the castle. The automation injects mouse-axis deltas through the same look-input method and calls gameplay attack methods; it does not emulate physical desktop mouse motion or clicks. Focus-loss delivery is simulated, and cursor readiness is evaluated against actual application focus so background automation does not assert that inactive windows should accept attacks. Human mouse-feel validation remains pending.
+
+The full-run victory assertions originally sampled audio gain after 1.7 seconds and fireworks after fixed delays. Two saved failed runs reached actual boss victory before failing these effect snapshots. The existing fireworks-only path passed 36 checks without changing the effect. The final runner waits for actual fade completion within four seconds and visible opening bursts within four seconds. Frozen-time burst advancement allows 4.5 seconds, covering the existing late launch interval of up to 2.6 seconds plus up to 1.15 seconds of rocket flight. Production music and fireworks code remain unchanged.
+
+The initial render showed the reticle over the hero, prompting the shoulder offset and a separate screen-space clearance check. An initial resume assertion incorrectly demanded active-window input readiness from a background test window; the final assertion checks native cursor capture separately from the focus guard. Iterations and final records are retained in `docs/qa/mouse-look`. All changes are in runtime scripts and documentation; saved maps remain unchanged. The previous packaged app and ZIP remain earlier snapshots.
+
+## Local KayKit candy artwork
+
+The selected `candyA.fbx` from Kay Lousberg's CC0 legacy Spooktober 1.1 pack replaces eleven saved visual containers: eight ground pickups and three held-candy props. Runtime candy generation uses the same prefab for refills, boss supplies, reinforcement drops and thrown projectiles. The original white material region stays separate from the colored body, so pink, blue and gold matching remains clear. The original raw model, verbatim license and source hashes are retained. Derived meshes have a centered pivot and normalized size; the game applies the previous ground, held and projectile size factors.
+
+The isolated signed macOS arm64 player passed 24 focused artwork/color checks and 406 full functional checks through three-chapter victory. Tests verify the imported mesh in saved ground/held props and real thrown objects, separate white and colored material regions, readable emission in all three hues, real E pickups/exchanges, tutorial refill, wrong-color rejection and matching-color boss damage. Final three-color preview, held close-up and blue boss-match capture were visually inspected. The first preview exposed a pre-existing missing emission keyword on pink; the common material builder now initializes all three hues consistently.
+
+The live-editor migration backs up saved files and loaded scene edits, replacing only candy visual descendants while preserving their containers and all other evaluated transforms, component settings and references. The exact saved maps and generated assets match the validation build. Records are in `docs/qa/kaykit-candy`; source and editing guidance are in `docs/KAYKIT_CANDY.md`. This is automated evidence and assistant visual inspection, not independent human playtesting. Current Unity assets and scenes are updated; earlier exported app/ZIP snapshots were not replaced, and no GitHub push was requested.
+
+## Local jump arm and wrist correction
+
+The old jump used fixed character-space hand heights near Timmy's shoulders, producing a raised-hand silhouette on his short torso. It also inherited wrist orientation from the underlying animation. The correction derives hand targets from evaluated shoulders and arm lengths, lowers the hands beside the body with a soft elbow bend, and varies the pose across takeoff, descent and landing. Wrist orientation uses the rig's knuckle axes so fingers follow the forearm without assuming mirrored Mixamo axes. Bow aiming blends over the jump arms, throwing retains priority, and the candy-carry solver owns the right arm.
+
+The final isolated signed macOS arm64 player passed 76 focused jump/character checks and 390 full integration checks through three-chapter victory. Independent geometry checks keep both free hands below the shoulders and prevent a sharply bent wrist during rising and falling. The focused run captures front, side and behind views, carrying candy, shooting and throwing in the air, and a return to ordinary locomotion. These final captures and the full-run rising screenshot were visually inspected. An initial fixed-height revision failed the shoulder-clearance check; a later proportional pose was visually too far forward, so the final pose lowers the hands beside the body. Those iterations are retained separately.
+
+Evidence is in `docs/qa/jump-hands`. Jump physics, ceiling collision, platform routes, attacks, three saved maps and the victory-fireworks flow remain verified. This is a project-authored procedural adaptation, with no new downloaded animation. It is automated validation and assistant visual inspection; independent human playtesting remains pending. Current Unity scripts are updated; the previously delivered application and ZIP remain unchanged, and no GitHub push was requested.
+
+## Local victory fireworks
+
+Defeating the Pumpkin King starts a scene-owned particle show behind the castle. Rising rockets burst into gold, pink, teal and violet sparks with fading trails. The camera eases out to show the castle and sky. Victory text, restart and chapter selection occupy the lower screen; battle HUD panels are omitted during victory. The existing victory sound and battle-music fade remain. The effect uses unscaled time and a fixed 1,800-particle maximum, with a slower cadence after twelve seconds. Repeated victory notifications do not duplicate the show; scene reload removes its particles and material.
+
+The isolated signed macOS arm64 player passed 382 full integration checks through actual matching-candy boss defeat, including the previously added side-fence maps. A focused 19-check run also verified that fireworks are absent during normal castle play, render with the included shader, continue beyond the default particle-system duration, progress with frozen gameplay time, and disappear on retry and return to the menu. Final focused and actual-victory screenshots were visually inspected after increasing the initially faint sparks and trails. This is automated evidence and assistant visual inspection, not independent human playtesting.
+
+Records are in `docs/qa/victory-fireworks`. All three saved scene files remain byte-identical to the fenced-map snapshot at the start of this change. Runtime scripts and the original glow shader match the tested build. The Unity project is updated; the previously delivered v0.12 app and ZIP were not replaced, and no GitHub push was requested.
+
 ## Local v0.12: owner-selected start-screen composition
 
 The start screen uses the selected `characters-and-props.png` render as a static backdrop. The source PNG is copied byte-for-byte with a provenance record. The entire image fits the window without cropping or stretching. Titles, a primary start button, three chapter buttons, control hints and a sound toggle are overlaid. Enter still begins the tutorial; starting or selecting a chapter removes the backdrop. Existing menu music continues.
@@ -102,3 +164,33 @@ Record observations, make focused changes, and repeat the troublesome section. P
 | Date / participant | Observation | Change | Retest |
 | --- | --- | --- | --- |
 | Pending | No independent human test yet | — | — |
+
+## Expanded garden: owner feedback
+
+The owner reported that chapter two could be completed in under one minute and asked for more complexity. The saved garden now has three extra islands, three recoverable dream memories, four circular-platform routes in total, an ordered three-rune archery puzzle, a replenishing candy seal puzzle, six lanterns and eleven enemies. Existing enemy health remains two or three hits. New memory checkpoints preserve progress after falls; stage-specific HUD text identifies prerequisites and remaining guardians. The original four islands and decorative objects are preserved; two side-fence groups have openings for the new routes.
+
+For the next owner playtest, time a first unassisted chapter-two run, note whether west/east/north signs are noticed, whether the I → II → III puzzle reset is understood, how often returning jumps cause falls, and whether guardians on both the main island and its branch can be found. A roughly four-to-six-minute first exploration is a design target, not a measured human result. Adjust travel length, hints or encounter placement based on that playtest rather than adding forced waiting or extra health.
+
+## Final island placement follow-up
+
+The owner requested the last floating island on the left rather than behind the portal. The existing Candy Crypt and its contents now sit west of the gate garden at (-33, 0, 74). Its round-platform connection turns west, the branch lamp/checkpoint move to the main island's left edge, both relevant side-fence openings are rebuilt, candy refill positions and enemy patrol homes follow the translation, and guidance now points west/east for the outward/return trip. The portal itself and the other six islands are retained.
+
+## Iron exit gate: owner feedback
+
+The owner requested replacing chapter two's portal with an iron gate, opening it only when every objective is complete, and lighting the floor as a traversal hint. The existing installed Poly Halloween gate now opens both leaves inward over 1.8 seconds. A blocker prevents walking through while closed or opening. After opening, an emissive trail and forward arrows illuminate the floor. Finishing requires a real front-to-back traversal; unlocking while standing elsewhere does not change scenes. For owner playtesting, check whether the opened silhouette and bright trail make the exit clear without explaining it aloud.
+
+## Exit fence continuity and tutorial trees: owner feedback
+
+The owner's screenshot showed side gaps beside the isolated garden gate. They requested enclosing that gate, using the same opening gate in chapter one, and matching the tutorial trees to chapter two. Both exit ends now have fence wings joining the island side rails, continuous side-wing collision, and rear side railings with a clear central opening. The tutorial gate keeps the original objective requirements and opens with the same floor-light cue. All eighteen tutorial tree positions now use the garden's two dead-tree models; original tree collision is preserved. Check the complete entrance silhouette and whether the new trees remain clear of the tutorial route during the next owner playtest.
+
+
+## Four-chapter flow and marsh acceptance
+
+- Walk through each unlocked exit without clicking or pressing Enter: the screen must fade fully black, load the next chapter and fade back into gameplay with mouse look restored. No completion modal should appear. Confirm this for tutorial → gardens → marsh → keep.
+- In the marsh, waste every supply color, pause, then resume. All three unfinished-pot supply spots should refill within three active seconds. Wrong colors and arrows must preserve recipe progress without advancing it.
+- Brew PINK → BLUE, BLUE → GOLD and GOLD → PINK → BLUE through real throws. Check that local guardians still gate their lantern, and a completed recipe dispels its local mist. Falls preserve ingredients and checkpoints; retry resets the entire chapter.
+- Jump all five crossings. On the last three, stand still on the teal drifting stone and verify it carries the character. Pause should stop both platform motion and mist phases.
+- Record at least three first-time human playthroughs. Target a full journey around ten minutes through exploration and varied actions. Planning estimates and accelerated automated-test duration are not human playtime measurements.
+- Recheck chapter-four Boss waves, half-health charge, candy matching, breakup, fireworks, cheerful victory music and animated idle after moving the scene.
+
+Current source and saved maps supersede the older three-chapter package. See `docs/WITCHLIGHT_MARSH.md` and `docs/qa/four-chapters` for implementation details and validation evidence.

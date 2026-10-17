@@ -9,13 +9,25 @@ namespace LostDream
         public Light glow;
         public Transform flame;
         public Vector3 safeCheckpoint;
+        public GardenAdventure garden;
+        public int requiredMemories;
+        public WitchlightMarsh marsh;
+        public int marshStage;
         public bool Lit { get; private set; }
         public override bool Available => !Lit;
-        public override string Prompt => "LIGHT " + lanternName.ToUpperInvariant();
+        public override string Prompt => marsh != null && !marsh.CanLight(marshStage) ? marsh.LockHint(marshStage) : garden != null && garden.MemoriesCollected < requiredMemories ?
+            "NEEDS " + requiredMemories + " DREAM MEMORIES" : "LIGHT " + lanternName.ToUpperInvariant();
         void Start() { if (flame != null) flame.gameObject.SetActive(false); glow.intensity = .3f; }
         public override bool Use(PlayerMotor player)
         {
             if (Lit) return false;
+            if (marsh != null && !marsh.CanLight(marshStage))
+            { DreamGame.Instance.ShowToast(marsh.LockHint(marshStage), 4); return false; }
+            if (garden != null && garden.MemoriesCollected < requiredMemories)
+            {
+                DreamGame.Instance.ShowToast("Recover the next dream memory first. " + garden.NextHint(), 4);
+                return false;
+            }
             Lit = true;
             flame.gameObject.SetActive(true);
             glow.intensity = 3;

@@ -1,0 +1,425 @@
+SMOKE_CHECK_OK: Tutorial loads in standalone player
+SMOKE_CHECK_OK: Game launches into the cover menu before gameplay
+SMOKE_CHECK_OK: Title menu keeps a visible free cursor for its buttons
+SMOKE_CHECK_OK: Chosen cover composition imports at its original 1600 by 1000 aspect ratio
+SMOKE_CHECK_OK: Dream music plays while the cover menu is displayed
+SMOKE_CHECK_OK: Cover menu remains idle and preserves the gameplay spawn while resizing: (1440, 900)
+SMOKE_CHECK_OK: Cover menu remains idle and preserves the gameplay spawn while resizing: (1920, 1080)
+SMOKE_CHECK_OK: Cover menu remains idle and preserves the gameplay spawn while resizing: (1280, 960)
+SMOKE_CHECK_OK: Start action leaves the cover menu and enters the tutorial
+SMOKE_CHECK_OK: Selected KayKit candy mesh is included in the built player
+SMOKE_CHECK_OK: Saved ground candies use the selected imported model
+SMOKE_CHECK_OK: Saved hand-held candy uses the same imported model
+SMOKE_CHECK_OK: Candy artwork adds no colliders that interfere with pickup or projectile logic
+SMOKE_CHECK_OK: Imported candy preserves its white pattern while matching the Pink gameplay color
+SMOKE_CHECK_OK: Matching candy color remains readable in night lighting: Pink
+SMOKE_CHECK_OK: Imported candy has visible game-scale source geometry: Pink
+SMOKE_CHECK_OK: Thrown candy retains the imported mesh and matching hue: Pink
+SMOKE_CHECK_OK: Imported candy preserves its white pattern while matching the Blue gameplay color
+SMOKE_CHECK_OK: Matching candy color remains readable in night lighting: Blue
+SMOKE_CHECK_OK: Imported candy has visible game-scale source geometry: Blue
+SMOKE_CHECK_OK: Thrown candy retains the imported mesh and matching hue: Blue
+SMOKE_CHECK_OK: Imported candy preserves its white pattern while matching the Gold gameplay color
+SMOKE_CHECK_OK: Matching candy color remains readable in night lighting: Gold
+SMOKE_CHECK_OK: Imported candy has visible game-scale source geometry: Gold
+SMOKE_CHECK_OK: Thrown candy retains the imported mesh and matching hue: Gold
+SMOKE_CHECK_OK: Original stereo background score imports and lasts more than twenty seconds: dream_journey
+SMOKE_CHECK_OK: Original stereo background score imports and lasts more than twenty seconds: pumpkin_battle
+SMOKE_CHECK_OK: Original stereo background score imports and lasts more than twenty seconds: pumpkin_rage
+SMOKE_CHECK_OK: Exploration music plays automatically on normal start
+SMOKE_CHECK_OK: Setting background volume to zero silences the score without losing its playback timeline
+SMOKE_CHECK_OK: Raising background volume restores the current score without restarting the scene
+SMOKE_CHECK_OK: Mute silences background music and event audio together
+SMOKE_CHECK_OK: Unmute restores music and event audio
+SMOKE_CHECK_OK: Pause stops the music timeline instead of restarting the track
+SMOKE_CHECK_OK: Resume continues the background score
+SMOKE_CHECK_OK: Tutorial refill regression starts before any lantern is lit
+SMOKE_CHECK_OK: Tutorial candy is picked up before testing held-candy refill
+SMOKE_CHECK_OK: Pause freezes the tutorial candy refill timer
+SMOKE_CHECK_OK: Tutorial refills both empty spots within three seconds while candy is held and lanterns are unlit
+SMOKE_CHECK_OK: Repeated tutorial refill ticks do not stack extra candy at occupied spots
+SMOKE_CHECK_OK: Candy elsewhere cannot prevent the tutorial's two designated spots from refilling
+SMOKE_CHECK_OK: Held tutorial test candy can be thrown away
+SMOKE_CHECK_OK: Player settles on the ground before jumping
+SMOKE_CHECK_OK: Pause prevents jump input
+SMOKE_CHECK_OK: Grounded jump starts upward controller velocity
+SMOKE_CHECK_OK: Repeated input cannot launch a second jump before leaving the floor
+SMOKE_CHECK_OK: Jump has a distinct takeoff animation stage
+SMOKE_CHECK_OK: Jump rises off the floor with the ascending animation
+SMOKE_CHECK_OK: Airborne jump input cannot produce a double jump
+SMOKE_CHECK_OK: Jump animation deforms the skin independently of the upward root movement
+SMOKE_CHECK_OK: Airborne jump visibly bends the leg instead of sliding the standing pose upward
+SMOKE_CHECK_OK: Jump keeps the left hand below its shoulder: rising
+SMOKE_CHECK_OK: Jump keeps the left wrist aligned with the forearm: rising
+SMOKE_CHECK_OK: Jump keeps the right hand below its shoulder: rising
+SMOKE_CHECK_OK: Jump keeps the right wrist aligned with the forearm: rising
+SMOKE_CHECK_OK: Descending jump uses the falling animation stage
+SMOKE_CHECK_OK: Jump keeps the left hand below its shoulder: falling
+SMOKE_CHECK_OK: Jump keeps the left wrist aligned with the forearm: falling
+SMOKE_CHECK_OK: Jump keeps the right hand below its shoulder: falling
+SMOKE_CHECK_OK: Jump keeps the right wrist aligned with the forearm: falling
+SMOKE_CHECK_OK: Actual jump height stays near the configured 2.2 units
+SMOKE_CHECK_OK: Jump lands back on the collidable floor and resets the jump state
+SMOKE_CHECK_OK: Touching the floor starts landing compression
+SMOKE_CHECK_OK: Landing animation returns to idle or running
+SMOKE_CHECK_OK: Landing enables the next jump
+SMOKE_CHECK_OK: Head collision stops the ascent before passing through a ceiling
+SMOKE_CHECK_OK: Running player can jump while carrying candy
+SMOKE_CHECK_OK: Airborne movement keeps the carried candy attached and available
+SMOKE_CHECK_OK: Bow can fire while jumping
+SMOKE_CHECK_OK: Left bow hand extends in front of the character rather than sideways: airborne jump shot
+SMOKE_CHECK_OK: Right drawing hand remains near the face behind the bow: airborne jump shot
+SMOKE_CHECK_OK: Bow stays attached to the forward left hand: airborne jump shot
+SMOKE_CHECK_OK: Jumping alone does not grant dash damage immunity
+SMOKE_CHECK_OK: Gameplay uses a perspective third-person camera
+SMOKE_CHECK_OK: Follow camera shows the whole character at a readable screen size
+SMOKE_CHECK_OK: Over-shoulder framing keeps Timmy clear of the central reticle
+SMOKE_CHECK_OK: Follow camera is lower than the previous overhead view
+SMOKE_CHECK_OK: Orbit changes the actual view around the player
+SMOKE_CHECK_OK: Controller movement remains relative to the rotated camera
+SMOKE_CHECK_OK: Zoom brings the actual camera closer to Timmy
+SMOKE_CHECK_OK: Camera pulls in before colliding with a solid wall
+SMOKE_CHECK_OK: Camera eases back after the obstruction is removed
+SMOKE_CHECK_OK: Perspective cursor ray can select the bow practice target
+SMOKE_CHECK_OK: Ordinary gameplay captures and hides the mouse for button-free camera control
+SMOKE_CHECK_OK: Horizontal and vertical mouse deltas rotate the rendered view without holding an orbit button
+SMOKE_CHECK_OK: Mouse can look up toward flying targets without flipping the camera
+SMOKE_CHECK_OK: Downward mouse pitch stops before the camera flips
+SMOKE_CHECK_OK: Long mouse rotations keep yaw bounded
+SMOKE_CHECK_OK: Pause frees the cursor, stops mouse attacks and ignores look input
+SMOKE_CHECK_OK: Resume button cannot leak its click into an accidental bow shot
+SMOKE_CHECK_OK: Resuming recaptures the mouse after click release and gates attacks on actual application focus
+SMOKE_CHECK_OK: Switching away from the game pauses play and releases the cursor
+SMOKE_CHECK_OK: Actual player aim and the HUD reticle share the screen center and select a physical target
+SMOKE_CHECK_OK: Bow fires along the actual central-reticle aim point
+SMOKE_CHECK_OK: Real central-reticle arrow hits and clears its physical target
+SMOKE_CHECK_OK: Candy throws use the same central-reticle aim point
+SMOKE_CHECK_OK: Real central-reticle candy projectile clears a candy-only target
+SMOKE_CHECK_OK: Timmy has a valid humanoid avatar and animation adapter
+SMOKE_CHECK_OK: Timmy root motion is disabled so the CharacterController owns movement
+SMOKE_CHECK_OK: Timmy skin uses imported color textures
+SMOKE_CHECK_OK: Moving Timmy plays an imported animation and deforms the mesh
+SMOKE_CHECK_OK: Animated Timmy moves over the floor using the original controller
+SMOKE_CHECK_OK: Timmy is visible at player scale and centered on the movement collider
+SMOKE_CHECK_OK: Bow follows Timmy's animated left hand
+SMOKE_CHECK_OK: Carried candy follows Timmy's animated right hand
+SMOKE_CHECK_OK: Candy throw starts Timmy's masked throw animation
+SMOKE_CHECK_OK: Throwing removes candy from the animated hand
+SMOKE_CHECK_OK: Arrow shot starts Timmy's bow aiming animation
+SMOKE_CHECK_OK: Left bow hand extends in front of the character rather than sideways: forward
+SMOKE_CHECK_OK: Right drawing hand remains near the face behind the bow: forward
+SMOKE_CHECK_OK: Bow stays attached to the forward left hand: forward
+SMOKE_CHECK_OK: Real arrow trajectory starts on the line of the forward bow grip
+SMOKE_CHECK_OK: Front pose capture uses a fresh arrow shot
+SMOKE_CHECK_OK: Left bow hand extends in front of the character rather than sideways: right-facing
+SMOKE_CHECK_OK: Right drawing hand remains near the face behind the bow: right-facing
+SMOKE_CHECK_OK: Bow stays attached to the forward left hand: right-facing
+SMOKE_CHECK_OK: Left bow hand extends in front of the character rather than sideways: moving and aiming upward
+SMOKE_CHECK_OK: Right drawing hand remains near the face behind the bow: moving and aiming upward
+SMOKE_CHECK_OK: Bow stays attached to the forward left hand: moving and aiming upward
+SMOKE_CHECK_OK: Upper-body action returns to locomotion without leaving a frozen pose
+SMOKE_CHECK_OK: Pause preserves in-flight projectile and position
+SMOKE_CHECK_OK: Resume continues projectile simulation
+SMOKE_CHECK_OK: Saved chapter includes imported Halloween scenery 1
+SMOKE_CHECK_OK: Decorative props introduce no collision or projectile obstacles 1
+SMOKE_CHECK_OK: Decoration stays outside gameplay targeting raycasts 1
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: First light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: First light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Crossing light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Crossing light
+SMOKE_CHECK_OK: Chapter uses the selected Timmy humanoid character 1
+SMOKE_CHECK_OK: Exit rejects incomplete chapter 1
+SMOKE_CHECK_OK: Hidden road has no active floor
+SMOKE_CHECK_OK: E interaction lights First light
+SMOKE_CHECK_OK: Poly Halloween lantern changes to its lit model after interaction
+SMOKE_CHECK_OK: Lantern restores collidable road
+SMOKE_CHECK_OK: Lantern saves safe checkpoint
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 1
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 1
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 1
+SMOKE_CHECK_OK: Jump route starts on safe island ground 1
+SMOKE_CHECK_OK: Walking across the tutorial's circular platforms without jumping falls into a gap
+SMOKE_CHECK_OK: Round platform has flat mesh collision 1
+SMOKE_CHECK_OK: Round platform has flat mesh collision 1
+SMOKE_CHECK_OK: Grounded route jump launches 1 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 1 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 1 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 1 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 1 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 1 hop 3
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 1
+SMOKE_CHECK_OK: A missed tutorial platform returns the player to the lantern checkpoint
+SMOKE_CHECK_OK: Hidden road has no active floor
+SMOKE_CHECK_OK: E interaction lights Crossing light
+SMOKE_CHECK_OK: Poly Halloween lantern changes to its lit model after interaction
+SMOKE_CHECK_OK: Lantern restores collidable road
+SMOKE_CHECK_OK: Lantern saves safe checkpoint
+SMOKE_CHECK_OK: Restored bridge supports player movement
+SMOKE_CHECK_OK: Real arrow clears tutorial practice rune
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+SMOKE_CHECK_OK: Animated dragon has visible game-scale bounds centered on its hit collider
+SMOKE_CHECK_OK: Imported flight animation deforms the dragon mesh during gameplay
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+SMOKE_CHECK_OK: Tutorial has two collectible candies before miss round 0
+SMOKE_CHECK_OK: E collects tutorial candy in miss round 0
+SMOKE_CHECK_OK: Real candy throw misses the seal in round 0
+SMOKE_CHECK_OK: E collects tutorial candy in miss round 0
+SMOKE_CHECK_OK: Real candy throw misses the seal in round 0
+SMOKE_CHECK_OK: Timer restores both tutorial candies after every original candy was thrown away in round 0
+SMOKE_CHECK_OK: Tutorial has two collectible candies before miss round 1
+SMOKE_CHECK_OK: E collects tutorial candy in miss round 1
+SMOKE_CHECK_OK: Real candy throw misses the seal in round 1
+SMOKE_CHECK_OK: E collects tutorial candy in miss round 1
+SMOKE_CHECK_OK: Real candy throw misses the seal in round 1
+SMOKE_CHECK_OK: Timer restores both tutorial candies after every original candy was thrown away in round 1
+SMOKE_CHECK_OK: Tutorial has two collectible candies before miss round 2
+SMOKE_CHECK_OK: E collects tutorial candy in miss round 2
+SMOKE_CHECK_OK: Real candy throw misses the seal in round 2
+SMOKE_CHECK_OK: E collects tutorial candy in miss round 2
+SMOKE_CHECK_OK: Real candy throw misses the seal in round 2
+SMOKE_CHECK_OK: Timer restores both tutorial candies after every original candy was thrown away in round 2
+SMOKE_CHECK_OK: Replenished tutorial candy can be collected
+SMOKE_CHECK_OK: Ballistic candy shatters nightmare seal and consumes carried candy
+SMOKE_CHECK_OK: Tutorial refill stops once the candy seal is cleared
+SMOKE_CHECK_OK: Falling costs health and returns to safe checkpoint
+SMOKE_CHECK_OK: All chapter objectives complete 1
+SMOKE_CHECK_OK: Physical gate trigger completes chapter 1
+SMOKE_CHECK_OK: Scene transition preserves chapter order
+SMOKE_CHECK_OK: Saved chapter includes imported Halloween scenery 2
+SMOKE_CHECK_OK: Decorative props introduce no collision or projectile obstacles 2
+SMOKE_CHECK_OK: Decoration stays outside gameplay targeting raycasts 2
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Orchard light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Orchard light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Terrace light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Terrace light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Gate light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Gate light
+SMOKE_CHECK_OK: Chapter uses the selected Timmy humanoid character 2
+SMOKE_CHECK_OK: Exit rejects incomplete chapter 2
+SMOKE_CHECK_OK: Hidden road has no active floor
+SMOKE_CHECK_OK: E interaction lights Orchard light
+SMOKE_CHECK_OK: Poly Halloween lantern changes to its lit model after interaction
+SMOKE_CHECK_OK: Lantern restores collidable road
+SMOKE_CHECK_OK: Lantern saves safe checkpoint
+SMOKE_CHECK_OK: Hidden road has no active floor
+SMOKE_CHECK_OK: E interaction lights Terrace light
+SMOKE_CHECK_OK: Poly Halloween lantern changes to its lit model after interaction
+SMOKE_CHECK_OK: Lantern restores collidable road
+SMOKE_CHECK_OK: Lantern saves safe checkpoint
+SMOKE_CHECK_OK: Hidden road has no active floor
+SMOKE_CHECK_OK: E interaction lights Gate light
+SMOKE_CHECK_OK: Poly Halloween lantern changes to its lit model after interaction
+SMOKE_CHECK_OK: Lantern restores collidable road
+SMOKE_CHECK_OK: Lantern saves safe checkpoint
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 2
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 2
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 2
+SMOKE_CHECK_OK: Jump route starts on safe island ground 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 3
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 4
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 4
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 2
+SMOKE_CHECK_OK: Garden keeps five encounters and includes dragon, ghost, bee and demon species
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+SMOKE_CHECK_OK: New species is visibly sized and centered on its hit collider: Ghost
+SMOKE_CHECK_OK: New species uses real deformed flight animation: Ghost
+SMOKE_CHECK_OK: New species visibly telegraphs before attacking: Ghost
+SMOKE_CHECK_OK: Pause freezes species warning and attack: Ghost
+SMOKE_CHECK_OK: Actual species projectile count matches its attack: Ghost
+SMOKE_CHECK_OK: Species projectiles have distinct visible color and speed: Ghost
+SMOKE_CHECK_OK: A real species projectile damages the player: Ghost
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+SMOKE_CHECK_OK: Evolved dragon is visible and centered on its hit collider
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+SMOKE_CHECK_OK: New species is visibly sized and centered on its hit collider: Armabee
+SMOKE_CHECK_OK: New species uses real deformed flight animation: Armabee
+SMOKE_CHECK_OK: New species visibly telegraphs before attacking: Armabee
+SMOKE_CHECK_OK: Pause freezes species warning and attack: Armabee
+SMOKE_CHECK_OK: Actual species projectile count matches its attack: Armabee
+SMOKE_CHECK_OK: Species projectiles have distinct visible color and speed: Armabee
+SMOKE_CHECK_OK: Bee fires three genuinely separated fan directions
+SMOKE_CHECK_OK: A real species projectile damages the player: Armabee
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+SMOKE_CHECK_OK: New species is visibly sized and centered on its hit collider: Demon
+SMOKE_CHECK_OK: New species uses real deformed flight animation: Demon
+SMOKE_CHECK_OK: New species visibly telegraphs before attacking: Demon
+SMOKE_CHECK_OK: Pause freezes species warning and attack: Demon
+SMOKE_CHECK_OK: Demon has a visible locked lane and a safe sideways escape
+SMOKE_CHECK_OK: Demon avoidance is tested without immunity
+SMOKE_CHECK_OK: Demon dive does not retarget after a sidestep
+SMOKE_CHECK_OK: Demon physically dives and clears its warning on recovery
+SMOKE_CHECK_OK: A sideways step avoids the actual demon dive
+SMOKE_CHECK_OK: Demon returns and starts another warned attack
+SMOKE_CHECK_OK: Standing in the demon dive path takes exactly one contact hit
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+SMOKE_CHECK_OK: Falling costs health and returns to safe checkpoint
+SMOKE_CHECK_OK: All chapter objectives complete 2
+SMOKE_CHECK_OK: Physical gate trigger completes chapter 2
+SMOKE_CHECK_OK: Scene transition preserves chapter order
+SMOKE_CHECK_OK: Saved chapter includes imported Halloween scenery 3
+SMOKE_CHECK_OK: Decorative props introduce no collision or projectile obstacles 3
+SMOKE_CHECK_OK: Decoration stays outside gameplay targeting raycasts 3
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Castle light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Castle light
+SMOKE_CHECK_OK: Castle chapter uses Timmy humanoid character
+SMOKE_CHECK_OK: Castle entrance lantern restores approach
+SMOKE_CHECK_OK: Castle lantern switches imported artwork on without changing the jump route
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 3
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 3
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 3
+SMOKE_CHECK_OK: Jump route starts on safe island ground 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 3
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 3
+SMOKE_CHECK_OK: Boss wakes when entering restored courtyard
+SMOKE_CHECK_OK: Awakening warns for exactly two enemies before the first summon wave materializes
+SMOKE_CHECK_OK: Pausing freezes pending summons without spawning enemies
+SMOKE_CHECK_OK: Warned summon wave materializes and clears its portals: 1
+SMOKE_CHECK_OK: Wave has an arrow-targetable dragon and the appropriate small monster: 1
+SMOKE_CHECK_OK: Summoned enemies have real Quaternius animated models and colliders
+SMOKE_CHECK_OK: Cursor aimed at a summoned monster near the boss selects the monster instead of boss aim assist
+SMOKE_CHECK_OK: Music transitions to the appropriate boss stage: 1
+SMOKE_CHECK_OK: Summoned enemy home is over actual courtyard floor: Dragon
+SMOKE_CHECK_OK: Summoned enemy home is over actual courtyard floor: Ghost
+SMOKE_CHECK_OK: Summoned enemies actively attack the player: 1
+SMOKE_CHECK_OK: The pumpkin continues its own attacks while reinforcements are alive: 1
+SMOKE_CHECK_OK: Real bow arrows defeat the summoned Dragon in wave 1
+SMOKE_CHECK_OK: Defeated reinforcement rewards matching candy on safe floor outside the boss footprint
+SMOKE_CHECK_OK: Reward candy does not overlap previous waves or existing different-color pickups
+SMOKE_CHECK_OK: Real bow arrows defeat the summoned Ghost in wave 1
+SMOKE_CHECK_OK: Defeated reinforcement rewards matching candy on safe floor outside the boss footprint
+SMOKE_CHECK_OK: Reward candy does not overlap previous waves or existing different-color pickups
+SMOKE_CHECK_OK: Both summons can be cleared without damaging the boss: 1
+SMOKE_CHECK_OK: Boss framing keeps player and pumpkin weak point visible
+SMOKE_CHECK_OK: Full-health boss has no second-phase charge
+SMOKE_CHECK_OK: Boss shell rejects arrows
+SMOKE_CHECK_OK: Grounded player can dash
+SMOKE_CHECK_OK: Dash grants damage immunity
+SMOKE_CHECK_OK: Telegraphed bomb blast damages player within radius
+SMOKE_CHECK_OK: Boss introduces matching with only pink before unlocking other colors
+SMOKE_CHECK_OK: Boss stone base has flat mesh collision without an invisible capsule blocking candy
+SMOKE_CHECK_OK: E picks up the actual blue candy hue
+SMOKE_CHECK_OK: E exchanges a held wrong color for the required floor candy
+SMOKE_CHECK_OK: Candy swapping preserves both held and ground supplies
+SMOKE_CHECK_OK: Candy swapping can be reversed without throwing away ammunition
+SMOKE_CHECK_OK: Held candy visibly retains its blue material
+SMOKE_CHECK_OK: Pause preserves required color and vulnerable window
+SMOKE_CHECK_OK: Wrong-color regression launches a real blue candy projectile
+SMOKE_CHECK_OK: Thrown projectile preserves the carried candy hue
+SMOKE_CHECK_OK: Wrong-color projectile does no damage, explains the mismatch and leaves the window open
+SMOKE_CHECK_OK: Refill guarantees required color even when floor slots are occupied by wrong colors
+SMOKE_CHECK_OK: Covered candy stock cannot block safe matching-color ground replenishment
+SMOKE_CHECK_OK: Boss replenishment maintains two reachable matching-color sweets: Pink
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+SMOKE_CHECK_OK: Picked up candy matches the current boss hue Pink
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+SMOKE_CHECK_OK: Bomb-only first phase stays active above half health
+SMOKE_CHECK_OK: Boss replenishment maintains two reachable matching-color sweets: Blue
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+SMOKE_CHECK_OK: Picked up candy matches the current boss hue Blue
+CORNER_VIEW: Blue blocked=False object=none camera=(5.09, 7.90, -6.89)
+SMOKE_CHECK_OK: Castle corner view keeps the candy-carrying player clear of roof occlusion: Blue
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+SMOKE_CHECK_OK: Bomb-only first phase stays active above half health
+SMOKE_CHECK_OK: Boss replenishment maintains two reachable matching-color sweets: Gold
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+SMOKE_CHECK_OK: Picked up candy matches the current boss hue Gold
+CORNER_VIEW: Gold blocked=False object=none camera=(-7.85, 8.55, -11.36)
+SMOKE_CHECK_OK: Castle corner view keeps the candy-carrying player clear of roof occlusion: Gold
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+SMOKE_CHECK_OK: Candy hit at exactly half health activates the second phase
+SMOKE_CHECK_OK: Half health triggers the second and final summon wave
+SMOKE_CHECK_OK: Warned summon wave materializes and clears its portals: 2
+SMOKE_CHECK_OK: Wave has an arrow-targetable dragon and the appropriate small monster: 2
+SMOKE_CHECK_OK: Summoned enemies have real Quaternius animated models and colliders
+SMOKE_CHECK_OK: Music transitions to the appropriate boss stage: 2
+SMOKE_CHECK_OK: Summoned enemy home is over actual courtyard floor: Dragon
+SMOKE_CHECK_OK: Summoned enemy home is over actual courtyard floor: Demon
+SMOKE_CHECK_OK: Summoned enemies actively attack the player: 2
+SMOKE_CHECK_OK: The pumpkin continues its own attacks while reinforcements are alive: 2
+SMOKE_CHECK_OK: Real bow arrows defeat the summoned Dragon in wave 2
+SMOKE_CHECK_OK: Defeated reinforcement rewards matching candy on safe floor outside the boss footprint
+SMOKE_CHECK_OK: Reward candy does not overlap previous waves or existing different-color pickups
+SMOKE_CHECK_OK: Real bow arrows defeat the summoned Demon in wave 2
+SMOKE_CHECK_OK: Defeated reinforcement rewards matching candy on safe floor outside the boss footprint
+SMOKE_CHECK_OK: Reward candy does not overlap previous waves or existing different-color pickups
+SMOKE_CHECK_OK: Both summons can be cleared without damaging the boss: 2
+SMOKE_CHECK_OK: Half-health charge has a visible windup lane
+SMOKE_CHECK_OK: Charge direction remains locked after the player sidesteps
+SMOKE_CHECK_OK: Candy cannot damage the boss during the charge windup
+SMOKE_CHECK_OK: Pause preserves the charge windup without moving the boss
+SMOKE_CHECK_OK: Contact regression places a vulnerable player in the lane before the charge starts
+SMOKE_CHECK_OK: The real boss charges forward along the locked lane and stops at its target
+SMOKE_CHECK_OK: Swept charge contact damages the player exactly once
+SMOKE_CHECK_OK: Required candy color stays fixed through charge and recovery
+SMOKE_CHECK_OK: Completed charge opens a stationary recovery weak point and clears the lane
+SMOKE_CHECK_OK: The stone dais remains in place while the pumpkin head charges
+SMOKE_CHECK_OK: Charge ends on safe courtyard ground away from the jump platforms
+SMOKE_CHECK_OK: Recovery turns the matching-color face toward the player so the weak point remains visible
+SMOKE_CHECK_OK: Charge recovery and return complete before timeout
+SMOKE_CHECK_OK: Unanswered recovery returns the boss home with a closed shell
+SMOKE_CHECK_OK: Later bomb volleys finish before the next second-phase charge begins
+SMOKE_CHECK_OK: Sideways charge avoidance starts outside the lane without damage immunity
+SMOKE_CHECK_OK: Moving outside the locked lane avoids the complete charge without damage
+SMOKE_CHECK_OK: Boss replenishment maintains two reachable matching-color sweets: Gold
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+SMOKE_CHECK_OK: Picked up candy matches the current boss hue Gold
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+SMOKE_CHECK_OK: Boss replenishment maintains two reachable matching-color sweets: Pink
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+SMOKE_CHECK_OK: Picked up candy matches the current boss hue Pink
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+SMOKE_CHECK_OK: Boss replenishment maintains two reachable matching-color sweets: Blue
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+SMOKE_CHECK_OK: Picked up candy matches the current boss hue Blue
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+SMOKE_CHECK_OK: Victory uses all three candy colors through gradual first-half introduction
+SMOKE_CHECK_OK: Boss defeat leads to victory screen
+SMOKE_CHECK_OK: Victory clears pending bomb hazards
+SMOKE_CHECK_OK: Boss victory includes second-phase charges and leaves no charge warning
+SMOKE_CHECK_OK: The entire boss fight summons exactly twice with no repeat waves
+SMOKE_CHECK_OK: Victory removes summoned enemies and pending portals from target registration
+SMOKE_CHECK_OK: Victory fades battle music out without leaving duplicate looping sources: track=, sources=0, gain=0
+SMOKE_CHECK_OK: Victory starts one scene-owned fireworks show
+SMOKE_CHECK_OK: Repeated victory notification does not duplicate the celebration
+SMOKE_CHECK_OK: Rockets launch and burst into live rendered sky particles: bursts=2, particles=256
+SMOKE_CHECK_OK: Fireworks use a supported included glow shader in the built player
+SMOKE_CHECK_OK: Celebration particles have no gameplay collision
+SMOKE_CHECK_OK: Victory camera frames the sky bursts above the lower victory controls
+SMOKE_CHECK_OK: Fireworks continue beyond the particle-system duration within a fixed particle budget
+SMOKE_CHECK_OK: Victory celebration advances in real time even when gameplay time is frozen
+SMOKE_CHECK_OK: Music mute preference survives retry and scene recreation
+SMOKE_CHECK_OK: Retry removes the complete victory fireworks show
+SMOKE_CHECK_OK: Retry resets summon counters and removes all reinforcements from the previous fight
+SMOKE_CHECK_OK: Cleanup regression restores the castle entrance lantern
+SMOKE_CHECK_OK: Fresh fight starts two pending summon portals
+SMOKE_CHECK_OK: Defeat clears pending portals before they can materialize
+SMOKE_CHECK_OK: A defeated fight never creates delayed reinforcement enemies
+SMOKE_CHECK_OK: Victory cleanup regression begins with two living summoned enemies
+SMOKE_CHECK_OK: Victory clears living reinforcements and their hostile projectiles without requiring extra kills
+LOST_DREAM_SMOKE_PASSED: 422 functional integration checks.

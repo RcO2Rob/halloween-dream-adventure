@@ -1,0 +1,23 @@
+{
+    "backup": "Builds/archive/before-kaykit-candy-20261016-004432",
+    "chapters": [
+        {
+            "scene": "Assets/Scenes/01_FirstLight.unity",
+            "replacedVisuals": 3,
+            "originalComponentsPreserved": 2765,
+            "geometryPhysicsAndGameplayPreserved": true
+        },
+        {
+            "scene": "Assets/Scenes/02_ShatteredGardens.unity",
+            "replacedVisuals": 3,
+            "originalComponentsPreserved": 3992,
+            "geometryPhysicsAndGameplayPreserved": true
+        },
+        {
+            "scene": "Assets/Scenes/03_PumpkinKeep.unity",
+            "replacedVisuals": 5,
+            "originalComponentsPreserved": 1176,
+            "geometryPhysicsAndGameplayPreserved": true
+        }
+    ]
+}

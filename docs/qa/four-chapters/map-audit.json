@@ -1,0 +1,20 @@
+{
+    "backup": "Builds/archive/before-four-chapters-20261016-155434",
+    "preservedBossComponents": 1260,
+    "newIslands": 6,
+    "newEnemies": 12,
+    "brews": 3,
+    "originalBossLayoutPreserved": true,
+    "originalFirstTwoMapsUntouched": true,
+    "chapters": [
+        "01_FirstLight",
+        "02_ShatteredGardens",
+        "03_WitchlightMarsh",
+        "04_PumpkinKeep"
+    ],
+    "recipes": [
+        "PINK > BLUE",
+        "BLUE > GOLD",
+        "GOLD > PINK > BLUE"
+    ]
+}

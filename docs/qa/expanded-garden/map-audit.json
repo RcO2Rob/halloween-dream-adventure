@@ -1,0 +1,14 @@
+{
+    "backup": "Builds/archive/before-expanded-garden-20261016-122626",
+    "preservedComponents": 3790,
+    "islands": 7,
+    "memories": 3,
+    "lanterns": 6,
+    "enemies": 11,
+    "originalIslandsPreserved": true,
+    "originalEnemyHealthPreserved": true,
+    "changedExistingFences": [
+        "Wandering orchard",
+        "Moonlit terrace"
+    ]
+}

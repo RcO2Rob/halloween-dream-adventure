@@ -11,8 +11,8 @@ namespace LostDream
     {
         public static DreamGame Instance { get; private set; }
         public static bool JourneyStarted;
-        public static readonly string[] SceneNames = { "01_FirstLight", "02_ShatteredGardens", "03_PumpkinKeep" };
-        public static readonly string[] ChapterNames = { "THE FIRST LIGHT", "SHATTERED GARDENS", "THE PUMPKIN KEEP" };
+        public static readonly string[] SceneNames = { "01_FirstLight", "02_ShatteredGardens", "03_WitchlightMarsh", "04_PumpkinKeep" };
+        public static readonly string[] ChapterNames = { "THE FIRST LIGHT", "SHATTERED GARDENS", "WITCHLIGHT MARSH", "THE PUMPKIN KEEP" };
         public int levelIndex;
         public Vector3 spawnPoint;
         public PlayerMotor player;
@@ -23,16 +23,27 @@ namespace LostDream
         public FlyingDragon[] dragons;
         public DreamRune[] runes;
         public Vector3[] candySpawnPoints;
+        public GardenAdventure garden;
+        public WitchlightMarsh marsh;
+        public const int BossChapterIndex = 3;
         public GamePhase Phase { get; private set; }
         public Vector3 Checkpoint { get; private set; }
         public string Toast { get; private set; }
         public float ToastUntil { get; private set; }
         public float PlaySeconds { get; private set; }
+        public Vector3 VictoryCenter => boss == null ? player.transform.position :
+            new Vector3((boss.arenaMin.x + boss.arenaMax.x) * .5f, boss.transform.position.y,
+                (boss.arenaMin.y + boss.arenaMax.y) * .5f);
         public int LitCount => lanterns.Count(x => x != null && x.Lit);
         public int DragonsRemaining => dragons.Count(x => x != null && !x.Defeated);
         public int RunesRemaining => runes.Count(x => x != null && !x.Cleared);
-        public bool ObjectivesComplete => LitCount == lanterns.Length && DragonsRemaining == 0 && RunesRemaining == 0;
+        public bool ObjectivesComplete => LitCount == lanterns.Length && DragonsRemaining == 0 && RunesRemaining == 0 &&
+            (garden == null || garden.Complete) && (marsh == null || marsh.Complete);
         float candyTimer;
+        bool awaitMouseRelease;
+        int captureFrame;
+        public bool MouseActionsReady => !awaitMouseRelease && Application.isFocused &&
+            Cursor.lockState == CursorLockMode.Locked;
 
         void Awake()
         {
@@ -40,20 +51,23 @@ namespace LostDream
             Time.timeScale = 1;
             Checkpoint = spawnPoint;
             candyTimer = levelIndex == 0 ? 3 : 0;
-            Phase = JourneyStarted ? GamePhase.Playing : GamePhase.Menu;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            Phase = DreamTransition.Running ? GamePhase.LevelComplete : JourneyStarted ? GamePhase.Playing : GamePhase.Menu;
+            if (DreamTransition.Running) Time.timeScale = 0;
+            RefreshCursor();
             Application.targetFrameRate = 60;
             foreach (var sign in GetComponentsInChildren<TextMesh>())
                 sign.text = sign.text.Replace("SPACE  /  DODGE", "SHIFT  /  DODGE");
         }
         void Start()
         {
-            if (levelIndex == 2) ReplenishCandy();
+            if (boss != null) ReplenishCandy();
         }
 
         void Update()
         {
+            if (DreamTransition.Running) return;
+            if (awaitMouseRelease && Time.frameCount > captureFrame &&
+                !Input.GetMouseButton(0) && !Input.GetMouseButton(1)) awaitMouseRelease = false;
             if (Input.GetKeyDown(KeyCode.M)) audioSystem.ToggleMute();
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -63,7 +77,6 @@ namespace LostDream
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 if (Phase == GamePhase.Menu) StartPlaying();
-                else if (Phase == GamePhase.LevelComplete) ContinueJourney();
                 else if (Phase == GamePhase.Defeated) Retry();
                 else if (Phase == GamePhase.Victory) LoadChapter(0);
             }
@@ -79,7 +92,7 @@ namespace LostDream
                     ReplenishTutorialCandy();
                 }
             }
-            if (levelIndex == 2 && LitCount > 0)
+            if (boss != null && LitCount > 0)
             {
                 candyTimer -= Time.deltaTime;
                 if (candyTimer <= 0)
@@ -95,16 +108,28 @@ namespace LostDream
             JourneyStarted = true;
             Phase = GamePhase.Playing;
             Time.timeScale = 1;
+            RefreshCursor();
             audioSystem.Play("lantern", .5f);
             ShowToast("Light the lanterns. Bring the dream back.", 4);
         }
-        public void Pause() { if (Phase == GamePhase.Playing) { Phase = GamePhase.Paused; Time.timeScale = 0; } }
-        public void Resume() { Phase = GamePhase.Playing; Time.timeScale = 1; }
+        public void Pause() { if (Phase == GamePhase.Playing) { Phase = GamePhase.Paused; Time.timeScale = 0; RefreshCursor(); } }
+        public void Resume() { Phase = GamePhase.Playing; Time.timeScale = 1; RefreshCursor(); }
+        void RefreshCursor()
+        {
+            bool playing = Phase == GamePhase.Playing;
+            Cursor.lockState = playing ? CursorLockMode.Locked : CursorLockMode.None;
+            Cursor.visible = !playing;
+            awaitMouseRelease = playing;
+            captureFrame = Time.frameCount;
+        }
+        void OnApplicationFocus(bool focused) { if (!focused) Pause(); }
+        void OnApplicationPause(bool paused) { if (paused) Pause(); }
         public void LoadChapter(int chapter)
         {
+            if (DreamTransition.Running) return;
             JourneyStarted = true;
             Time.timeScale = 1;
-            SceneManager.LoadScene(SceneNames[Mathf.Clamp(chapter, 0, 2)]);
+            SceneManager.LoadScene(SceneNames[Mathf.Clamp(chapter, 0, SceneNames.Length - 1)]);
         }
         public void Retry() { LoadChapter(levelIndex); }
         public void ReturnToMenu()
@@ -113,7 +138,13 @@ namespace LostDream
             Time.timeScale = 1;
             SceneManager.LoadScene(SceneNames[0]);
         }
-        public void ContinueJourney() { if (levelIndex < 2) LoadChapter(levelIndex + 1); }
+        public void ContinueJourney() { if (Phase == GamePhase.LevelComplete && !DreamTransition.Running && levelIndex < SceneNames.Length - 1) DreamTransition.Begin(levelIndex + 1); }
+        public void FinishTransition()
+        {
+            Phase = Application.isFocused ? GamePhase.Playing : GamePhase.Paused;
+            Time.timeScale = Phase == GamePhase.Playing ? 1 : 0; RefreshCursor();
+            ShowToast("CHAPTER " + (levelIndex + 1) + " / " + ChapterNames[levelIndex], 3);
+        }
         public void SetCheckpoint(Vector3 safePosition)
         {
             Checkpoint = safePosition;
@@ -126,30 +157,37 @@ namespace LostDream
         }
         public bool TryExit()
         {
-            if (Phase != GamePhase.Playing) return false;
+            if (Phase != GamePhase.Playing || boss != null || DreamTransition.Running) return false;
             if (!ObjectivesComplete)
             {
-                ShowToast("Restore every lantern and clear the nightmares to open this dream gate.", 3);
+                ShowToast(marsh != null ? marsh.NextHint() : garden != null ? garden.NextHint() : "Restore every lantern and clear the nightmares to open this dream gate.", 4);
                 return false;
             }
             Phase = GamePhase.LevelComplete;
+            RefreshCursor();
             audioSystem.Play("victory", .65f);
+            ContinueJourney();
             return true;
         }
         public void Defeat()
         {
             if (Phase != GamePhase.Playing) return;
             Phase = GamePhase.Defeated;
+            RefreshCursor();
             if (boss != null) boss.ClearSummons();
             audioSystem.Play("hurt");
         }
         public void Win()
         {
+            if (Phase == GamePhase.Victory) return;
             Phase = GamePhase.Victory;
-            if (boss != null) boss.ClearSummons();
+            RefreshCursor();
+            if (boss != null) { boss.ClearSummons(); boss.BreakApart(); }
+            player.BeginVictory();
             foreach (var bomb in FindObjectsByType<NightmareBomb>(FindObjectsSortMode.None)) Destroy(bomb.gameObject);
             audioSystem.Play("victory", .8f);
             DreamArt.Burst(boss.transform.position + Vector3.up * 3, "GlowGold", 60, 7);
+            VictoryFireworks.Begin(this);
         }
         void ReplenishTutorialCandy()
         {
@@ -169,7 +207,7 @@ namespace LostDream
         }
         public void ReplenishCandy()
         {
-            if (levelIndex != 2 || boss == null || boss.Defeated) return;
+            if (boss == null || boss.Defeated) return;
             var sweets = FindObjectsByType<CandyPickup>(FindObjectsSortMode.None);
             if (candySpawnPoints == null || candySpawnPoints.Length == 0) return;
             int offset = UnityEngine.Random.Range(0, candySpawnPoints.Length);
@@ -211,7 +249,9 @@ namespace LostDream
         }
         public string Objective()
         {
-            if (levelIndex == 2)
+            if (garden != null) return garden.NextHint();
+            if (marsh != null) return marsh.NextHint();
+            if (boss != null)
             {
                 if (LitCount == 0) return "Find the entrance lantern. Restore the bridge to the keep.";
                 if (!boss.AwakeInArena) return "Jump across the glowing platforms. Face the Pumpkin King.";
@@ -236,8 +276,13 @@ namespace LostDream
             if (LitCount < lanterns.Length) return "Explore the islands. Light the next pumpkin lantern with E.";
             if (DragonsRemaining > 0) return "Use your bow to clear the flying nightmares.";
             if (RunesRemaining > 0) return "A nightmare seal remains. Follow its glowing marker.";
-            return "The dream gate is open. Walk into the glowing arch.";
+            return "The iron gate is open.\nFollow the glowing path through the doorway.";
         }
-        void OnDestroy() { if (Instance == this) Instance = null; Time.timeScale = 1; }
+        void OnDestroy()
+        {
+            if (Instance != this) return;
+            Instance = null; Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.None; Cursor.visible = true;
+        }
     }
 }

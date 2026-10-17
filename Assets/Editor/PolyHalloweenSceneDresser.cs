@@ -82,7 +82,7 @@ public static class PolyHalloweenSceneDresser
                 }
             }
 
-            if (level == 2)
+            if (level == DreamGame.BossChapterIndex)
             {
                 var approach = islands.Single(x => x.name == "Castle approach");
                 var court = islands.Single(x => x.name == "Pumpkin keep courtyard");
@@ -233,7 +233,7 @@ public static class PolyHalloweenSceneDresser
     {
         Directory.CreateDirectory(Path.GetDirectoryName(path));
         var camera = game.gameCamera;
-        if (game.levelIndex == 2) { camera.transform.position = new Vector3(25, 22, -30); camera.transform.LookAt(new Vector3(0, 2, 8)); }
+        if (game.boss != null) { camera.transform.position = new Vector3(25, 22, -30); camera.transform.LookAt(new Vector3(0, 2, 8)); }
         else if (game.levelIndex == 1) { camera.transform.position = new Vector3(-34, 18, 7); camera.transform.LookAt(new Vector3(-18, 1, 25)); }
         else { camera.transform.position = new Vector3(17, 15, -17); camera.transform.LookAt(new Vector3(0, .5f, 1)); }
         var texture = new RenderTexture(1600, 1000, 24) { antiAliasing = 4 };

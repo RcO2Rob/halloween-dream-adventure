@@ -15,7 +15,7 @@ public static class PrototypeBuilder
     }
     public static void BuildCurrentScenes()
     {
-        PlayerSettings.bundleVersion = "0.12.0";
+        PlayerSettings.bundleVersion = "0.13.0";
         MakeCombatMaterials();
         ValidateScenes();
         AssetDatabase.SaveAssets();
@@ -48,6 +48,7 @@ public static class PrototypeBuilder
     }
     static void MakeCombatMaterials()
     {
+        Material("Candy", CandyPalette.Color(CandyHue.Pink), .8f);
         Material("CandyBlue", CandyPalette.Color(CandyHue.Blue), .8f);
         Material("CandyGold", CandyPalette.Color(CandyHue.Gold), .8f);
         foreach (CandyHue hue in Enum.GetValues(typeof(CandyHue)))
@@ -62,8 +63,8 @@ public static class PrototypeBuilder
     public static void AddJumpPlatformsToCurrentScenes()
     {
         if (!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
-        PlayerSettings.bundleVersion = "0.12.0";
-        for (int i = 0; i < 3; i++)
+        PlayerSettings.bundleVersion = "0.13.0";
+        for (int i = 0; i < DreamGame.SceneNames.Length; i++)
         {
             var scene = EditorSceneManager.OpenScene("Assets/Scenes/" + DreamGame.SceneNames[i] + ".unity");
             var game = UnityEngine.Object.FindFirstObjectByType<DreamGame>();
@@ -81,6 +82,8 @@ public static class PrototypeBuilder
     [MenuItem("Lost Dream/Create or regenerate prototype scenes")]
     public static void CreateScenes()
     {
+        if (DreamGame.SceneNames.Any(x => File.Exists("Assets/Scenes/" + x + ".unity")))
+            throw new InvalidOperationException("Saved maps exist. Use BuildCurrentScenes; regenerating user-authored maps is disabled.");
         Directory.CreateDirectory("Assets/Resources/Materials");
         Directory.CreateDirectory("Assets/Resources/Meshes");
         Directory.CreateDirectory("Assets/Scenes");
@@ -89,7 +92,7 @@ public static class PrototypeBuilder
         MonsterAssetBuilder.BuildVarietyPrefabs(); TimmyAssetBuilder.BuildPrefab();
         PlayerSettings.companyName = "Lost Dream Studio";
         PlayerSettings.productName = "Lanterns of the Lost Dream";
-        PlayerSettings.bundleVersion = "0.12.0";
+        PlayerSettings.bundleVersion = "0.13.0";
         PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.Standalone, "com.lostdream.halloween");
         PlayerSettings.defaultScreenWidth = 1440; PlayerSettings.defaultScreenHeight = 900;
         PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
@@ -101,17 +104,17 @@ public static class PrototypeBuilder
         QualitySettings.shadows = ShadowQuality.All; QualitySettings.shadowResolution = ShadowResolution.Medium;
         QualitySettings.pixelLightCount = 4;
         EditorSettings.serializationMode = SerializationMode.ForceText;
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < DreamGame.SceneNames.Length; i++)
         {
             var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
-            DreamWorld.Build(i);
+            if (i == 2) FourChapterBuilder.CreateMarsh(); else DreamWorld.Build(i);
             string path = "Assets/Scenes/" + DreamGame.SceneNames[i] + ".unity";
             EditorSceneManager.SaveScene(scene, path);
         }
         EditorBuildSettings.scenes = DreamGame.SceneNames.Select(x => new EditorBuildSettingsScene("Assets/Scenes/" + x + ".unity", true)).ToArray();
         AssetDatabase.SaveAssets();
         EditorSceneManager.OpenScene("Assets/Scenes/01_FirstLight.unity");
-        Debug.Log("LOST_DREAM_SCENES_READY: three playable chapters generated.");
+        Debug.Log("LOST_DREAM_SCENES_READY: four playable chapters generated.");
     }
 
     [MenuItem("Lost Dream/Build macOS prototype")]
@@ -160,7 +163,7 @@ public static class PrototypeBuilder
     [MenuItem("Lost Dream/Validate prototype scenes")]
     public static void ValidateScenes()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < DreamGame.SceneNames.Length; i++)
         {
             EditorSceneManager.OpenScene("Assets/Scenes/" + DreamGame.SceneNames[i] + ".unity");
             DreamGame game = UnityEngine.Object.FindFirstObjectByType<DreamGame>();
@@ -174,7 +177,7 @@ public static class PrototypeBuilder
             Require(character.LeftHand != null && character.RightHand != null && character.bow != null && game.player.heldCandy != null, "Hand-held props " + i);
             foreach (var skin in character.GetComponentsInChildren<SkinnedMeshRenderer>())
                 Require(skin.sharedMaterials.All(x => x != null && x.mainTexture != null), "Timmy textured skin " + i);
-            Require(game.lanterns.Length == (i == 0 ? 2 : i == 1 ? 3 : 1), "Lantern count " + i);
+            Require(game.lanterns.Length == (i == 0 ? 2 : i == 1 ? (game.garden != null ? 6 : 3) : i == 2 ? 5 : 1), "Lantern count " + i);
             foreach (var lamp in game.lanterns)
             {
                 Require(lamp.path != null && !lamp.path.solid.activeSelf, "Hidden road starts inactive");
@@ -184,13 +187,38 @@ public static class PrototypeBuilder
                 if (lamp.path.IsJumpRoute)
                 {
                     Require(lamp.path.jumpEntry != null && lamp.path.jumpExit != null, "Jump route island anchors");
-                    Require(lamp.path.jumpPlatforms.Length == (i == 1 ? 3 : 2), "Chapter jumping platform count");
+                    Require(lamp.path.jumpPlatforms.Length == (i == 1 || i == 2 ? 3 : 2), "Chapter jumping platform count");
                     Require(lamp.path.solid.GetComponentsInChildren<BoxCollider>(true).Length == 0, "Jump route has no continuous bridge collider");
                     foreach (var platform in lamp.path.jumpPlatforms)
                         Require(platform.GetComponentInChildren<MeshCollider>(true) != null, "Flat round landing collision");
                 }
             }
-            Require(game.lanterns.Count(x => x.path.IsJumpRoute) == 1, "One jump route per chapter");
+            Require(game.lanterns.Count(x => x.path.IsJumpRoute) == (game.garden != null ? 4 : game.marsh != null ? 5 : 1), "Authored chapter jump route count");
+            if (game.garden != null)
+            {
+                var garden = game.garden;
+                Require(i == 1 && garden.memories.Length == 3 && garden.sequenceRunes.Length == 3 && garden.candySeal != null,
+                    "Garden memories and puzzle references");
+                Require(game.dragons.Length == 11 && game.runes.Length == 4 && garden.candyPoints.Length == 2, "Expanded garden encounters and supplies");
+                Require(garden.memories.All(x => x.garden == garden && x.crystal != null && x.guardians.Length >= 3), "Garden memory guardians");
+                Require(garden.sequenceRunes.All(x => x.sequence == garden && !x.candyOnly), "Garden ordered bow targets");
+                var exit = game.GetComponentInChildren<DreamGate>();
+                if (exit.ironGate != null)
+                {
+                    var iron = exit.ironGate;
+                    Require(iron.leftLeaf != null && iron.rightLeaf != null && iron.closedBarrier.enabled &&
+                        !iron.groundCue.activeSelf && iron.cueLight != null, "Saved iron exit references and closed state");
+                    Require(exit.GetComponent<BoxCollider>().isTrigger && exit.GetComponent<BoxCollider>().center.z > .8f,
+                        "Iron exit trigger lies beyond the door plane");
+                }
+            }
+            if (i == 2)
+            {
+                Require(game.boss == null && game.marsh != null && game.marsh.cauldrons.Length == 3, "Distinct marsh chapter and recipes");
+                Require(game.dragons.Length == 12 && game.marsh.cauldrons.All(x => x.recipe.Length >= 2 && x.supplyPoints.Length == 3), "Marsh encounters and renewable color supplies");
+                Require(game.GetComponentsInChildren<MarshMist>(true).Length == 4 && game.GetComponentsInChildren<DriftingPlatform>(true).Length == 3, "Mist vents and drifting crossings");
+                Require(game.GetComponentInChildren<DreamGate>().ironGate != null, "Marsh physical iron exit");
+            }
             foreach (var go in UnityEngine.Object.FindObjectsByType<GameObject>(FindObjectsSortMode.None))
                 Require(GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(go) == 0, "No missing script: " + go.name);
             foreach (var renderer in UnityEngine.Object.FindObjectsByType<MeshRenderer>(FindObjectsSortMode.None))
@@ -203,7 +231,7 @@ public static class PrototypeBuilder
                 foreach (var skin in dragon.body.GetComponentsInChildren<SkinnedMeshRenderer>())
                     Require(skin.sharedMaterials.All(x => x != null && x.mainTexture != null), "Monster atlas material");
             }
-            if (i == 2) Require(game.boss != null && game.boss.weakPoint.Length == 3 && game.candySpawnPoints.Length >= 4, "Boss and safe candy points");
+            if (i == DreamGame.BossChapterIndex) Require(game.boss != null && game.boss.weakPoint.Length == 3 && game.candySpawnPoints.Length >= 4, "Boss and safe candy points");
             Debug.Log("LOST_DREAM_VALIDATED_CHAPTER_" + (i + 1));
         }
         EditorSceneManager.OpenScene("Assets/Scenes/01_FirstLight.unity");

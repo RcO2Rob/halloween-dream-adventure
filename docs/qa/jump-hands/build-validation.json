@@ -1,0 +1,23 @@
+{
+  "change": "Natural jump arm targets and rig-derived wrist orientation",
+  "unity": "6000.6.2f1",
+  "platform": "macOS arm64",
+  "normal_application_launch": true,
+  "focused_checks": 76,
+  "full_three_chapter_checks": 390,
+  "all_checks_passed": true,
+  "assistant_visual_review": [
+    "Final front, side and behind jump poses inspected.",
+    "Candy carry, airborne bow and airborne throw inspected.",
+    "Full-run rising pose inspected against historical raised-hand reference."
+  ],
+  "source_sha256": {
+    "Assets/Scripts/TimmyAnimation.cs": "8107e69230cbf976b5402217cfb0d2254b522f3db2a09609c7c4ecfd3b86b474",
+    "Assets/Scripts/PrototypeSmoke.cs": "203b5ca2251ffc1b83634372849c83acc2e402ca31dbd9498e883e944fc12935"
+  },
+  "three_saved_maps_unchanged": true,
+  "physics_jump_height_and_collision_checks_passed": true,
+  "independent_human_playtest": false,
+  "delivery": "Runtime source updated in the current Unity project. Prior application and ZIP not replaced.",
+  "github_sync": "No push requested or performed."
+}

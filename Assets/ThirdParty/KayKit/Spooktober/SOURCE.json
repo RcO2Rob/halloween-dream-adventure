@@ -1,0 +1,12 @@
+{
+  "asset": "KayKit Spooktober Seasonal Pack 1.1 (Legacy)",
+  "creator": "Kay Lousberg",
+  "author_page": "https://kaylousberg.itch.io/kaykit-spooktober",
+  "author_upload_mirror": "https://opengameart.org/content/kaykit-spooktober-seasonal-pack-11",
+  "download": "https://opengameart.org/sites/default/files/kaykit_spooktober_seasonal_pack_1.1.zip",
+  "license": "CC0 1.0; package License.txt retained verbatim",
+  "archive_sha256": "5fd3180b26d79cb3e8ed5d334aac80634fd9bd64051a695e4af4ef6da27f0004",
+  "selected_model": "Models/fbx/candyA.fbx",
+  "model_sha256": "6b27a42dbd6f9134887f409265c7c39581ba7d256518347338c4366b5ece6078",
+  "adaptation": "Normalize size and pivot, separate original color and white submeshes for three matching-candy hues. No unrelated character or environment assets imported."
+}

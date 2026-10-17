@@ -1,0 +1,34 @@
+SMOKE_CHECK_OK: Tutorial loads in standalone player
+SMOKE_CHECK_OK: Game launches into the cover menu before gameplay
+SMOKE_CHECK_OK: Title menu keeps a visible free cursor for its buttons
+SMOKE_CHECK_OK: Chosen cover composition imports at its original 1600 by 1000 aspect ratio
+SMOKE_CHECK_OK: Dream music plays while the cover menu is displayed
+SMOKE_CHECK_OK: Cover menu remains idle and preserves the gameplay spawn while resizing: (1440, 900)
+SMOKE_CHECK_OK: Cover menu remains idle and preserves the gameplay spawn while resizing: (1920, 1080)
+SMOKE_CHECK_OK: Cover menu remains idle and preserves the gameplay spawn while resizing: (1280, 960)
+SMOKE_CHECK_OK: Start action leaves the cover menu and enters the tutorial
+SMOKE_CHECK_OK: Saved boss courtyard is 42 by 38 with the original jump-route landing edge preserved
+SMOKE_CHECK_OK: Castle approach island keeps its original size
+SMOKE_CHECK_OK: The real controller can stand in the enlarged courtyard: (-16.00, 0.15, 8.00)
+SMOKE_CHECK_OK: The real controller can stand in the enlarged courtyard: (16.00, 0.15, 8.00)
+SMOKE_CHECK_OK: The real controller can stand in the enlarged courtyard: (-16.00, 0.15, 29.00)
+SMOKE_CHECK_OK: The real controller can stand in the enlarged courtyard: (16.00, 0.15, 29.00)
+SMOKE_CHECK_OK: Victory hides the intact pumpkin head and crown
+SMOKE_CHECK_OK: The real pumpkin and crown surfaces split into a bounded number of fragments
+SMOKE_CHECK_OK: Pumpkin fragments cannot damage or block the hero
+SMOKE_CHECK_OK: Pumpkin shell fragments physically separate and arc away from the defeated head
+SMOKE_CHECK_OK: Victory crossfades from battle music into one audible looping celebration score
+SMOKE_CHECK_OK: Victory starts one scene-owned fireworks show
+SMOKE_CHECK_OK: Victory clears running, throw and bow poses and restores visible idle animation
+SMOKE_CHECK_OK: Victory idle visibly deforms Timmy's mesh instead of holding the final combat frame
+SMOKE_CHECK_OK: Repeated victory notification does not duplicate the celebration
+SMOKE_CHECK_OK: Rockets launch and burst into live rendered sky particles: bursts=2, particles=276
+SMOKE_CHECK_OK: Fireworks use a supported included glow shader in the built player
+SMOKE_CHECK_OK: Celebration particles have no gameplay collision
+SMOKE_CHECK_OK: Victory camera frames the sky bursts above the lower victory controls
+SMOKE_CHECK_OK: Fireworks continue beyond the particle-system duration within a fixed particle budget
+SMOKE_CHECK_OK: Victory celebration advances in real time even when gameplay time is frozen
+SMOKE_CHECK_OK: Timmy keeps playing idle throughout the fireworks even with gameplay time frozen
+SMOKE_CHECK_OK: Pumpkin fragments finish dissipating and clean up their temporary meshes
+SMOKE_CHECK_OK: Retry removes celebration fragments and restores the intact boss
+LOST_DREAM_ENDING_SMOKE_PASSED: 33

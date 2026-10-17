@@ -1,0 +1,1 @@
+637 full-game checks passed, including tutorial and garden walk-through completion, fence walk/jump blocking, boss fight and ending. Visual review then found the full rear fence obscured the view through an opened gate. Follow-up splits only that rear fence into side segments with a centered exit sightline, keeping both front wings and gate mechanics unchanged.

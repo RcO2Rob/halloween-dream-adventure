@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "suite": "--smoke-test --journey-smoke",
+  "checks": 719,
+  "unityVersion": "6000.6.2f1",
+  "buildVersion": "0.13.0",
+  "testedSceneOrder": [
+    "01_FirstLight",
+    "02_ShatteredGardens",
+    "03_WitchlightMarsh",
+    "04_PumpkinKeep"
+  ],
+  "testedCodeAndMapsMatchOriginalWorkspace": true,
+  "originalFirstTwoSceneBytesUnchanged": {
+    "01_FirstLight.unity": true,
+    "02_ShatteredGardens.unity": true
+  },
+  "bossSceneGuidRetained": true,
+  "bossComponentsPreserved": 1260,
+  "macAdHocSignatureVerified": true,
+  "automaticGateTransitionsVerified": 3,
+  "driftingPlatformRides": [
+    "Standing character rides the drifting platform without sliding off (travel=0.550, slip=0.000)",
+    "Standing character rides the drifting platform without sliding off (travel=0.378, slip=0.003)",
+    "Standing character rides the drifting platform without sliding off (travel=0.214, slip=0.003)"
+  ],
+  "independentHumanPlaytest": false,
+  "minimumTenMinutePlaytimeVerified": false,
+  "note": "Journey mode plays all four chapters with real controller jumps, bow/candy collisions, potion recipes, hazards, all three automatic fades and the complete Boss ending. It skips separate camera, skeletal-pose and legacy species attack-timing reviews that were already exercised in the earlier iteration. Earlier failures are retained under iterations and are not counted as passing suites. No new Git push or packaged-release replacement was performed."
+}

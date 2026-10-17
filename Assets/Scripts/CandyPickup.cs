@@ -47,7 +47,7 @@ namespace LostDream
             visual.Rotate(0, Time.deltaTime * 40, 0);
             if (label != null && DreamGame.Instance != null)
             {
-                bool nearby = DreamGame.Instance.levelIndex == 2 &&
+                bool nearby = (DreamGame.Instance.boss != null || DreamGame.Instance.marsh != null) &&
                     Vector3.Distance(transform.position, DreamGame.Instance.player.transform.position) < 14;
                 bool clear = nearby && !Physics.Linecast(DreamGame.Instance.gameCamera.transform.position,
                     label.transform.position, ~(1 << 2), QueryTriggerInteraction.Ignore);

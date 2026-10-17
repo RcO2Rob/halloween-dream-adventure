@@ -72,13 +72,12 @@ namespace LostDream
             Matrix4x4 before = GUI.matrix;
             GUI.matrix = Matrix4x4.Scale(new Vector3(scale, scale, 1));
             if (game.Phase == GamePhase.Menu) Menu(game);
+            else if (game.Phase == GamePhase.Victory) Victory(game);
             else
             {
                 PlayHUD(game);
                 if (game.Phase == GamePhase.Paused) Modal(game, "THE DREAM IS PAUSED", "Take a breath. The nightmare can wait.", "RESUME", game.Resume);
                 else if (game.Phase == GamePhase.Defeated) Modal(game, "LOST IN THE NIGHTMARE", "Your lanterns remember the way. Try this chapter again.", "TRY AGAIN  /  ENTER", game.Retry);
-                else if (game.Phase == GamePhase.LevelComplete) Modal(game, "A DREAM RESTORED", "The gate leads deeper into the dream.", "NEXT CHAPTER  /  ENTER", game.ContinueJourney);
-                else if (game.Phase == GamePhase.Victory) Modal(game, "THE NIGHTMARE IS OVER", "The Pumpkin King has fallen. Every lantern shines again.", "DREAM AGAIN  /  ENTER", () => game.LoadChapter(0));
             }
             GUI.matrix = before;
         }
@@ -90,22 +89,31 @@ namespace LostDream
             Label(new Rect(64, 188, 650, 54), "OF THE LOST DREAM", menuSubtitle);
             Panel(new Rect(64, 261, 54, 3), gold);
             Label(new Rect(64, 288, 350, 70), "Light the lanterns.\nFind your way through the dream.", text);
-            float actionsY = Mathf.Max(390, height - 440);
+            float actionsY = Mathf.Max(365, height - 490);
             if (GUI.Button(new Rect(64, actionsY, 320, 58), "BEGIN THE DREAM", menuPrimary)) game.StartPlaying();
             Label(new Rect(64, actionsY + 68, 320, 24), "PRESS ENTER TO BEGIN", menuSmall);
             Label(new Rect(64, actionsY + 115, 340, 25), "OR CHOOSE A CHAPTER", menuSmall, gold);
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < DreamGame.SceneNames.Length; i++)
             {
                 int chapter = i;
                 if (GUI.Button(new Rect(64, actionsY + 150 + i * 48, 320, 40), "0" + (i + 1) + "   " + DreamGame.ChapterNames[i], menuChapter)) game.LoadChapter(chapter);
             }
-            Label(new Rect(64, height - 82, 640, 60), "WASD / move    Space / jump    Shift / dodge\nLeft-click / bow    E / interact    Q / candy", menuSmall);
+            Label(new Rect(64, height - 82, 640, 60), "WASD / move    Mouse / look    Space / jump    Shift / dodge\nLeft-click / bow    E / interact    Q / candy    Esc / pause", menuSmall);
             if (GUI.Button(new Rect(width - 228, 38, 188, 36), game.audioSystem.Muted ? "SOUND OFF  /  M" : "SOUND ON  /  M", menuChapter))
                 game.audioSystem.ToggleMute();
         }
         void OnDestroy()
         {
             if (menuShade != null) Destroy(menuShade);
+        }
+        void Victory(DreamGame game)
+        {
+            Rect box = new Rect(width / 2 - 380, height - 254, 760, 226);
+            Panel(box, panel);
+            Label(new Rect(box.x + 30, box.y + 20, 700, 42), "THE NIGHTMARE IS OVER", heading, gold);
+            Label(new Rect(box.x + 30, box.y + 69, 700, 40), "The Pumpkin King has fallen. Every lantern shines again.", text);
+            if (GUI.Button(new Rect(box.x + 30, box.y + 128, 420, 55), "DREAM AGAIN  /  ENTER", button)) game.LoadChapter(0);
+            if (GUI.Button(new Rect(box.x + 470, box.y + 128, 260, 55), "CHAPTER SELECT", button)) game.ReturnToMenu();
         }
         void PlayHUD(DreamGame game)
         {
@@ -118,7 +126,7 @@ namespace LostDream
             {
                 Panel(new Rect(width - 279 + i * 45, 68, 31, 17), i < game.player.Health ? new Color(.97f, .4f, .46f) : new Color(.24f, .2f, .3f));
             }
-            if (game.levelIndex == 2 && game.boss.AwakeInArena)
+            if (game.boss != null && game.boss.AwakeInArena)
             {
                 Panel(new Rect(width / 2 - 245, 26, 490, 78), panel);
                 Color required = CandyPalette.Color(game.boss.RequiredHue);
@@ -136,9 +144,21 @@ namespace LostDream
             }
             Panel(new Rect(28, height - 128, 600, 100), panel);
             string progress = "LANTERNS  " + game.LitCount + "/" + game.lanterns.Length;
-            if (game.levelIndex != 2) progress += "     ENEMIES  " + (game.dragons.Length - game.DragonsRemaining) + "/" + game.dragons.Length;
+            if (game.boss == null) progress += "     ENEMIES  " + (game.dragons.Length - game.DragonsRemaining) + "/" + game.dragons.Length;
             else if (game.boss.AwakeInArena) progress += "     WAVE " + game.boss.SummonWavesStarted + "/2  /  ENEMIES " + game.boss.ActiveSummons;
             Label(new Rect(48, height - 113, 560, 24), progress, small, gold);
+            if (game.garden != null)
+            {
+                Panel(new Rect(28, 118, 452, 62), panel);
+                Label(new Rect(48, 124, 410, 24), "DREAM MEMORIES  " + game.garden.MemoriesCollected + "/3", small, teal);
+                Label(new Rect(48, 148, 410, 25), game.garden.StageLabel, small, gold);
+            }
+            if (game.marsh != null)
+            {
+                Panel(new Rect(28, 118, 452, 62), panel);
+                Label(new Rect(48, 124, 410, 24), "WITCHLIGHT BREWS  " + game.marsh.BrewsComplete + "/3", small, teal);
+                Label(new Rect(48, 148, 410, 25), game.marsh.StageLabel, small, gold);
+            }
             Label(new Rect(48, height - 82, 552, 56), game.Objective(), text);
             Panel(new Rect(width - 360, height - 156, 332, 128), panel);
             Label(new Rect(width - 340, height - 141, 300, 26), game.player.CarryingCandy ? CandyPalette.Label(game.player.HeldCandyHue) + " CANDY  /  Q" : "BOW READY  /  LEFT-CLICK", small, game.player.CarryingCandy ? CandyPalette.Color(game.player.HeldCandyHue) : teal);
@@ -147,16 +167,17 @@ namespace LostDream
             Label(new Rect(width - 340, height - 59, 300, 22), "E / interact    Esc / pause    R / retry", small);
             if (game.Phase == GamePhase.Playing)
             {
-                if (game.player.Nearby != null)
+                if (game.player.Nearby != null && game.player.Nearby.Available)
                 {
                     Panel(new Rect(width / 2 - 310, height - 200, 620, 48), panel);
                     Label(new Rect(width / 2 - 295, height - 194, 590, 36), "[ E ]  " + game.player.Nearby.Prompt, centered, gold);
                 }
                 if (Time.unscaledTime < game.ToastUntil)
                 {
-                    float toastY = game.levelIndex == 2 && game.boss.AwakeInArena ? 185 : 151;
-                    Panel(new Rect(width / 2 - 450, toastY, 900, 50), panel);
-                    Label(new Rect(width / 2 - 434, toastY + 6, 868, 37), game.Toast, centered);
+                    float toastY = (game.garden != null || game.marsh != null) ? 192 : game.boss != null && game.boss.AwakeInArena ? 185 : 151;
+                    float toastHeight = Mathf.Clamp(centered.CalcHeight(new GUIContent(game.Toast), 868) + 12, 50, 92);
+                    Panel(new Rect(width / 2 - 450, toastY, 900, toastHeight), panel);
+                    Label(new Rect(width / 2 - 434, toastY + 6, 868, toastHeight - 12), game.Toast, centered);
                 }
                 Reticle(game);
                 TargetLabels(game);
@@ -164,7 +185,8 @@ namespace LostDream
         }
         void Reticle(DreamGame game)
         {
-            Vector2 p = new Vector2(Input.mousePosition.x / scale, (Screen.height - Input.mousePosition.y) / scale);
+            Vector2 aim = game.player.AimScreenPoint;
+            Vector2 p = new Vector2(aim.x / scale, (Screen.height - aim.y) / scale);
             Color color = game.player.CarryingCandy ? CandyPalette.Color(game.player.HeldCandyHue) : teal;
             Panel(new Rect(p.x - 11, p.y - 1, 7, 2), color);
             Panel(new Rect(p.x + 4, p.y - 1, 7, 2), color);

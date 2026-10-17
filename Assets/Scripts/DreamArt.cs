@@ -99,6 +99,14 @@ namespace LostDream
         public static GameObject CandyVisual(Transform parent, Vector3 position, float size, CandyHue hue = CandyHue.Pink)
         {
             var root = Group("Wrapped candy", parent, position);
+            var prefab = Resources.Load<GameObject>("Props/KayKitCandy");
+            if (prefab != null)
+            {
+                var model = Object.Instantiate(prefab, root.transform, false);
+                model.name = "KayKit candy"; model.transform.localScale = Vector3.one * size;
+                CandyPalette.Paint(root.transform, hue);
+                return root;
+            }
             Shape("Sweet", PrimitiveType.Sphere, root.transform, Vector3.zero,
                 new Vector3(.7f, .45f, .45f) * size, CandyPalette.Material(hue));
             for (int i = -1; i <= 1; i += 2)

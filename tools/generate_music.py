@@ -17,7 +17,7 @@ def frequency(note):
     return 440 * 2 ** ((note - 69) / 12)
 
 
-def render(name, bpm, intensity):
+def render(name, bpm, intensity, celebration=False):
     beat = 60 / bpm
     duration = 64 * beat
     length = round(duration * RATE)
@@ -68,6 +68,12 @@ def render(name, bpm, intensity):
               (48, [55, 60, 64, 74]), (40, [55, 59, 64, 67])]
     melody = [[76, 79, 83, 81, 79, 76], [77, 81, 84, 83, 81, 79],
               [79, 76, 74, 72, 76, 79], [78, 76, 74, 71, 74, 76]]
+    if celebration:
+        # Bright C-major I-IV-V-I harmony and a new ascending victory melody.
+        chords = [(48, [60, 64, 67, 72]), (41, [57, 60, 65, 69]),
+                  (43, [59, 62, 67, 74]), (48, [60, 64, 67, 76])]
+        melody = [[76, 79, 84, 83, 81, 79], [77, 81, 84, 86, 84, 81],
+                  [79, 83, 86, 84, 83, 79], [84, 79, 76, 79, 83, 84]]
     for bar in range(16):
         start = bar*4*beat
         bass, tones = chords[(bar//2) % 4]
@@ -100,6 +106,11 @@ def render(name, bpm, intensity):
     score -= score.mean(axis=0)
     peak = np.abs(score).max()
     score *= .78 / max(peak, 1e-9)
+    if celebration:
+        # A six-millisecond seam envelope removes the final oscillator discontinuity.
+        edge = round(RATE * .006)
+        score[:edge] *= np.linspace(0, 1, edge)[:, None]
+        score[-edge:] *= np.linspace(1, 0, edge)[:, None]
     pcm = np.round(score*32767).astype('<i2')
     path = OUT / (name+'.wav')
     with wave.open(str(path),'wb') as f:

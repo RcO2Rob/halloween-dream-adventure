@@ -1,0 +1,720 @@
+SMOKE_CHECK_OK: Tutorial loads in standalone player
+SMOKE_CHECK_OK: Game launches into the cover menu before gameplay
+SMOKE_CHECK_OK: Title menu keeps a visible free cursor for its buttons
+SMOKE_CHECK_OK: Chosen cover composition imports at its original 1600 by 1000 aspect ratio
+SMOKE_CHECK_OK: Dream music plays while the cover menu is displayed
+SMOKE_CHECK_OK: Cover menu remains idle and preserves the gameplay spawn while resizing: (1440, 900)
+SMOKE_CHECK_OK: Cover menu remains idle and preserves the gameplay spawn while resizing: (1920, 1080)
+SMOKE_CHECK_OK: Cover menu remains idle and preserves the gameplay spawn while resizing: (1280, 960)
+SMOKE_CHECK_OK: Start action leaves the cover menu and enters the tutorial
+SMOKE_CHECK_OK: Original stereo background score imports and lasts more than twenty seconds: dream_journey
+SMOKE_CHECK_OK: Original stereo background score imports and lasts more than twenty seconds: pumpkin_battle
+SMOKE_CHECK_OK: Original stereo background score imports and lasts more than twenty seconds: pumpkin_rage
+SMOKE_CHECK_OK: Original stereo background score imports and lasts more than twenty seconds: dream_celebration
+SMOKE_CHECK_OK: Exploration music plays automatically on normal start
+SMOKE_CHECK_OK: Setting background volume to zero silences the score without losing its playback timeline
+SMOKE_CHECK_OK: Raising background volume restores the current score without restarting the scene
+SMOKE_CHECK_OK: Mute silences background music and event audio together
+SMOKE_CHECK_OK: Unmute restores music and event audio
+SMOKE_CHECK_OK: Pause stops the music timeline instead of restarting the track
+SMOKE_CHECK_OK: Resume continues the background score
+SMOKE_CHECK_OK: Pause preserves in-flight projectile and position
+SMOKE_CHECK_OK: Resume continues projectile simulation
+SMOKE_CHECK_OK: Saved chapter includes imported Halloween scenery 1
+SMOKE_CHECK_OK: Decorative props introduce no collision or projectile obstacles 1
+SMOKE_CHECK_OK: Decoration stays outside gameplay targeting raycasts 1
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: First light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: First light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Crossing light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Crossing light
+SMOKE_CHECK_OK: Chapter uses the selected Timmy humanoid character 1
+SMOKE_CHECK_OK: Exit rejects incomplete chapter 1
+SMOKE_CHECK_OK: All eighteen tutorial tree positions use imported dead trees and hide the former round canopy art
+SMOKE_CHECK_OK: Tutorial trees match the garden's two dead-tree models without adding collision or blocking targeting
+SMOKE_CHECK_OK: Saved iron gate starts shut, physically blocking passage, with its ground trail dark
+SMOKE_CHECK_OK: Real player movement cannot walk through the closed iron gate
+SMOKE_CHECK_OK: Exit has two continuous side wings and a physical rear perimeter in chapter 1
+SMOKE_CHECK_OK: Rear enclosure leaves a clear centered sightline through the opening gate
+SMOKE_CHECK_OK: Visible left fence meshes stay outside the doorway instead of stretching across its sightline
+SMOKE_CHECK_OK: Visible right fence meshes stay outside the doorway instead of stretching across its sightline
+SMOKE_CHECK_OK: Exit wing railing exceeds the reachable jump height
+SMOKE_CHECK_OK: Real controller cannot walk around the exit through a side opening
+SMOKE_CHECK_OK: Real controller cannot walk around the exit through a side opening
+SMOKE_CHECK_OK: Real controller cannot walk around the exit through a side opening
+SMOKE_CHECK_OK: Exit wing test starts a real grounded jump
+SMOKE_CHECK_OK: A real jump cannot bypass the exit through its side wing
+SMOKE_CHECK_OK: Exit wing railing exceeds the reachable jump height
+SMOKE_CHECK_OK: Real controller cannot walk around the exit through a side opening
+SMOKE_CHECK_OK: Real controller cannot walk around the exit through a side opening
+SMOKE_CHECK_OK: Real controller cannot walk around the exit through a side opening
+SMOKE_CHECK_OK: Exit wing test starts a real grounded jump
+SMOKE_CHECK_OK: A real jump cannot bypass the exit through its side wing
+SMOKE_CHECK_OK: Rear side perimeter blocks walking off beside the exit opening
+SMOKE_CHECK_OK: Rear side perimeter blocks walking off beside the exit opening
+SMOKE_CHECK_OK: Hidden road has no active floor
+SMOKE_CHECK_OK: E interaction lights First light
+SMOKE_CHECK_OK: Poly Halloween lantern changes to its lit model after interaction
+SMOKE_CHECK_OK: Lantern restores collidable road
+SMOKE_CHECK_OK: Lantern saves safe checkpoint
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 1
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 1
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 1
+SMOKE_CHECK_OK: Jump route starts on safe island ground 1
+SMOKE_CHECK_OK: Walking across the tutorial's circular platforms without jumping falls into a gap
+SMOKE_CHECK_OK: Round platform has flat mesh collision 1
+SMOKE_CHECK_OK: Round platform has flat mesh collision 1
+SMOKE_CHECK_OK: Grounded route jump launches 1 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 1 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 1 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 1 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 1 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 1 hop 3
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 1
+SMOKE_CHECK_OK: A missed tutorial platform returns the player to the lantern checkpoint
+SMOKE_CHECK_OK: Hidden road has no active floor
+SMOKE_CHECK_OK: E interaction lights Crossing light
+SMOKE_CHECK_OK: Poly Halloween lantern changes to its lit model after interaction
+SMOKE_CHECK_OK: Lantern restores collidable road
+SMOKE_CHECK_OK: Lantern saves safe checkpoint
+SMOKE_CHECK_OK: Restored bridge supports player movement
+SMOKE_CHECK_OK: Real arrow clears tutorial practice rune
+SMOKE_CHECK_OK: Enemy uses imported Quaternius skinned model and animation rig
+SMOKE_CHECK_OK: Animated dragon has visible game-scale bounds centered on its hit collider
+SMOKE_CHECK_OK: Imported flight animation deforms the dragon mesh during gameplay
+SMOKE_CHECK_OK: Real arrows defeat moving dragon
+SMOKE_CHECK_OK: Tutorial has two collectible candies before miss round 0
+SMOKE_CHECK_OK: E collects tutorial candy in miss round 0
+SMOKE_CHECK_OK: Real candy throw misses the seal in round 0
+SMOKE_CHECK_OK: E collects tutorial candy in miss round 0
+SMOKE_CHECK_OK: Real candy throw misses the seal in round 0
+SMOKE_CHECK_OK: Timer restores both tutorial candies after every original candy was thrown away in round 0
+SMOKE_CHECK_OK: Tutorial has two collectible candies before miss round 1
+SMOKE_CHECK_OK: E collects tutorial candy in miss round 1
+SMOKE_CHECK_OK: Real candy throw misses the seal in round 1
+SMOKE_CHECK_OK: E collects tutorial candy in miss round 1
+SMOKE_CHECK_OK: Real candy throw misses the seal in round 1
+SMOKE_CHECK_OK: Timer restores both tutorial candies after every original candy was thrown away in round 1
+SMOKE_CHECK_OK: Tutorial has two collectible candies before miss round 2
+SMOKE_CHECK_OK: E collects tutorial candy in miss round 2
+SMOKE_CHECK_OK: Real candy throw misses the seal in round 2
+SMOKE_CHECK_OK: E collects tutorial candy in miss round 2
+SMOKE_CHECK_OK: Real candy throw misses the seal in round 2
+SMOKE_CHECK_OK: Timer restores both tutorial candies after every original candy was thrown away in round 2
+SMOKE_CHECK_OK: Replenished tutorial candy can be collected
+SMOKE_CHECK_OK: Ballistic candy shatters nightmare seal and consumes carried candy
+SMOKE_CHECK_OK: Tutorial refill stops once the candy seal is cleared
+SMOKE_CHECK_OK: Falling costs health and returns to safe checkpoint
+SMOKE_CHECK_OK: All chapter objectives complete 1
+SMOKE_CHECK_OK: Player approaches the open iron gate without an automatic scene change
+SMOKE_CHECK_OK: Real controller movement follows the light through the open iron gate and completes chapter 1
+SMOKE_CHECK_OK: Physical gate trigger completes chapter 1
+SMOKE_CHECK_OK: Walking through the gate starts the fade without any click or Enter action
+SMOKE_CHECK_OK: The next chapter loads behind black with gameplay frozen
+SMOKE_CHECK_OK: Black fade automatically loads and resumes chapter 2
+SMOKE_CHECK_OK: Automatic fade restores mouse look and hides the cursor
+SMOKE_CHECK_OK: Scene transition preserves chapter order
+SMOKE_CHECK_OK: Saved chapter includes imported Halloween scenery 2
+SMOKE_CHECK_OK: Decorative props introduce no collision or projectile obstacles 2
+SMOKE_CHECK_OK: Decoration stays outside gameplay targeting raycasts 2
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Orchard light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Orchard light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Terrace light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Terrace light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Gate light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Gate light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Whisper Grove light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Whisper Grove light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Observatory light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Observatory light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Crypt light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Crypt light
+SMOKE_CHECK_OK: Chapter uses the selected Timmy humanoid character 2
+SMOKE_CHECK_OK: Exit rejects incomplete chapter 2
+SMOKE_CHECK_OK: Saved garden contains three authored memories and the ordered moon puzzle
+SMOKE_CHECK_OK: Garden expands to seven islands, six lanterns and eleven distributed enemies
+SMOKE_CHECK_OK: Garden adds encounters with all four species without inflating enemy health
+SMOKE_CHECK_OK: Final Crypt island sits to the left of the gate garden instead of behind its portal
+SMOKE_CHECK_OK: Final round-platform route connects westward from the main island to the left Crypt
+SMOKE_CHECK_OK: Garden gate rejects a zero-memory shortcut
+SMOKE_CHECK_OK: Saved iron gate starts shut, physically blocking passage, with its ground trail dark
+SMOKE_CHECK_OK: Real player movement cannot walk through the closed iron gate
+SMOKE_CHECK_OK: Exit has two continuous side wings and a physical rear perimeter in chapter 2
+SMOKE_CHECK_OK: Rear enclosure leaves a clear centered sightline through the opening gate
+SMOKE_CHECK_OK: Visible left fence meshes stay outside the doorway instead of stretching across its sightline
+SMOKE_CHECK_OK: Visible right fence meshes stay outside the doorway instead of stretching across its sightline
+SMOKE_CHECK_OK: Exit wing railing exceeds the reachable jump height
+SMOKE_CHECK_OK: Real controller cannot walk around the exit through a side opening
+SMOKE_CHECK_OK: Real controller cannot walk around the exit through a side opening
+SMOKE_CHECK_OK: Real controller cannot walk around the exit through a side opening
+SMOKE_CHECK_OK: Exit wing test starts a real grounded jump
+SMOKE_CHECK_OK: A real jump cannot bypass the exit through its side wing
+SMOKE_CHECK_OK: Exit wing railing exceeds the reachable jump height
+SMOKE_CHECK_OK: Real controller cannot walk around the exit through a side opening
+SMOKE_CHECK_OK: Real controller cannot walk around the exit through a side opening
+SMOKE_CHECK_OK: Real controller cannot walk around the exit through a side opening
+SMOKE_CHECK_OK: Exit wing test starts a real grounded jump
+SMOKE_CHECK_OK: A real jump cannot bypass the exit through its side wing
+SMOKE_CHECK_OK: Rear side perimeter blocks walking off beside the exit opening
+SMOKE_CHECK_OK: Rear side perimeter blocks walking off beside the exit opening
+SMOKE_CHECK_OK: Memory and rune numbers remain readable as the mouse camera orbits: 0
+SMOKE_CHECK_OK: Memory and rune numbers remain readable as the mouse camera orbits: 90
+SMOKE_CHECK_OK: Memory and rune numbers remain readable as the mouse camera orbits: 180
+SMOKE_CHECK_OK: Memory and rune numbers remain readable as the mouse camera orbits: -90
+SMOKE_CHECK_OK: Terrace lantern requires the Whisper Grove memory
+SMOKE_CHECK_OK: Bow launches at garden rune Moon melody rune 1
+SMOKE_CHECK_OK: Shooting the Observatory before reaching its unlocked stage cannot advance it
+SMOKE_CHECK_OK: Garden route starts hidden: Orchard light
+SMOKE_CHECK_OK: E unlocks garden route: Orchard light
+SMOKE_CHECK_OK: Garden lantern retains the imported lit/unlit artwork: Orchard light
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: EMBER DRAGON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-20.00, 2.50, 23.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: WISP GHOST
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-14.00, 2.80, 29.00)
+SMOKE_CHECK_OK: Garden route starts hidden: Whisper Grove light
+SMOKE_CHECK_OK: E unlocks garden route: Whisper Grove light
+SMOKE_CHECK_OK: Garden lantern retains the imported lit/unlit artwork: Whisper Grove light
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 2
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 2
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 2
+SMOKE_CHECK_OK: Jump route starts on safe island ground 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 3
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 4
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 4
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 2
+SMOKE_CHECK_OK: Guardians protect the first memory until defeated
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: WISP GHOST
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-46.00, 2.80, 22.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: FANSHOT BEE
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-40.00, 2.50, 29.00)
+SMOKE_CHECK_OK: E collects the unlocked dream memory 1
+SMOKE_CHECK_OK: Recovered memory saves a safe island checkpoint 1
+SMOKE_CHECK_OK: A fall preserves recovered memories and returns to the new shrine checkpoint
+SMOKE_CHECK_OK: Return trip launches a grounded garden jump
+SMOKE_CHECK_OK: Garden branch is traversable in reverse with the real jump controller
+SMOKE_CHECK_OK: Return trip launches a grounded garden jump
+SMOKE_CHECK_OK: Garden branch is traversable in reverse with the real jump controller
+SMOKE_CHECK_OK: Return trip launches a grounded garden jump
+SMOKE_CHECK_OK: Garden branch is traversable in reverse with the real jump controller
+SMOKE_CHECK_OK: Return trip launches a grounded garden jump
+SMOKE_CHECK_OK: Garden branch is traversable in reverse with the real jump controller
+SMOKE_CHECK_OK: One recovered memory does not open the dream gate
+SMOKE_CHECK_OK: Recovering only memory I leaves the iron gate closed
+SMOKE_CHECK_OK: Garden route starts hidden: Terrace light
+SMOKE_CHECK_OK: E unlocks garden route: Terrace light
+SMOKE_CHECK_OK: Garden lantern retains the imported lit/unlit artwork: Terrace light
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: ELDER DRAGON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-3.00, 2.80, 44.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: FANSHOT BEE
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (7.00, 2.50, 46.00)
+SMOKE_CHECK_OK: Garden route starts hidden: Observatory light
+SMOKE_CHECK_OK: E unlocks garden route: Observatory light
+SMOKE_CHECK_OK: Garden lantern retains the imported lit/unlit artwork: Observatory light
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 2
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 2
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 2
+SMOKE_CHECK_OK: Jump route starts on safe island ground 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 3
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 4
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 4
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 2
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: ELDER DRAGON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (26.00, 2.80, 43.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: FANSHOT BEE
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (36.00, 2.50, 48.00)
+SMOKE_CHECK_OK: Observatory memory requires its moon melody even after all guardians are cleared
+SMOKE_CHECK_OK: Bow launches at garden rune Moon melody rune 1
+SMOKE_CHECK_OK: Real arrow lights the first moon rune without prematurely consuming its retry collider
+SMOKE_CHECK_OK: Pausing preserves the partial moon melody
+SMOKE_CHECK_OK: Bow launches at garden rune Moon melody rune 3
+SMOKE_CHECK_OK: Wrong-order arrow resets the melody and leaves every rune available to retry
+SMOKE_CHECK_OK: Bow launches at garden rune Moon melody rune 1
+SMOKE_CHECK_OK: Bow launches at garden rune Moon melody rune 2
+SMOKE_CHECK_OK: Bow launches at garden rune Moon melody rune 3
+SMOKE_CHECK_OK: Real arrows in I II III order permanently restore all three moon runes
+SMOKE_CHECK_OK: E collects the unlocked dream memory 2
+SMOKE_CHECK_OK: Recovered memory saves a safe island checkpoint 2
+SMOKE_CHECK_OK: Return trip launches a grounded garden jump
+SMOKE_CHECK_OK: Garden branch is traversable in reverse with the real jump controller
+SMOKE_CHECK_OK: Return trip launches a grounded garden jump
+SMOKE_CHECK_OK: Garden branch is traversable in reverse with the real jump controller
+SMOKE_CHECK_OK: Return trip launches a grounded garden jump
+SMOKE_CHECK_OK: Garden branch is traversable in reverse with the real jump controller
+SMOKE_CHECK_OK: Return trip launches a grounded garden jump
+SMOKE_CHECK_OK: Garden branch is traversable in reverse with the real jump controller
+SMOKE_CHECK_OK: Two recovered memories do not open the dream gate
+SMOKE_CHECK_OK: Recovering only memories I and II leaves the iron gate closed
+SMOKE_CHECK_OK: Garden route starts hidden: Gate light
+SMOKE_CHECK_OK: Clear an incidental guardian candy through normal E and throw actions before lighting Gate light
+SMOKE_CHECK_OK: E unlocks garden route: Gate light
+SMOKE_CHECK_OK: Garden lantern retains the imported lit/unlit artwork: Gate light
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 2
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 2
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 2
+SMOKE_CHECK_OK: Jump route starts on safe island ground 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 3
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 4
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 4
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 2
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: DIVING DEMON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (2.00, 2.80, 73.00)
+SMOKE_CHECK_OK: Garden route starts hidden: Crypt light
+SMOKE_CHECK_OK: E unlocks garden route: Crypt light
+SMOKE_CHECK_OK: Garden lantern retains the imported lit/unlit artwork: Crypt light
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 2
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 2
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 2
+SMOKE_CHECK_OK: Jump route starts on safe island ground 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Round platform has flat mesh collision 2
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 3
+SMOKE_CHECK_OK: Grounded route jump launches 2 hop 4
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 2 hop 4
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 2
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: DIVING DEMON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-38.00, 2.80, 73.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: WISP GHOST
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-28.00, 2.70, 78.00)
+SMOKE_CHECK_OK: Final memory requires breaking the candy seal after clearing its guardians
+SMOKE_CHECK_OK: Bow launches at garden rune Crypt candy seal
+SMOKE_CHECK_OK: Bow arrows cannot bypass the crypt candy seal
+SMOKE_CHECK_OK: Crypt candy supply can be picked up with E
+SMOKE_CHECK_OK: Crypt candy miss launches through the normal throw cooldown
+SMOKE_CHECK_OK: Crypt candy supply can be picked up with E
+SMOKE_CHECK_OK: Crypt candy miss launches through the normal throw cooldown
+SMOKE_CHECK_OK: Wasting both crypt candies consumes both held throws
+SMOKE_CHECK_OK: Every crypt candy supply replenishes after missed throws, preventing a soft lock
+SMOKE_CHECK_OK: Replenished crypt candy remains usable
+SMOKE_CHECK_OK: A real ballistic candy throw shatters the crypt seal
+SMOKE_CHECK_OK: Clearing every old-style objective still cannot bypass collecting the final memory
+SMOKE_CHECK_OK: E collects the unlocked dream memory 3
+SMOKE_CHECK_OK: Recovered memory saves a safe island checkpoint 3
+SMOKE_CHECK_OK: The final memory starts the two-leaf opening animation before the exit ground lights turn on
+SMOKE_CHECK_OK: Pause freezes both iron gate leaves during opening
+SMOKE_CHECK_OK: Both iron leaves swing open, remove their blocker, then reveal the glowing ground trail
+SMOKE_CHECK_OK: The unlocked ground cue has visible glowing steps, direction arrows and light without obstructing movement
+SMOKE_CHECK_OK: Unlocking does not auto-complete the chapter for a player already standing behind the gate
+SMOKE_CHECK_OK: Crypt supply stops replenishing once its seal is solved
+SMOKE_CHECK_OK: Return trip launches a grounded garden jump
+SMOKE_CHECK_OK: Garden branch is traversable in reverse with the real jump controller
+SMOKE_CHECK_OK: Return trip launches a grounded garden jump
+SMOKE_CHECK_OK: Garden branch is traversable in reverse with the real jump controller
+SMOKE_CHECK_OK: Return trip launches a grounded garden jump
+SMOKE_CHECK_OK: Garden branch is traversable in reverse with the real jump controller
+SMOKE_CHECK_OK: Return trip launches a grounded garden jump
+SMOKE_CHECK_OK: Garden branch is traversable in reverse with the real jump controller
+SMOKE_CHECK_OK: Expanded chapter opens only after all three memories, six lanterns, eleven enemies and four runes
+SMOKE_CHECK_OK: Open iron gate lights the route and waits for the player to walk through
+SMOKE_CHECK_OK: Player approaches the open iron gate without an automatic scene change
+SMOKE_CHECK_OK: Real controller movement follows the light through the open iron gate and completes chapter 2
+SMOKE_CHECK_OK: Restored garden gate physically advances the expanded chapter
+SMOKE_CHECK_OK: Walking through the gate starts the fade without any click or Enter action
+SMOKE_CHECK_OK: The next chapter loads behind black with gameplay frozen
+SMOKE_CHECK_OK: Black fade automatically loads and resumes chapter 3
+SMOKE_CHECK_OK: Automatic fade restores mouse look and hides the cursor
+SMOKE_CHECK_OK: Expanded garden automatically continues into Witchlight Marsh
+SMOKE_CHECK_OK: Chapter three is a separate adventure before the Boss
+SMOKE_CHECK_OK: Marsh has six distinct islands, twelve guardians, five crossings and three potions
+SMOKE_CHECK_OK: Marsh exit rejects incomplete potion and guardian objectives
+SMOKE_CHECK_OK: Saved chapter includes imported Halloween scenery 3
+SMOKE_CHECK_OK: Decorative props introduce no collision or projectile obstacles 3
+SMOKE_CHECK_OK: Decoration stays outside gameplay targeting raycasts 3
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Landing light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Landing light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Grove light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Grove light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Workshop light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Workshop light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Marsh light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Marsh light
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Watchtower light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Watchtower light
+SMOKE_CHECK_OK: Grove lantern cannot bypass its unbrewed potion
+SMOKE_CHECK_OK: Real E lights Landing light and restores its crossing
+SMOKE_CHECK_OK: Marsh lantern saves its safe island checkpoint
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 3
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 3
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 3
+SMOKE_CHECK_OK: Jump route starts on safe island ground 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 3
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 4
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 4
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 3
+SMOKE_CHECK_OK: A real arrow launches at the first potion pot
+SMOKE_CHECK_OK: Bow arrows cannot substitute for potion ingredients
+SMOKE_CHECK_OK: Recipe swap regression picks up a real pink candy
+SMOKE_CHECK_OK: Renewable Blue supply exists beside Moonwake
+SMOKE_CHECK_OK: Real E interaction selects Blue potion candy
+SMOKE_CHECK_OK: A ballistic Blue candy throw targets Moonwake
+SMOKE_CHECK_OK: Potion throw consumes its held candy
+SMOKE_CHECK_OK: A wrong-color ballistic throw preserves recipe progress
+SMOKE_CHECK_OK: A blue supply slot recovers its color after a swap leaves pink candy occupying it
+SMOKE_CHECK_OK: Pause freezes marsh candy replenishment
+SMOKE_CHECK_OK: All three colors return after discarded teaching throws, preventing a potion softlock
+SMOKE_CHECK_OK: Renewable Pink supply exists beside Moonwake
+SMOKE_CHECK_OK: Real E interaction selects Pink potion candy
+SMOKE_CHECK_OK: A ballistic Pink candy throw targets Moonwake
+SMOKE_CHECK_OK: Potion throw consumes its held candy
+SMOKE_CHECK_OK: A missed marsh jump preserves recipe progress and restores the lantern checkpoint
+SMOKE_CHECK_OK: Real candy projectile adds ingredient 1 to Moonwake
+SMOKE_CHECK_OK: Renewable Blue supply exists beside Moonwake
+SMOKE_CHECK_OK: Real E interaction selects Blue potion candy
+SMOKE_CHECK_OK: A ballistic Blue candy throw targets Moonwake
+SMOKE_CHECK_OK: Potion throw consumes its held candy
+SMOKE_CHECK_OK: Real candy projectile adds ingredient 2 to Moonwake
+SMOKE_CHECK_OK: Potion completes its authored recipe: Moonwake
+SMOKE_CHECK_OK: A brewed potion still requires its living guardians to be cleared
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: FANSHOT BEE
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-4.00, 2.70, 30.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: EMBER DRAGON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (4.00, 3.00, 37.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: DIVING DEMON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (5.00, 2.80, 30.00)
+SMOKE_CHECK_OK: Potion and guardians unlock the next marsh lantern
+SMOKE_CHECK_OK: Real E lights Grove light and restores its crossing
+SMOKE_CHECK_OK: Marsh lantern saves its safe island checkpoint
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 3
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 3
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 3
+SMOKE_CHECK_OK: Jump route starts on safe island ground 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 3
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 4
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 4
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 3
+SMOKE_CHECK_OK: Mist vents show a gold warning before dealing damage
+SMOKE_CHECK_OK: Pause freezes the mist warning interval
+SMOKE_CHECK_OK: A player who remains inside an active marked mist vent takes real damage
+SMOKE_CHECK_OK: Renewable Blue supply exists beside Starlight
+SMOKE_CHECK_OK: Real E interaction selects Blue potion candy
+SMOKE_CHECK_OK: A ballistic Blue candy throw targets Starlight
+SMOKE_CHECK_OK: Potion throw consumes its held candy
+SMOKE_CHECK_OK: Real candy projectile adds ingredient 1 to Starlight
+SMOKE_CHECK_OK: Renewable Gold supply exists beside Starlight
+SMOKE_CHECK_OK: Real E interaction selects Gold potion candy
+SMOKE_CHECK_OK: A ballistic Gold candy throw targets Starlight
+SMOKE_CHECK_OK: Potion throw consumes its held candy
+SMOKE_CHECK_OK: Real candy projectile adds ingredient 2 to Starlight
+SMOKE_CHECK_OK: Potion completes its authored recipe: Starlight
+SMOKE_CHECK_OK: A brewed potion still requires its living guardians to be cleared
+SMOKE_CHECK_OK: Completed potion permanently dispels its dangerous mist vents
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: WISP GHOST
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-36.00, 2.70, 30.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: EMBER DRAGON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-28.00, 3.00, 37.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: DIVING DEMON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-27.00, 2.80, 30.00)
+SMOKE_CHECK_OK: Potion and guardians unlock the next marsh lantern
+SMOKE_CHECK_OK: Real E lights Workshop light and restores its crossing
+SMOKE_CHECK_OK: Marsh lantern saves its safe island checkpoint
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 3
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 3
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 3
+SMOKE_CHECK_OK: Jump route starts on safe island ground 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 3
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 4
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 4
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 3
+SMOKE_CHECK_OK: Standing character rides the drifting platform without sliding off (travel=0.550, slip=0.000)
+SMOKE_CHECK_OK: Pause freezes the drifting dreamstone
+SMOKE_CHECK_OK: Renewable Gold supply exists beside Dawnbloom
+SMOKE_CHECK_OK: Real E interaction selects Gold potion candy
+SMOKE_CHECK_OK: A ballistic Gold candy throw targets Dawnbloom
+SMOKE_CHECK_OK: Potion throw consumes its held candy
+SMOKE_CHECK_OK: Real candy projectile adds ingredient 1 to Dawnbloom
+SMOKE_CHECK_OK: Renewable Pink supply exists beside Dawnbloom
+SMOKE_CHECK_OK: Real E interaction selects Pink potion candy
+SMOKE_CHECK_OK: A ballistic Pink candy throw targets Dawnbloom
+SMOKE_CHECK_OK: Potion throw consumes its held candy
+SMOKE_CHECK_OK: Real candy projectile adds ingredient 2 to Dawnbloom
+SMOKE_CHECK_OK: Renewable Blue supply exists beside Dawnbloom
+SMOKE_CHECK_OK: Real E interaction selects Blue potion candy
+SMOKE_CHECK_OK: A ballistic Blue candy throw targets Dawnbloom
+SMOKE_CHECK_OK: Potion throw consumes its held candy
+SMOKE_CHECK_OK: Real candy projectile adds ingredient 3 to Dawnbloom
+SMOKE_CHECK_OK: Potion completes its authored recipe: Dawnbloom
+SMOKE_CHECK_OK: A brewed potion still requires its living guardians to be cleared
+SMOKE_CHECK_OK: Completed potion permanently dispels its dangerous mist vents
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: FANSHOT BEE
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-36.00, 2.70, 64.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: EMBER DRAGON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-28.00, 3.00, 71.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: DIVING DEMON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-27.00, 2.80, 64.00)
+SMOKE_CHECK_OK: Potion and guardians unlock the next marsh lantern
+SMOKE_CHECK_OK: Real E lights Marsh light and restores its crossing
+SMOKE_CHECK_OK: Marsh lantern saves its safe island checkpoint
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 3
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 3
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 3
+SMOKE_CHECK_OK: Jump route starts on safe island ground 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 3
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 4
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 4
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 3
+SMOKE_CHECK_OK: Standing character rides the drifting platform without sliding off (travel=0.378, slip=0.003)
+SMOKE_CHECK_OK: Pause freezes the drifting dreamstone
+SMOKE_CHECK_OK: Watchtower guardians guard the final restored route
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: WISP GHOST
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (-4.00, 2.70, 64.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: EMBER DRAGON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (4.00, 3.00, 71.00)
+SMOKE_CHECK_OK: Garden guardian uses an imported animated monster: DIVING DEMON
+SMOKE_CHECK_OK: Actual bow shots defeat garden guardian at (5.00, 2.80, 64.00)
+SMOKE_CHECK_OK: Real E lights Watchtower light and restores its crossing
+SMOKE_CHECK_OK: Marsh lantern saves its safe island checkpoint
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 3
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 3
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 3
+SMOKE_CHECK_OK: Jump route starts on safe island ground 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Round platform has flat mesh collision 3
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 3
+SMOKE_CHECK_OK: Grounded route jump launches 3 hop 4
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 3 hop 4
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 3
+SMOKE_CHECK_OK: Standing character rides the drifting platform without sliding off (travel=0.214, slip=0.003)
+SMOKE_CHECK_OK: Pause freezes the drifting dreamstone
+SMOKE_CHECK_OK: Marsh opens only after all seven ingredients, twelve guardians and five lanterns
+SMOKE_CHECK_OK: Marsh uses the opening iron gate and glowing exit trail
+SMOKE_CHECK_OK: Player approaches the open iron gate without an automatic scene change
+SMOKE_CHECK_OK: Real controller movement follows the light through the open iron gate and completes chapter 3
+SMOKE_CHECK_OK: Walking through the gate starts the fade without any click or Enter action
+SMOKE_CHECK_OK: The next chapter loads behind black with gameplay frozen
+SMOKE_CHECK_OK: Black fade automatically loads and resumes chapter 4
+SMOKE_CHECK_OK: Automatic fade restores mouse look and hides the cursor
+SMOKE_CHECK_OK: Saved boss courtyard is 42 by 38 with the original jump-route landing edge preserved
+SMOKE_CHECK_OK: Castle approach island keeps its original size
+SMOKE_CHECK_OK: The real controller can stand in the enlarged courtyard: (-16.00, 0.15, 8.00)
+SMOKE_CHECK_OK: The real controller can stand in the enlarged courtyard: (16.00, 0.15, 8.00)
+SMOKE_CHECK_OK: The real controller can stand in the enlarged courtyard: (-16.00, 0.15, 29.00)
+SMOKE_CHECK_OK: The real controller can stand in the enlarged courtyard: (16.00, 0.15, 29.00)
+SMOKE_CHECK_OK: Saved chapter includes imported Halloween scenery 4
+SMOKE_CHECK_OK: Decorative props introduce no collision or projectile obstacles 4
+SMOKE_CHECK_OK: Decoration stays outside gameplay targeting raycasts 4
+SMOKE_CHECK_OK: Imported switch starts unlit and references the existing lantern: Castle light
+SMOKE_CHECK_OK: Lantern artwork retains only the existing pedestal collision: Castle light
+SMOKE_CHECK_OK: Castle chapter uses Timmy humanoid character
+SMOKE_CHECK_OK: Castle entrance lantern restores approach
+SMOKE_CHECK_OK: Castle lantern switches imported artwork on without changing the jump route
+SMOKE_CHECK_OK: Lantern reveals the chapter's round jumping route 4
+SMOKE_CHECK_OK: Jump route has no invisible continuous bridge floor 4
+SMOKE_CHECK_OK: Space between round platforms is a real fallable gap 4
+SMOKE_CHECK_OK: Jump route starts on safe island ground 4
+SMOKE_CHECK_OK: Round platform has flat mesh collision 4
+SMOKE_CHECK_OK: Round platform has flat mesh collision 4
+SMOKE_CHECK_OK: Grounded route jump launches 4 hop 1
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 4 hop 1
+SMOKE_CHECK_OK: Grounded route jump launches 4 hop 2
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 4 hop 2
+SMOKE_CHECK_OK: Grounded route jump launches 4 hop 3
+SMOKE_CHECK_OK: Real controller jump lands on the next round platform or exit island 4 hop 3
+SMOKE_CHECK_OK: All round-platform hops finish without fall damage 4
+SMOKE_CHECK_OK: Boss wakes when entering restored courtyard
+SMOKE_CHECK_OK: Awakening warns for exactly two enemies before the first summon wave materializes
+SMOKE_CHECK_OK: Pausing freezes pending summons without spawning enemies
+SMOKE_CHECK_OK: Warned summon wave materializes and clears its portals: 1
+SMOKE_CHECK_OK: Wave has an arrow-targetable dragon and the appropriate small monster: 1
+SMOKE_CHECK_OK: Summoned enemies have real Quaternius animated models and colliders
+SMOKE_CHECK_OK: A reticle aimed at a summon near the boss selects its actual surface without redirecting toward the boss
+SMOKE_CHECK_OK: Music transitions to the appropriate boss stage: 1
+SMOKE_CHECK_OK: Summoned enemy home is over actual courtyard floor: Dragon
+SMOKE_CHECK_OK: Summoned enemy home is over actual courtyard floor: Ghost
+SMOKE_CHECK_OK: Summoned enemies actively attack the player: 1
+SMOKE_CHECK_OK: The pumpkin continues its own attacks while reinforcements are alive: 1
+SMOKE_CHECK_OK: Real bow arrows defeat the summoned Dragon in wave 1
+SMOKE_CHECK_OK: Defeated reinforcement rewards matching candy on safe floor outside the boss footprint
+SMOKE_CHECK_OK: Reward candy does not overlap previous waves or existing different-color pickups
+SMOKE_CHECK_OK: Real bow arrows defeat the summoned Ghost in wave 1
+SMOKE_CHECK_OK: Defeated reinforcement rewards matching candy on safe floor outside the boss footprint
+SMOKE_CHECK_OK: Reward candy does not overlap previous waves or existing different-color pickups
+SMOKE_CHECK_OK: Both summons can be cleared without damaging the boss: 1
+SMOKE_CHECK_OK: Boss framing keeps player and pumpkin weak point visible
+SMOKE_CHECK_OK: Full-health boss has no second-phase charge
+SMOKE_CHECK_OK: Boss shell rejects arrows
+SMOKE_CHECK_OK: Grounded player can dash
+SMOKE_CHECK_OK: Dash grants damage immunity
+SMOKE_CHECK_OK: Telegraphed bomb blast damages player within radius
+SMOKE_CHECK_OK: Boss introduces matching with only pink before unlocking other colors
+SMOKE_CHECK_OK: Boss stone base has flat mesh collision without an invisible capsule blocking candy
+SMOKE_CHECK_OK: E picks up the actual blue candy hue
+SMOKE_CHECK_OK: E exchanges a held wrong color for the required floor candy
+SMOKE_CHECK_OK: Candy swapping preserves both held and ground supplies
+SMOKE_CHECK_OK: Candy swapping can be reversed without throwing away ammunition
+SMOKE_CHECK_OK: Held candy visibly retains its blue material
+SMOKE_CHECK_OK: Pause preserves required color and vulnerable window
+SMOKE_CHECK_OK: Wrong-color regression launches a real blue candy projectile
+SMOKE_CHECK_OK: Thrown projectile preserves the carried candy hue
+SMOKE_CHECK_OK: Wrong-color projectile does no damage, explains the mismatch and leaves the window open
+SMOKE_CHECK_OK: Refill guarantees required color even when floor slots are occupied by wrong colors
+SMOKE_CHECK_OK: Covered candy stock cannot block safe matching-color ground replenishment
+SMOKE_CHECK_OK: Boss replenishment maintains two reachable matching-color sweets: Pink
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+SMOKE_CHECK_OK: Picked up candy matches the current boss hue Pink
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+SMOKE_CHECK_OK: Bomb-only first phase stays active above half health
+SMOKE_CHECK_OK: Boss replenishment maintains two reachable matching-color sweets: Blue
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+SMOKE_CHECK_OK: Picked up candy matches the current boss hue Blue
+SMOKE_CHECK_OK: Castle corner view keeps the candy-carrying player clear of roof occlusion: Blue
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+SMOKE_CHECK_OK: Bomb-only first phase stays active above half health
+SMOKE_CHECK_OK: Boss replenishment maintains two reachable matching-color sweets: Gold
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+SMOKE_CHECK_OK: Picked up candy matches the current boss hue Gold
+SMOKE_CHECK_OK: Castle corner view keeps the candy-carrying player clear of roof occlusion: Gold
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+SMOKE_CHECK_OK: Candy hit at exactly half health activates the second phase
+SMOKE_CHECK_OK: Half health triggers the second and final summon wave
+SMOKE_CHECK_OK: Warned summon wave materializes and clears its portals: 2
+SMOKE_CHECK_OK: Wave has an arrow-targetable dragon and the appropriate small monster: 2
+SMOKE_CHECK_OK: Summoned enemies have real Quaternius animated models and colliders
+SMOKE_CHECK_OK: Music transitions to the appropriate boss stage: 2
+SMOKE_CHECK_OK: Summoned enemy home is over actual courtyard floor: Dragon
+SMOKE_CHECK_OK: Summoned enemy home is over actual courtyard floor: Demon
+SMOKE_CHECK_OK: Summoned enemies actively attack the player: 2
+SMOKE_CHECK_OK: The pumpkin continues its own attacks while reinforcements are alive: 2
+SMOKE_CHECK_OK: Real bow arrows defeat the summoned Dragon in wave 2
+SMOKE_CHECK_OK: Defeated reinforcement rewards matching candy on safe floor outside the boss footprint
+SMOKE_CHECK_OK: Reward candy does not overlap previous waves or existing different-color pickups
+SMOKE_CHECK_OK: Real bow arrows defeat the summoned Demon in wave 2
+SMOKE_CHECK_OK: Defeated reinforcement rewards matching candy on safe floor outside the boss footprint
+SMOKE_CHECK_OK: Reward candy does not overlap previous waves or existing different-color pickups
+SMOKE_CHECK_OK: Both summons can be cleared without damaging the boss: 2
+SMOKE_CHECK_OK: Half-health charge has a visible windup lane
+SMOKE_CHECK_OK: Charge direction remains locked after the player sidesteps
+SMOKE_CHECK_OK: Candy cannot damage the boss during the charge windup
+SMOKE_CHECK_OK: Pause preserves the charge windup without moving the boss
+SMOKE_CHECK_OK: Contact regression places a vulnerable player in the lane before the charge starts
+SMOKE_CHECK_OK: The real boss charges forward along the locked lane and stops at its target
+SMOKE_CHECK_OK: Swept charge contact damages the player exactly once
+SMOKE_CHECK_OK: Required candy color stays fixed through charge and recovery
+SMOKE_CHECK_OK: Completed charge opens a stationary recovery weak point and clears the lane
+SMOKE_CHECK_OK: The stone dais remains in place while the pumpkin head charges
+SMOKE_CHECK_OK: Charge ends on safe courtyard ground away from the jump platforms
+SMOKE_CHECK_OK: Recovery turns the matching-color face toward the player so the weak point remains visible
+SMOKE_CHECK_OK: Charge recovery and return complete before timeout
+SMOKE_CHECK_OK: Unanswered recovery returns the boss home with a closed shell
+SMOKE_CHECK_OK: Later bomb volleys finish before the next second-phase charge begins
+SMOKE_CHECK_OK: Sideways charge avoidance starts outside the lane without damage immunity
+SMOKE_CHECK_OK: Moving outside the locked lane avoids the complete charge without damage
+SMOKE_CHECK_OK: Boss replenishment maintains two reachable matching-color sweets: Gold
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+SMOKE_CHECK_OK: Picked up candy matches the current boss hue Gold
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+SMOKE_CHECK_OK: Boss replenishment maintains two reachable matching-color sweets: Pink
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+SMOKE_CHECK_OK: Picked up candy matches the current boss hue Pink
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+SMOKE_CHECK_OK: Boss replenishment maintains two reachable matching-color sweets: Blue
+SMOKE_CHECK_OK: Boss fight maintains collectible candy supply
+SMOKE_CHECK_OK: Candy pickup remains reachable in boss arena
+SMOKE_CHECK_OK: Picked up candy matches the current boss hue Blue
+SMOKE_CHECK_OK: Real candy projectile damages exposed boss exactly once
+SMOKE_CHECK_OK: Victory hides the intact pumpkin head and crown
+SMOKE_CHECK_OK: The real pumpkin and crown surfaces split into a bounded number of fragments
+SMOKE_CHECK_OK: Pumpkin fragments cannot damage or block the hero
+SMOKE_CHECK_OK: Pumpkin shell fragments physically separate and arc away from the defeated head
+SMOKE_CHECK_OK: Victory uses all three candy colors through gradual first-half introduction
+SMOKE_CHECK_OK: Boss defeat leads to victory screen
+SMOKE_CHECK_OK: Victory clears pending bomb hazards
+SMOKE_CHECK_OK: Boss victory includes second-phase charges and leaves no charge warning
+SMOKE_CHECK_OK: The entire boss fight summons exactly twice with no repeat waves
+SMOKE_CHECK_OK: Victory removes summoned enemies and pending portals from target registration
+SMOKE_CHECK_OK: Victory crossfades from battle music into one audible looping celebration score
+SMOKE_CHECK_OK: Victory starts one scene-owned fireworks show
+SMOKE_CHECK_OK: Victory clears running, throw and bow poses and restores visible idle animation
+SMOKE_CHECK_OK: Victory idle visibly deforms Timmy's mesh instead of holding the final combat frame
+SMOKE_CHECK_OK: Repeated victory notification does not duplicate the celebration
+SMOKE_CHECK_OK: Rockets launch and burst into live rendered sky particles: bursts=2, particles=276
+SMOKE_CHECK_OK: Fireworks use a supported included glow shader in the built player
+SMOKE_CHECK_OK: Celebration particles have no gameplay collision
+SMOKE_CHECK_OK: Victory camera frames the sky bursts above the lower victory controls
+SMOKE_CHECK_OK: Fireworks continue beyond the particle-system duration within a fixed particle budget: previous=3, current=9, particles=344
+SMOKE_CHECK_OK: Victory celebration advances in real time even when gameplay time is frozen
+SMOKE_CHECK_OK: Timmy keeps playing idle throughout the fireworks even with gameplay time frozen
+SMOKE_CHECK_OK: Pumpkin fragments finish dissipating and clean up their temporary meshes
+SMOKE_CHECK_OK: Music mute preference survives retry and scene recreation
+SMOKE_CHECK_OK: Retry removes the complete victory fireworks show
+SMOKE_CHECK_OK: Retry resets summon counters and removes all reinforcements from the previous fight
+SMOKE_CHECK_OK: Cleanup regression restores the castle entrance lantern
+SMOKE_CHECK_OK: Fresh fight starts two pending summon portals
+SMOKE_CHECK_OK: Defeat clears pending portals before they can materialize
+SMOKE_CHECK_OK: A defeated fight never creates delayed reinforcement enemies
+SMOKE_CHECK_OK: Victory cleanup regression begins with two living summoned enemies
+SMOKE_CHECK_OK: Victory clears living reinforcements and their hostile projectiles without requiring extra kills
+SMOKE_CHECK_OK: Revisiting the completed garden restores a fresh adventure with all objectives reset
+SMOKE_CHECK_OK: Garden retry setup restores its first road through a real E action
+SMOKE_CHECK_OK: Retry resets garden progression and hides every restored route
+LOST_DREAM_SMOKE_PASSED: 719 functional integration checks.

@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "unityVersion": "6000.6.2f1",
+  "fullIntegrationChecks": 589,
+  "endingIntegrationChecks": 33,
+  "sceneHashes": {
+    "Assets/Scenes/03_PumpkinKeep.unity": "f9aefef9b8fd5378e0aa42c4e4a1308ef8c91c0888ff13bf99c7999c6bc7ba37",
+    "Assets/Scenes/01_FirstLight.unity": "5991ffae93f181b04513aa853280b7352140437e018fe51acbd846f65fb93e95",
+    "Assets/Scenes/02_ShatteredGardens.unity": "2cab6a509524ee8e104046461e40787bcd8ee87068aa3f302c71a6cbcd0d7efa"
+  },
+  "tutorialAndCastleScenesUnchangedThisIteration": true,
+  "originalGardenComponentsPreserved": 3790,
+  "exactSourceAndMapMatchWithIsolatedBuild": true,
+  "buildAndAdHocSignatureVerified": true,
+  "testBuildLocation": "/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-poly-preview-wjzxe2c1/Builds/macOS/Lanterns of the Lost Dream.app",
+  "humanPlaytimeMeasured": false,
+  "firstPlayDesignTargetMinutes": [
+    4,
+    6
+  ]
+}

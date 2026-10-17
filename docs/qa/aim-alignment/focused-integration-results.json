@@ -1,0 +1,31 @@
+{
+    "passed": true,
+    "unityVersion": "6000.6.2f1",
+    "checks": [
+        "Tutorial loads in standalone player",
+        "Game launches into the cover menu before gameplay",
+        "Title menu keeps a visible free cursor for its buttons",
+        "Chosen cover composition imports at its original 1600 by 1000 aspect ratio",
+        "Dream music plays while the cover menu is displayed",
+        "Cover menu remains idle and preserves the gameplay spawn while resizing: (1440, 900)",
+        "Cover menu remains idle and preserves the gameplay spawn while resizing: (1920, 1080)",
+        "Cover menu remains idle and preserves the gameplay spawn while resizing: (1280, 960)",
+        "Start action leaves the cover menu and enters the tutorial",
+        "Downward central reticle selects an ordinary floor collider",
+        "Ground aim stays at the exact reticle impact with no legacy upward offset",
+        "Wall aim uses the visible surface instead of lifting the shot above the crosshair",
+        "Real queued shot converges from the bow to the displayed reticle at range 5",
+        "Arrow model, bow pitch and grip agree on their first rendered frame at range 5",
+        "A real arrow strikes the small physical target under the reticle at range 5",
+        "Real queued shot converges from the bow to the displayed reticle at range 18",
+        "Arrow model, bow pitch and grip agree on their first rendered frame at range 18",
+        "A real arrow strikes the small physical target under the reticle at range 18",
+        "Nearby off-center targets do not secretly redirect a centered shot",
+        "Shoulder camera can see the target while a separate obstacle blocks the bow",
+        "A real arrow stops at nearby bow cover instead of passing through it toward the crosshair",
+        "A shot queued during a 90-degree turn and zoom uses this frame's camera direction",
+        "Airborne aim check begins with a real controller jump",
+        "Moving and jumping fire uses the current-frame reticle and correctly oriented arrow"
+    ],
+    "error": ""
+}

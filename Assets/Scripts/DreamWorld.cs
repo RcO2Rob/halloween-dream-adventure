@@ -8,15 +8,8 @@ namespace LostDream
         public static DreamGame Build(int level)
         {
             Random.InitState(721 + level);
-            var root = new GameObject("Lost Dream - Chapter " + (level + 1));
-            var game = root.AddComponent<DreamGame>();
-            game.levelIndex = level;
-            game.spawnPoint = level == 2 ? new Vector3(0, .12f, -13) : new Vector3(0, .12f, -3);
-            game.audioSystem = root.AddComponent<DreamAudio>();
-            game.player = Player(root.transform, game.spawnPoint);
-            game.gameCamera = Camera(root.transform, game.player, level == 2);
-            root.AddComponent<DreamHUD>();
-            Lighting(root.transform);
+            var game = Core(level, level == DreamGame.BossChapterIndex ? new Vector3(0, .12f, -13) : new Vector3(0, .12f, -3));
+            var root = game.gameObject;
             var lamps = new List<Lantern>();
             var dragons = new List<FlyingDragon>();
             var runes = new List<DreamRune>();
@@ -85,6 +78,18 @@ namespace LostDream
             game.lanterns = lamps.ToArray();
             game.dragons = dragons.ToArray();
             game.runes = runes.ToArray();
+            return game;
+        }
+
+        public static DreamGame Core(int level, Vector3 spawn)
+        {
+            var root = new GameObject("Lost Dream - Chapter " + (level + 1));
+            var game = root.AddComponent<DreamGame>();
+            game.levelIndex = level; game.spawnPoint = spawn;
+            game.audioSystem = root.AddComponent<DreamAudio>();
+            game.player = Player(root.transform, spawn);
+            game.gameCamera = Camera(root.transform, game.player, level == DreamGame.BossChapterIndex);
+            root.AddComponent<DreamHUD>(); Lighting(root.transform);
             return game;
         }
 
@@ -185,7 +190,7 @@ namespace LostDream
                     Vector3.one * Random.Range(.045f, .15f), "GlowMoon");
         }
 
-        static void Island(Transform parent, Vector3 point, float width, float depth, string name, bool garden = true)
+        public static void Island(Transform parent, Vector3 point, float width, float depth, string name, bool garden = true)
         {
             var root = DreamArt.Group(name, parent, point);
             DreamArt.Shape("Solid dream island", PrimitiveType.Cube, root.transform, new Vector3(0, -.45f, 0), new Vector3(width, .9f, depth), garden ? "Ground" : "CastleFloor", true);
@@ -305,7 +310,7 @@ namespace LostDream
             }
         }
 
-        static Lantern Lamp(Transform parent, Vector3 point, string name, DreamPath path, Vector3 checkpoint)
+        public static Lantern Lamp(Transform parent, Vector3 point, string name, DreamPath path, Vector3 checkpoint)
         {
             var root = DreamArt.Group(name, parent, point);
             var lamp = root.AddComponent<Lantern>();
@@ -333,7 +338,7 @@ namespace LostDream
             return candy;
         }
 
-        static DreamRune Rune(Transform parent, Vector3 point, bool candyOnly)
+        public static DreamRune Rune(Transform parent, Vector3 point, bool candyOnly)
         {
             var root = DreamArt.Group(candyOnly ? "Candy nightmare seal" : "Bow practice rune", parent, point);
             var rune = root.AddComponent<DreamRune>(); rune.candyOnly = candyOnly;
@@ -382,7 +387,7 @@ namespace LostDream
             return dragon;
         }
 
-        static void Gate(Transform parent, Vector3 point)
+        public static void Gate(Transform parent, Vector3 point)
         {
             var root = DreamArt.Group("Dream gate", parent, point);
             var gate = root.AddComponent<DreamGate>();
@@ -399,7 +404,7 @@ namespace LostDream
             DreamArt.Ring(ring.transform, 2.3f, "GlowTeal", 32);
         }
 
-        static void Sign(Transform parent, Vector3 point, string top, string bottom)
+        public static void Sign(Transform parent, Vector3 point, string top, string bottom)
         {
             var root = DreamArt.Group("Dream sign", parent, point);
             DreamArt.Shape("Signpost", PrimitiveType.Cylinder, root.transform, Vector3.up * .8f, new Vector3(.13f, .8f, .13f), "Wood");

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/02_ShatteredGardens.unity
     guid: 0a08e52a0d43a4e938ff61acd73f6274
   - enabled: 1
-    path: Assets/Scenes/03_PumpkinKeep.unity
+    path: Assets/Scenes/03_WitchlightMarsh.unity
+    guid: f7d18b7f93d3c4ba882976a3d98176f8
+  - enabled: 1
+    path: Assets/Scenes/04_PumpkinKeep.unity
     guid: 7272a5ca6ba3f4b2699e0f9430f79b02
   m_configObjects: {}

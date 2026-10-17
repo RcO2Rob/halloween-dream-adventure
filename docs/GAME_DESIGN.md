@@ -1,12 +1,12 @@
-# Lanterns of the Lost Dream — Prototype design v0.10
+# Lanterns of the Lost Dream — Prototype design v0.13
 
 ## High concept
 
-A dreamwalker crosses a Halloween dream disappearing into nightmare fog. Pumpkin lanterns restore missing roads. A bow clears flying nightmares; candy breaks the Pumpkin King's exposed shell. Win by restoring two dream chapters and defeating the boss inside his castle.
+A dreamwalker crosses a Halloween dream disappearing into nightmare fog. Pumpkin lanterns restore missing roads. A bow clears flying nightmares; candy breaks the Pumpkin King's exposed shell. Win by restoring three dream chapters and defeating the boss inside his castle.
 
 **Genre:** short single-player 3D action adventure with environmental switching and light puzzles. **View:** lower third-person perspective follow camera, inspired by the user's It Takes Two reference. **Prototype target:** keyboard/mouse on macOS. **Visual tone:** purple floating islands, warm pumpkin light, teal restored paths, pink/blue/gold candy and boss hues.
 
-The user's established concept is three chapters, lanterns revealing roads or dispersing nightmares, bow combat against small flying dragons, and a castle pumpkin boss attacked with collected candy after dodging bombs. The precise rules, counts, controls, and timings below are implementation proposals for playtesting.
+The user's updated concept is four chapters, lanterns revealing roads or dispersing nightmares, bow combat against small flying dragons, and a castle pumpkin boss attacked with collected candy after dodging bombs. The precise rules, counts, controls, and timings below are implementation proposals for playtesting.
 
 ## Game script
 
@@ -16,9 +16,15 @@ The player appears on a floating island. The title screen explains controls. A g
 
 ### 2 — Shattered Gardens
 
-Follow a bending chain of islands. Three lanterns create successive crossings; five flying enemies patrol above the route: a basic ember dragon, a slow-orb ghost, an evolved dragon, a fan-shot bee and a diving demon. Their original encounter positions and health counts are retained. The first two crossings keep their bridges; the final crossing uses three smaller staggered round platforms, including a raised middle landing. Lanterns stay lit and save a safe checkpoint. Bow attacks are unlimited with a short cooldown. All species telegraph their attacks and then recover. Dragons use an aimed ember; Ghost uses a slow blue orb at 5 units/s; Armabee uses three gold projectiles at 7.5 units/s, spaced 18 degrees apart. Demon shows a locked ground lane for 1.3 seconds, dives toward the initial target at 10 units/s, deals at most one contact hit, then returns home without another contact attack. Sideways movement avoids the dive; dash immunity also applies. Keep moving or dash through danger. The exit requires all lanterns and dragons.
+Recover three lost memories across seven islands. Eleven flying guardians include ember and evolved dragons, slow-orb ghosts, fan-shot bees and diving demons. Take the west Whisper Grove branch, then the east Moon Observatory branch to shoot the I → II → III moon melody, then the west Candy Crypt branch to break its candy seal. Six lanterns and four round-platform routes connect exploration, combat and puzzles. Terrace/Observatory lights require one recovered memory; Gate/Crypt lights require two. Crypt supplies replenish every three active seconds. All memories, lanterns, guardians and runes are required before the enclosed iron gate opens and lights its exit trail.
 
-### 3 — The Pumpkin Keep
+### 3 — Witchlight Marsh
+
+A teal, mushroom-lit route introduces potion recipes and environmental timing before the castle. Cross six islands: the landing, Glowcap grove, witch's workshop, breathing marsh, abandoned watchtower and castle road. Use colored candy to brew Moonwake (PINK → BLUE), Starlight (BLUE → GOLD) and Dawnbloom (GOLD → PINK → BLUE). Each pot displays the full recipe and next ingredient. Arrows and wrong colors do not advance or reset accepted ingredients. Three designated candy spots replenish and restore their respective colors every three active seconds, including after swaps leave wrong-colored stock on the floor.
+
+Each potion and its three guardians unlock the next lantern. The workshop and marsh have marked vents: a gold 1.5-second warning precedes two seconds of low damaging mist. Jump or go around its marked radius; brewing the local potion permanently dispels it. Five jumping crossings link the islands, with one sideways drifting stone in each of the last three. Grounded characters ride with the platform. The watchtower's three guardians guard the final lantern. The exit requires three potions, twelve defeated guardians and five lanterns. Falls preserve progress; retry resets the chapter. See [map and editing details](WITCHLIGHT_MARSH.md).
+
+### 4 — The Pumpkin Keep
 
 A lantern reveals two narrow raised round platforms across the castle approach, requiring two platform landings followed by a jump into the courtyard. Entering the courtyard wakes the Pumpkin King. He gives a warning, then sends falling pumpkin bombs; orange circles mark blast radii. Move out or dash while collecting glowing candy. In the first half, each volley opens his face for four seconds. Candy must match his current body hue. One accurate matching-color candy throw removes one of six health points and closes that window. Arrows and protected-phase candy do no damage.
 
@@ -39,11 +45,11 @@ E at a different-colored pickup swaps it with the held candy, leaving the previo
 | System | Rule | Feedback |
 | --- | --- | --- |
 | Lantern | E nearby; permanent bridge activation; heal 1; save checkpoint | Flame, warm light, teal road, sound, counter, message |
-| Bow | Unlimited arrows; 0.38 s cooldown; projectile collision; small aim assist | Arrow trail, shot sound, health indicator, hit burst |
+| Bow | Unlimited arrows; 0.38 s cooldown; projectile collision; current-frame center-reticle aiming | Arrow trail, shot sound, health indicator, hit burst |
 | Candy | Carry one; E pickup/exchange; ballistic throw retains hue; consumed on throw | Held hue, names/symbols, floor labels and pickup/throw sounds |
-| Flying nightmares | Five garden encounters, four behavioral species; patrol, warning, attack, recovery | Imported animated models, species names, warning hints, distinct projectiles and dive lane |
+| Flying nightmares | Eleven garden and twelve marsh encounters, four behavioral species; patrol, warning, attack, recovery | Imported animated models, species names, warning hints, distinct projectiles and dive lane |
 | Jump | Space: 2.2-unit grounded jump, gravity and head collision; no double jump or immunity | Takeoff, airborne leg tuck and landing compression |
-| Round platforms | One lantern-activated jumping route per chapter; flat tops, empty gaps, increasing precision | Cyan landing rims, gold center dots, entry/exit rings and Space instructions |
+| Round platforms | Lantern-activated jumping routes; flat tops, empty gaps and drifting stones in the marsh | Cyan landing rims, gold center dots, entry/exit rings and Space instructions |
 | Dash | Shift: 0.22 s dash; 1.05 s cooldown; damage immunity during dash | Teal burst, sound, readiness indicator |
 | Health | 5 points; 1.05 s post-hit immunity; retry at zero | Health segments, flashing character, hurt sound |
 | Fall | Lose 1 health; return to checkpoint | Return and explanatory message |
@@ -51,7 +57,7 @@ E at a different-colored pickup swaps it with the held candy, leaving the previo
 | Boss matching | Candy hue must match while shell is open; wrong color consumes candy without damage or closing the window | Body hue, separate open/closed state, required name/symbol and mismatch toast |
 | Boss charge | Unlock at 3/6 health; 1.6 s locked-lane warning; one-point contact damage; 2.4 s exposed recovery, then return home | Marked corridor and arrow, warning sound, HUD phase instructions and exposed face |
 | Boss reinforcements | Two one-time waves, each one dragon and one monster; boss attacks concurrently; arrows defeat minions | Two-second portal rings, WAVE counter and living-enemy count; matching candy reward |
-| Exit | All chapter objectives required | Gate glow; explanatory rejection message |
+| Exit | All chapter objectives required; walk through without confirmation | Iron leaves open, floor glows, black fade loads and resumes next chapter |
 
 The lantern is a spatial switch: activation changes where the player can physically travel. This version uses readable single-lantern/single-crossing relationships for bridges and round platforms; ordering puzzles can follow core-loop playtesting.
 
@@ -65,7 +71,7 @@ stateDiagram-v2
     Playing --> Defeated: Zero health
     Defeated --> Playing: Retry
     Playing --> LevelComplete: Unlocked gate
-    LevelComplete --> Playing: Next chapter
+    LevelComplete --> Playing: Automatic black fade / load / fade in
     Playing --> Victory: Boss defeated
     Victory --> Playing: Dream again
 ```
@@ -107,3 +113,8 @@ Player movement combines locomotion, grounded jump, grounded dash, attack pose, 
 Exploration and the title screen use an original melodic dream score. Courtyard awakening crossfades to the boss score; reaching half health crossfades to a faster, denser arrangement. Each score loops, with event effects on a separate audio source. Pause holds the music playback position; resume continues it. M mutes music and effects together and retains that preference through retries and chapter changes. Level completion, defeat and victory fade the score out. `DreamAudio.musicVolume` allows volume tuning in the Inspector. Music sources are recreated with the scene, so retries do not accumulate loops.
 
 The prototype includes beginning-to-victory progression, sounds, checkpoints, retry, pause, mute, and chapter selection. There is no persistent save, controller support, or complex lantern ordering puzzle yet. Test camera scale, aiming, bridge width, bomb timing, and the readability of the vulnerability cue before expanding scope.
+
+
+## Four-chapter pacing target
+
+Budget roughly 1.5–2 minutes for the tutorial, 3–4 for the gardens, 3–4 for the marsh and 2–3 for the Boss. These are design estimates, not measured first-time play durations or a guaranteed ten-minute minimum. Validate with timed human playthroughs. Add meaningful traversal, recipe decisions and combat instead of mandatory waiting.
