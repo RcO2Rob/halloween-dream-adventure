@@ -1,1 +1,0 @@
-261 physics/gameplay checks passed, but visual inspection caught transverse fence panels stretching across the doorway. The inherited fence normalizer measured world-Z length even for world-X runs. Correct its span measurement along the actual run direction, rebuild only the two exit enclosure subtrees, and assert renderer bounds leave the visible doorway clear.

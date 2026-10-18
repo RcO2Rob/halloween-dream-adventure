@@ -48,3 +48,6 @@ sysinfo.txt
 # Unity Asset Store source assets stay local under the store EULA.
 /Assets/polyperfect/
 /Assets/polyperfect.meta
+
+# Local documentation and validation records.
+/docs/

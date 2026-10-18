@@ -1,6 +1,0 @@
-{
-  "resolved_editor_compile_issue": "Unity 6000.6 requires GetEntityId instead of GetInstanceID. Fixed before successful builds.",
-  "serialization_audit_notes": "Initial strict comparisons identified previously implicit C# defaults; the saved-file audit verifies only exact initialized defaults were added.",
-  "delivery_note": "The preview shadow-distance override was removed. The final app uses original QualitySettings and separately passed all 366 checks.",
-  "mac_signing": "Deep verification found an invalid signature in an exported Unity runtime dylib. Re-signed the local bundle ad-hoc, verified it, launched through macOS Application Services, and reran all 366 checks. PrototypeBuilder now applies and verifies this signature after future macOS exports; the new editor helper was compiled and executed successfully."
-}

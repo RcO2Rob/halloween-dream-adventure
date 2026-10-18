@@ -1,1 +1,0 @@
-The unchanged Observatory route test encountered a guardian candy drop closer than the lamp. Normal E interaction correctly picked up that candy instead of lighting the farther lantern. Test setup now clears incidental pickups with actual E/throw actions before requiring lamp activation. Gameplay interaction priority is unchanged.

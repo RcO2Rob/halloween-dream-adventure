@@ -1,5 +1,0 @@
-LOST_DREAM_EXIT_ENCLOSED: chapter=1; trees=18; preserved=2614
-NullReferenceException: Object reference not set to an instance of an object
-  at ExitEnclosureBuilder.Enclose (LostDream.GardenIronGate iron, UnityEngine.BoxCollider floor) [0x0001c] in /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-poly-preview-wjzxe2c1/Assets/Editor/ExitEnclosureBuilder.cs:105 
-  at ExitEnclosureBuilder.UpdateSavedChapters () [0x00306] in /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-poly-preview-wjzxe2c1/Assets/Editor/ExitEnclosureBuilder.cs:67 
-  at ExitEnclosureBuilder.ApplyAndBuild () [0x00000] in /private/var/folders/b3/c8sbfs815ks4rj72cmsx4hzm0000gn/T/lost-dream-poly-preview-wjzxe2c1/Assets/Editor/ExitEnclosureBuilder.cs:155 

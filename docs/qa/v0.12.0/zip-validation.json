@@ -1,8 +1,0 @@
-{
-  "archive": "Lanterns-of-the-Lost-Dream-v0.12.0-macOS-arm64.zip",
-  "bytes": 64484146,
-  "sha256": "0c92f4fa53d622c35dc3cbe1121d95d7687f651e9d192dc5145157e408c459d9",
-  "integrity": "passed",
-  "file_hashes_modes_and_symlinks_match_tested_app": true,
-  "entries": 250
-}

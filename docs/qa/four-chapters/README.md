@@ -1,9 +1,0 @@
-# Four-chapter journey validation
-
-The final saved maps and source passed **719 checks** in the rendered macOS standalone player using `--smoke-test --journey-smoke`. All three iron-gate exits automatically faded fully black, loaded the next scene and resumed play without click/Enter confirmation. The journey included all six marsh islands, five real jumping crossings, three continuously tracked platform rides, wrong-color/swap recovery, seven recipe ingredients, mist warning/damage/pause/dispelling, twelve guardians and the complete fourth-chapter Boss ending.
-
-`source-sha256.json` binds the tested source and scene files to the original workspace. `map-audit.json` records the editor migration backup and 1,260 preserved Boss components. `before-scene-sha256.json` and `build-validation.json` confirm that chapters one and two remain byte-identical and the renamed castle retains its original scene GUID. Build validation covers all four scenes, and the Mac bundle passed strict ad-hoc signature verification. Only filtered log lines are retained.
-
-Journey mode focuses on the whole four-chapter route. It skips separate camera, skeletal-pose and legacy species attack-timing reviews; these were exercised in an earlier broad iteration. `iterations` preserves two stopped runs and their failure boundaries rather than presenting them as passing suites. The platform check now measures accumulated movement and per-frame character slip, avoiding a false failure when net displacement is near zero at a turnaround.
-
-The runner uses controlled teleports and some acceleration. **No independent human playtest or ten-minute minimum has been measured.** The old workspace release app/ZIP remain earlier snapshots; the tested export resides in the isolated test project. All current playable changes are saved in the original Unity project.

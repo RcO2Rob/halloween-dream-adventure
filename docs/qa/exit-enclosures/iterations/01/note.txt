@@ -1,1 +1,0 @@
-Isolated editor migration found an existing gate prefab whose root kept its source name after serialization. Locate its frame via the saved native leaf parent rather than a display name. New configurations also persist their intended root display name explicitly. Original maps had not yet been edited.
