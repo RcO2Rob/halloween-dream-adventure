@@ -51,3 +51,6 @@ sysinfo.txt
 
 # Local documentation and validation records.
 /docs/
+
+# Local asset and packaging utilities.
+/tools/
